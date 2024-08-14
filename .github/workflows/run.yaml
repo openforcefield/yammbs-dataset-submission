@@ -1,0 +1,164 @@
+# this is adapted from openff-docs/cookbook_preproc.yaml
+
+name: Run benchmarks and commit the results
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Run the benchmarks for PR#: '
+        required: true
+        type: string
+      path:
+        description: Path to submission directory
+        required: true
+        type: string
+      env:
+        description: Path to conda YAML file
+        required: true
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.pr_number || github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report dispatch to PR
+        if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          pr_number: ${{ inputs.pr_number }}
+          message: >
+            A workflow has been dispatched to run the benchmarks for this PR.
+
+
+            - Run ID: [${{ github.run_id }}]
+
+            - Triggering actor: ${{ github.triggering_actor }}
+
+            - Target branch: ${{ github.ref_name }}
+
+
+            [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Create check
+        if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        id: create-check
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const created_run = await github.request(
+              'POST /repos/{owner}/{repo}/check-runs',
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: '${{ github.job }}',
+                head_sha: '${{ github.sha }}',
+                details_url: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
+                status: 'in_progress',
+                started_at: new Date().toISOString(),
+                output: {
+                  title: 'Run benchmarks',
+                  summary: 'Results and progress: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
+                  text: ''
+                },
+                headers: {
+                  'X-GitHub-Api-Version': '2022-11-28'
+                }
+              }
+            )
+
+            return created_run.data.id
+
+      - uses: actions/checkout@v3
+
+      - name: Install Conda environment
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          environment-file: ${{ inputs.env }}
+
+      - name: Run benchmarks
+        env:
+            LICENSE: ${{ secrets.OELICENSE }}
+        shell: bash -l {0}
+        run: |
+          set -e
+          echo "$LICENSE" > /tmp/oe_license.txt
+          export OE_LICENSE=/tmp/oe_license.txt
+          python main2.py ${{ inputs.path }} $(nproc)
+
+      - name: Commit results
+        shell: bash -l {0}
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+          git config --global init.defaultBranch main
+
+          # Commit the benchmark results and push
+          git add .
+          git commit -m "Add benchmark results"
+          git push
+
+      - name: Report status to PR
+        id: reportStatusToPr
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          pr_number: ${{ inputs.pr_number }}
+          message: >
+            A workflow dispatched to run benchmarks for this PR has just finished.
+
+
+            - Run ID: [${{ github.run_id }}]
+
+            - Triggering actor: ${{ github.triggering_actor }}
+
+            - Target branch: ${{ github.ref_name }}
+
+            - Job status: **${{ job.status }}**
+
+            [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+
+      - name: Report status to PR on templating failure
+        if: always() && steps.reportStatusToPr.outcome == 'failure'
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          pr_number: ${{ inputs.pr_number }}
+          message: >
+            A workflow dispatched to run benchmarks for this PR has just failed.
+
+
+            - Run ID: [${{ github.run_id }}]
+
+            - Triggering actor: ${{ github.triggering_actor }}
+
+            - Target branch: ${{ github.ref_name }}
+
+            - Job status: **${{ job.status }}**
+
+            [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Update check
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.request(
+              'PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}',
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                check_run_id: ${{ steps.create-check.outputs.result }},
+                status: 'completed',
+                conclusion: '${{ job.status }}',
+                completed_at: new Date().toISOString(),
+                headers: {
+                  'X-GitHub-Api-Version': '2022-11-28'
+                }
+              }
+            )
