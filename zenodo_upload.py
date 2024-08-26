@@ -3,6 +3,7 @@
 import json
 import logging
 import os
+import sys
 
 import requests
 
@@ -12,6 +13,16 @@ logger.setLevel(logging.INFO)
 
 URL = "https://sandbox.zenodo.org"
 TOKEN = os.environ["ZENODO_TOKEN"]
+
+if len(sys.argv) < 2:
+    print("Must provide a file to upload")
+    exit(1)
+
+filename = sys.argv[1]
+
+if not os.path.exists(filename):
+    print(f"provided filename `{filename}` does not exist")
+    exit(1)
 
 
 def check_status(response, expect):
@@ -46,7 +57,6 @@ deposition_id = res["id"]
 # this is a real sqlite file from a yammbs run on the industry dataset, bzipped
 # to save space. even the zipped form is 165 M
 logger.info("uploading file")
-filename = "test.sqlite.bz2"
 with open(filename, "rb") as f:
     r = requests.put(f"{bucket_url}/{filename}", data=f, headers=main_headers)
 
