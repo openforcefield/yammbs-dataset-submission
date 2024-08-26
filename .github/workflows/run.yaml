@@ -101,6 +101,14 @@ jobs:
           git commit -m "Add benchmark results"
           git push
 
+      - name: Upload to zenodo
+        env:
+            ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        shell: bash -l {0}
+        run: |
+          bzip2 tmp.sqlite
+          python zenodo_upload.py tmp.sqlite.bz2
+
       - name: Report status to PR
         id: reportStatusToPr
         if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
