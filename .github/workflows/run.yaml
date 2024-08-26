@@ -100,7 +100,10 @@ jobs:
           git config --global init.defaultBranch main
 
           # Commit the benchmark results and push
-          git add .
+
+          input_file=${{ inputs.path }}                        # path to the input YAML file
+          input_dir=$(dirname $input_file)                     # parent directory of input YAML file
+          git add $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv  # add only the output CSV files
           git commit -m "Add benchmark results"
           git push
 
