@@ -67,7 +67,7 @@ hostname
 echo \$SLURM_JOB_ID
 
 source ~/.bashrc
-mamba activate openff-benchmarks
+mamba activate yammbs-dataset-submission
 
 echo \$OE_LICENSE
 
