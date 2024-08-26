@@ -15,13 +15,13 @@ URL = "https://sandbox.zenodo.org"
 TOKEN = os.environ["ZENODO_TOKEN"]
 
 if len(sys.argv) < 2:
-    print("Must provide a file to upload")
+    logger.error("Must provide a file to upload")
     exit(1)
 
 filename = sys.argv[1]
 
 if not os.path.exists(filename):
-    print(f"provided filename `{filename}` does not exist")
+    logger.error(f"provided filename `{filename}` does not exist")
     exit(1)
 
 
