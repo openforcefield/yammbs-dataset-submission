@@ -20,19 +20,22 @@ def check_status(response, expect):
     ), f"Request failed ({response.status_code}), body: {response.json()}"
 
 
-auth = ("Bearer", TOKEN)
+main_headers = {"Authorization": f"Bearer {TOKEN}"}
 
 # this just checks that we can make requests with our token, so it can probably
 # be skipped in general
 logger.info("checking API access")
-r = requests.get(f"{URL}/api/deposit/depositions", auth=auth)
+r = requests.get(f"{URL}/api/deposit/depositions", headers=main_headers)
 check_status(r, 200)
 
 # create a new empty upload
 logger.info("creating an empty upload")
 headers = {"Content-Type": "application/json"}
+headers.update(main_headers)
 r = requests.post(
-    f"{URL}/api/deposit/depositions", auth=auth, json={}, headers=headers
+    f"{URL}/api/deposit/depositions",
+    json={},
+    headers=headers,
 )
 check_status(r, 201)
 
@@ -45,7 +48,7 @@ deposition_id = res["id"]
 logger.info("uploading file")
 filename = "test.sqlite.bz2"
 with open(filename, "rb") as f:
-    r = requests.put(f"{bucket_url}/{filename}", data=f, auth=auth)
+    r = requests.put(f"{bucket_url}/{filename}", data=f, headers=main_headers)
 
 check_status(r, 201)
 
@@ -62,9 +65,8 @@ data = {
 }
 r = requests.put(
     f"{URL}/api/deposit/depositions/{deposition_id}",
-    auth=auth,
-    data=json.dumps(data),
     headers=headers,
+    data=json.dumps(data),
 )
 check_status(r, 200)
 
@@ -73,7 +75,7 @@ exit(0)  # exit for now to avoid publishing while testing
 # publish the result
 r = requests.post(
     f"{URL}/api/deposit/depositions/{deposition_id}/actions/publish",
-    auth=auth,
+    headers=main_headers,
 )
 print(r.status_code)
 print(r.json())
