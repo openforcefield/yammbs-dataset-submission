@@ -90,6 +90,7 @@ jobs:
           echo "$LICENSE" > /tmp/oe_license.txt
           export OE_LICENSE=/tmp/oe_license.txt
           python main.py ${{ inputs.path }} $(nproc)
+          rm $OE_LICENSE
 
       - name: Commit results
         shell: bash -l {0}
