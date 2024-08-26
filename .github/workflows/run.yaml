@@ -83,13 +83,11 @@ jobs:
 
       - name: Run benchmarks
         env:
-            LICENSE: ${{ secrets.OELICENSE }}
+            OE_LICENSE: ${{ github.workspace }}/oe_license.txt
         shell: bash -l {0}
         run: |
           set -e
-          echo "$LICENSE" > /tmp/oe_license.txt
-          export OE_LICENSE=/tmp/oe_license.txt
-          python main2.py ${{ inputs.path }} $(nproc)
+          python main.py ${{ inputs.path }} $(nproc)
 
       - name: Commit results
         shell: bash -l {0}
