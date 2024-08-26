@@ -83,7 +83,7 @@ jobs:
 
       - name: Run benchmarks
         env:
-            LICENSE: ${{ secrets.OELICENSE }}
+            LICENSE: ${{ secrets.OE_LICENSE }}
         shell: bash -l {0}
         run: |
           set -e
