@@ -7,6 +7,9 @@ import time
 from dataclasses import dataclass
 from pathlib import Path
 
+if True:  # to prevent future reordering around this import
+    import qcportal  # noqa
+
 import yaml
 from openff.toolkit.utils import OpenEyeToolkitWrapper
 from yammbs import MoleculeStore
