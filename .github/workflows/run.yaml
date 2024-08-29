@@ -83,11 +83,14 @@ jobs:
 
       - name: Run benchmarks
         env:
-            OE_LICENSE: ${{ github.workspace }}/oe_license.txt
+            LICENSE: ${{ secrets.OE_LICENSE }}
         shell: bash -l {0}
         run: |
           set -e
+          echo "$LICENSE" > /tmp/oe_license.txt
+          export OE_LICENSE=/tmp/oe_license.txt
           python main.py ${{ inputs.path }} $(nproc)
+          rm $OE_LICENSE
 
       - name: Commit results
         shell: bash -l {0}
@@ -97,7 +100,10 @@ jobs:
           git config --global init.defaultBranch main
 
           # Commit the benchmark results and push
-          git add .
+
+          input_file=${{ inputs.path }}                        # path to the input YAML file
+          input_dir=$(dirname $input_file)                     # parent directory of input YAML file
+          git add $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv  # add only the output CSV files
           git commit -m "Add benchmark results"
           git push
 
