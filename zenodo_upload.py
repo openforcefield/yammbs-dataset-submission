@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 parser = argparse.ArgumentParser()
-parser.add_argument("files", action="append")
+parser.add_argument("files", nargs="+")
 
 URL = "https://sandbox.zenodo.org"
 TOKEN = os.environ["ZENODO_TOKEN"]
