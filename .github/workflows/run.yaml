@@ -116,9 +116,8 @@ jobs:
         run: |
           bzip2 tmp.sqlite
           micromamba env export > env.yaml
-          input_files=$(python get_files.py ${{ inputs.path }} | tee input_files.dat)
-          cat input_files.dat
-          echo input files: $input_files
+          python get_files.py ${{ inputs.path }}
+          input_files=$(python get_files.py ${{ inputs.path }})
           python zenodo_upload.py tmp.sqlite.bz2 \
             $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv env.yaml main.py $input_files
 
