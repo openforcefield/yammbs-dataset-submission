@@ -103,9 +103,12 @@ jobs:
 
           input_file=${{ inputs.path }}                        # path to the input YAML file
           input_dir=$(dirname $input_file)                     # parent directory of input YAML file
-          git add $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv  # add only the output CSV files
+          csv_files=$input_dir/output/{dde,icrmsd,rmsd,tfd}.csv
+          git add $csv_files
           git commit -m "Add benchmark results"
           git push
+
+          echo csv_files="${csv_files}" >> $GITHUB_ENV
 
       - name: Upload to zenodo
         env:
@@ -113,7 +116,9 @@ jobs:
         shell: bash -l {0}
         run: |
           bzip2 tmp.sqlite
-          python zenodo_upload.py tmp.sqlite.bz2
+          micromamba env export > env.yaml
+          input_files=$(python get_files.py ${{ inputs.path }})
+          python zenodo_upload.py tmp.sqlite.bz2 $csv_files env.yaml main.py $input_files
 
       - name: Report status to PR
         id: reportStatusToPr
