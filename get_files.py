@@ -3,7 +3,7 @@
 
 import sys
 
-from main import Config
+from config import Config
 
 conf = Config.from_file(sys.argv[1])
 print(conf.forcefield)

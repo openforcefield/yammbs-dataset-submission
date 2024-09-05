@@ -4,30 +4,18 @@
 import os
 import sys
 import time
-from dataclasses import dataclass
 from pathlib import Path
 
 if True:  # to prevent future reordering around this import
     import qcportal  # noqa
 
-import yaml
 from openff.toolkit.utils import OpenEyeToolkitWrapper
 from yammbs import MoleculeStore
 from yammbs.cached_result import CachedResultCollection
 
+from config import Config
+
 assert OpenEyeToolkitWrapper().is_available()
-
-
-@dataclass
-class Config:
-    forcefield: str
-    datasets: list[str]
-
-    @classmethod
-    def from_file(cls, filename):
-        with open(filename) as inp:
-            d = yaml.load(inp, Loader=yaml.Loader)
-            return cls(**d)
 
 
 def make_csvs(store, forcefield, out_dir):
