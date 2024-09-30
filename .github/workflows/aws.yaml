@@ -52,7 +52,7 @@ jobs:
       - name: Setup Conda Environment
         uses: mamba-org/setup-micromamba@v1
         with:
-          environment-file: devtools/envs/env.yaml
+          environment-file: devtools/env.yaml
 
       - name: Run integration tests
         run: |
