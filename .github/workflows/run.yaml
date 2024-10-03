@@ -43,7 +43,7 @@ jobs:
           provider: "aws"
           action: "start"
           aws_image_id: ami-0d5079d9be06933e5
-          aws_instance_type: c6g.12xlarge
+          aws_instance_type: c6a.12xlarge
           aws_region_name: us-east-1
           aws_home_dir: /home/ubuntu
         env:
