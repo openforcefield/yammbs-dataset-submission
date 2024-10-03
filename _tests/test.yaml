@@ -1,3 +1,3 @@
 forcefield: openff-2.1.0.offxml
 datasets:
-    - _tests/industry1000.json
+    - datasets/cache/filtered-industry.json
