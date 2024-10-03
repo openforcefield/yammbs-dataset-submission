@@ -103,6 +103,8 @@ jobs:
             return created_run.data.id
 
       - uses: actions/checkout@v3
+        with:
+          lfs: true
 
       - name: Install Conda environment
         uses: mamba-org/setup-micromamba@v1
