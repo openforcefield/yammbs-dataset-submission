@@ -56,7 +56,7 @@ jobs:
           set -e
           echo "$LICENSE" > /tmp/oe_license.txt
           export OE_LICENSE=/tmp/oe_license.txt
-          python main.py test.yaml $(nproc)
+          python main.py _tests/test.yaml $(nproc)
           rm $OE_LICENSE
 
   stop-aws-runner:
