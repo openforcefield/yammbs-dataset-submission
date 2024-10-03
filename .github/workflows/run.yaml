@@ -102,6 +102,10 @@ jobs:
 
             return created_run.data.id
 
+      - name: Install git-lfs
+        run: |
+          sudo apt install -y git-lfs
+
       - uses: actions/checkout@v3
         with:
           lfs: true
