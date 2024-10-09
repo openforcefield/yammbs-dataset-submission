@@ -23,9 +23,37 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  start-aws-runner:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    outputs:
+      mapping: ${{ steps.aws-start.outputs.mapping }}
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::649715411074:role/gh-actions-runner-role
+          aws-region: us-east-1
+      - name: Create cloud runner
+        id: aws-start
+        uses: omsf-eco-infra/gha-runner@v0.2.0
+        with:
+          provider: "aws"
+          action: "start"
+          aws_image_id: ami-0d5079d9be06933e5
+          aws_instance_type: c6a.8xlarge
+          aws_region_name: us-east-1
+          aws_home_dir: /home/ubuntu
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+
   benchmark:
     permissions: write-all
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    needs:
+      - start-aws-runner
     steps:
       - name: Report dispatch to PR
         if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
@@ -74,7 +102,13 @@ jobs:
 
             return created_run.data.id
 
+      - name: Install git-lfs
+        run: |
+          sudo apt install -y git-lfs
+
       - uses: actions/checkout@v3
+        with:
+          lfs: true
 
       - name: Install Conda environment
         uses: mamba-org/setup-micromamba@v1
@@ -179,3 +213,28 @@ jobs:
                 }
               }
             )
+
+  stop-aws-runner:
+    runs-on: ubuntu-latest
+    permissions:
+        id-token: write
+        contents: read
+    needs:
+      - start-aws-runner
+      - benchmark
+    if: ${{ always() }}
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::649715411074:role/gh-actions-runner-role
+          aws-region: us-east-1
+      - name: Stop instances
+        uses: omsf-eco-infra/gha-runner@v0.2.0
+        with:
+          provider: "aws"
+          action: "stop"
+          instance_mapping: ${{ needs.start-aws-runner.outputs.mapping }}
+          aws_region_name: us-east-1
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
