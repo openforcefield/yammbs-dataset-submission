@@ -43,7 +43,7 @@ jobs:
           provider: "aws"
           action: "start"
           aws_image_id: ami-0d5079d9be06933e5
-          aws_instance_type: c6g.12xlarge
+          aws_instance_type: c6a.8xlarge
           aws_region_name: us-east-1
           aws_home_dir: /home/ubuntu
         env:
@@ -102,7 +102,13 @@ jobs:
 
             return created_run.data.id
 
+      - name: Install git-lfs
+        run: |
+          sudo apt install -y git-lfs
+
       - uses: actions/checkout@v3
+        with:
+          lfs: true
 
       - name: Install Conda environment
         uses: mamba-org/setup-micromamba@v1
