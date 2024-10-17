@@ -145,6 +145,16 @@ def filter_dataset(ds, nprocs, chunksize, out_dir):
     return ds
 
 
+# the plan here is to run everything in a python script instead of relying on a
+# Makefile. the flow for adding a new dataset is providing an input YAML file
+# containing the global variables at the top, then this single script will
+# create the corresponding directory and store each phase of the run there
+# (raw, filtered, cached)
+#
+# there will still be a template Slurm script since we still have to run these
+# on HPC3 for now, but it should also include creating and dumping the
+# environment in the log file. the log file then should also be committed to
+# the repo in the dataset directory
 def main():
     with TemporaryDirectory() as d:
         client = _CachedPortalClient(
