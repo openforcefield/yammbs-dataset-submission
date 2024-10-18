@@ -4,7 +4,7 @@ import qcportal  # noqa
 from openff.interchange.exceptions import UnassignedValenceError
 from openff.toolkit import ForceField, Molecule
 from tqdm import tqdm
-from yammbs.cached_result import CachedResultCollection
+from yammbs.inputs import QCArchiveDataset
 
 FF = ForceField("openff-2.1.0.offxml")
 
@@ -21,12 +21,20 @@ def all_assigned(smiles):
     return True
 
 
-crc = CachedResultCollection.from_json("filtered-industry.json")
-print("init: ", len(crc.inner))
+with open("filtered-industry.json") as inp:
+    crc = QCArchiveDataset.model_validate_json(inp.read())
 
-crc.inner = [res for res in tqdm(crc.inner) if all_assigned(res.mapped_smiles)]
+print("init: ", len(crc.qm_molecules))
 
-print("final: ", len(crc.inner))
+crc = QCArchiveDataset(
+    qm_molecules=[
+        res
+        for res in tqdm(crc.qm_molecules)
+        if all_assigned(res.mapped_smiles)
+    ]
+)
+
+print("final: ", len(crc.qm_molecules))
 
 with open("filtered-industry.json", "w") as out:
-    out.write(crc.to_json(indent=2))
+    out.write(crc.model_dump_json())
