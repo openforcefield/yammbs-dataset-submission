@@ -11,7 +11,7 @@ if True:  # to prevent future reordering around this import
 
 from openff.toolkit.utils import OpenEyeToolkitWrapper
 from yammbs import MoleculeStore
-from yammbs.cached_result import CachedResultCollection
+from yammbs.inputs import QCArchiveDataset
 
 from config import Config
 
@@ -39,8 +39,9 @@ def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
         store = MoleculeStore(sqlite_file)
     else:
         print(f"loading cached dataset from {dataset}", flush=True)
-        crc = CachedResultCollection.from_json(dataset)
-        store = MoleculeStore.from_cached_result_collection(crc, sqlite_file)
+        with open(dataset) as inp:
+            crc = QCArchiveDataset.model_validate_json(inp.read())
+        store = MoleculeStore.from_qcarchive_dataset(crc, sqlite_file)
 
     print("started optimizing store", flush=True)
     start = time.time()
