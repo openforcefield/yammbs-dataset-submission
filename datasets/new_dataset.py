@@ -177,7 +177,7 @@ def main():
 
         with portal_client_manager(lambda _: client):
             logger.info("Filtering dataset with")
-            ds = filter_dataset(ds, args.nprocs, conf.chunksize)
+            ds = filter_dataset(ds, args.nprocs, conf.chunksize, out_dir)
 
             logger.info("Converting dataset to yammbs input format")
             ds = QCArchiveDataset.from_qcsubmit_collection(ds)
