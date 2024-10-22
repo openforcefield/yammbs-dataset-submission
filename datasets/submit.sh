@@ -36,6 +36,8 @@ done
 
 shift $((OPTIND-1)) # shift off flags to process positionals
 
+infile=${1?No input file provided}
+
 day=$(date +%Y-%m-%d)
 pid=$$
 
@@ -66,11 +68,17 @@ echo \$SLURM_JOB_ID
 source ~/.bashrc
 mamba activate yammbs-dataset-submission
 
+echo "=== CONDA ENV ==="
 mamba list
+echo
 
 echo \$OE_LICENSE
 
-$*
+echo "=== INPUT FILE ==="
+cat ${infile}
+echo
+
+python new_dataset.py --nprocs ${ncpus} ${infile}
 
 date
 INP

@@ -33,14 +33,15 @@ logger = logging.getLogger(__name__)
 @dataclass
 class Config:
     ds_name: str
-    nprocs: int
     chunksize: int
 
     @classmethod
     def from_file(cls, filename):
         with open(filename) as inp:
             d = yaml.load(inp, Loader=yaml.Loader)
-            return cls(**d)
+            ret = cls(**d)
+            ret.chunksize = int(ret.chunksize)
+            return ret
 
 
 def download_dataset(client: PortalClient, dsname: str, out_dir: Path):
@@ -160,6 +161,7 @@ def filter_dataset(ds, nprocs, chunksize, out_dir):
 def main():
     a = argparse.ArgumentParser()
     a.add_argument("input_file")
+    a.add_argument("--nprocs", "-n", type=int)
     args = a.parse_args()
 
     conf = Config.from_file(args.input_file)
@@ -175,7 +177,7 @@ def main():
 
         with portal_client_manager(lambda _: client):
             logger.info("Filtering dataset with")
-            ds = filter_dataset(ds, conf.nprocs, conf.chunksize)
+            ds = filter_dataset(ds, args.nprocs, conf.chunksize)
 
             logger.info("Converting dataset to yammbs input format")
             ds = QCArchiveDataset.from_qcsubmit_collection(ds)
