@@ -1,9 +1,12 @@
+import argparse
 import logging
 from collections import defaultdict
+from dataclasses import dataclass
 from multiprocessing import Pool
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+import yaml
 from openff.qcsubmit.results import OptimizationResultCollection
 from openff.qcsubmit.results.filters import (
     ConformerRMSDFilter,
@@ -21,14 +24,23 @@ from openff.toolkit.utils.exceptions import (
 from openff.toolkit.utils.toolkits import OpenEyeToolkitWrapper
 from qcportal import PortalClient
 from tqdm import tqdm
+from yammbs.inputs import QCArchiveDataset
 
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
-# TODO take these from config
-DS_NAME = "OpenFF Industry Benchmark Season 1 v1.1"
-NPROCS = 16
-CHUNKSIZE = 32
+
+@dataclass
+class Config:
+    ds_name: str
+    nprocs: int
+    chunksize: int
+
+    @classmethod
+    def from_file(cls, filename):
+        with open(filename) as inp:
+            d = yaml.load(inp, Loader=yaml.Loader)
+            return cls(**d)
 
 
 def download_dataset(client: PortalClient, dsname: str, out_dir: Path):
@@ -145,27 +157,30 @@ def filter_dataset(ds, nprocs, chunksize, out_dir):
     return ds
 
 
-# the plan here is to run everything in a python script instead of relying on a
-# Makefile. the flow for adding a new dataset is providing an input YAML file
-# containing the global variables at the top, then this single script will
-# create the corresponding directory and store each phase of the run there
-# (raw, filtered, cached)
-#
-# there will still be a template Slurm script since we still have to run these
-# on HPC3 for now, but it should also include creating and dumping the
-# environment in the log file. the log file then should also be committed to
-# the repo in the dataset directory
 def main():
+    a = argparse.ArgumentParser()
+    a.add_argument("input_file")
+    args = a.parse_args()
+
+    conf = Config.from_file(args.input_file)
     with TemporaryDirectory() as d:
         client = _CachedPortalClient(
             "https://api.qcarchive.molssi.org:443/", d
         )
-        out_dir = Path(DS_NAME.replace(" ", "-"))
+        out_dir = Path(conf.ds_name.replace(" ", "-"))
         out_dir.mkdir()
-        ds = download_dataset(client, DS_NAME, out_dir)
+
+        logger.info(f"Downloading dataset {conf.ds_name} to {out_dir}")
+        ds = download_dataset(client, conf.ds_name, out_dir)
 
         with portal_client_manager(lambda _: client):
-            filter_dataset(ds, NPROCS, CHUNKSIZE)
+            logger.info("Filtering dataset with")
+            ds = filter_dataset(ds, conf.nprocs, conf.chunksize)
+
+            logger.info("Converting dataset to yammbs input format")
+            ds = QCArchiveDataset.from_qcsubmit_collection(ds)
+            with open(out_dir / "cache.json", "w") as out:
+                out.write(ds.model_dump_json())
 
 
 if __name__ == "__main__":
