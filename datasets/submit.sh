@@ -17,10 +17,10 @@ case $# in
 esac
 
 # default options
-hours=72
-mem=64
+hours=288
+mem=96
 cmd=sbatch
-ncpus=32
+ncpus=16
 
 while getopts "hdt:m:n:" arg
 do
