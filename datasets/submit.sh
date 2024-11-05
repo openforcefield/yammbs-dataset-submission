@@ -76,7 +76,7 @@ echo
 
 echo \$OE_LICENSE
 
-python new_dataset.py --nprocs ${ncpus} --chunksize ${chunksize} ${ds_name}
+python download_and_filter_dataset.py --nprocs ${ncpus} --chunksize ${chunksize} ${ds_name}
 
 date
 INP
