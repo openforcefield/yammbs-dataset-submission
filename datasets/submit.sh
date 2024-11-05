@@ -21,8 +21,9 @@ hours=288
 mem=96
 cmd=sbatch
 ncpus=16
+chunksize=32
 
-while getopts "hdt:m:n:" arg
+while getopts "hdt:m:n:c:" arg
 do
 	case $arg in
 		h) echo $usage
@@ -31,12 +32,13 @@ do
 		t) hours=$OPTARG;;
 		m) mem=$OPTARG;;
 		n) ncpus=$OPTARG;;
+		c) chunksize=$OPTARG;;
 	esac
 done
 
 shift $((OPTIND-1)) # shift off flags to process positionals
 
-infile=${1?No input file provided}
+ds_name=${1?No dataset name provided}
 
 day=$(date +%Y-%m-%d)
 pid=$$
@@ -74,11 +76,7 @@ echo
 
 echo \$OE_LICENSE
 
-echo "=== INPUT FILE ==="
-cat ${infile}
-echo
-
-python new_dataset.py --nprocs ${ncpus} ${infile}
+python new_dataset.py --nprocs ${ncpus} --chunksize ${chunksize} ${ds_name}
 
 date
 INP

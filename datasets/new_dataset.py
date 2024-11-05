@@ -1,12 +1,10 @@
 import argparse
 import logging
 from collections import defaultdict
-from dataclasses import dataclass
 from multiprocessing import Pool
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-import yaml
 from openff.qcsubmit.results import OptimizationResultCollection
 from openff.qcsubmit.results.filters import (
     ConformerRMSDFilter,
@@ -28,20 +26,6 @@ from yammbs.inputs import QCArchiveDataset
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-
-@dataclass
-class Config:
-    ds_name: str
-    chunksize: int
-
-    @classmethod
-    def from_file(cls, filename):
-        with open(filename) as inp:
-            d = yaml.load(inp, Loader=yaml.Loader)
-            ret = cls(**d)
-            ret.chunksize = int(ret.chunksize)
-            return ret
 
 
 def download_dataset(client: PortalClient, dsname: str, out_dir: Path):
@@ -160,24 +144,24 @@ def filter_dataset(ds, nprocs, chunksize, out_dir):
 
 def main():
     a = argparse.ArgumentParser()
-    a.add_argument("input_file")
+    a.add_argument("ds_name")
     a.add_argument("--nprocs", "-n", type=int)
+    a.add_argument("--chunksize", "-c", type=int)
     args = a.parse_args()
 
-    conf = Config.from_file(args.input_file)
     with TemporaryDirectory() as d:
         client = _CachedPortalClient(
             "https://api.qcarchive.molssi.org:443/", d
         )
-        out_dir = Path(conf.ds_name.replace(" ", "-"))
+        out_dir = Path(args.ds_name.replace(" ", "-"))
         out_dir.mkdir()
 
-        logger.info(f"Downloading dataset {conf.ds_name} to {out_dir}")
-        ds = download_dataset(client, conf.ds_name, out_dir)
+        logger.info(f"Downloading dataset {args.ds_name} to {out_dir}")
+        ds = download_dataset(client, args.ds_name, out_dir)
 
         with portal_client_manager(lambda _: client):
             logger.info("Filtering dataset with")
-            ds = filter_dataset(ds, args.nprocs, conf.chunksize, out_dir)
+            ds = filter_dataset(ds, args.nprocs, args.chunksize, out_dir)
 
             logger.info("Converting dataset to yammbs input format")
             ds = QCArchiveDataset.from_qcsubmit_collection(ds)
