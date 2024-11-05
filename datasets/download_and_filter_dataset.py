@@ -168,8 +168,8 @@ def filter_dataset(ds, nprocs, chunksize, out_dir):
 def main():
     a = argparse.ArgumentParser()
     a.add_argument("ds_name")
-    a.add_argument("--nprocs", "-n", type=int)
-    a.add_argument("--chunksize", "-c", type=int)
+    a.add_argument("--nprocs", "-n", type=int, default=1)
+    a.add_argument("--chunksize", "-c", type=int, default=1)
     args = a.parse_args()
 
     with TemporaryDirectory() as d:
