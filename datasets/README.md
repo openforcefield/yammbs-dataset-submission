@@ -1,35 +1,29 @@
 ## Adding a new dataset
 The general steps for adding a new dataset are:
-1. Prepare an input YAML file specifying
+1. Run `download_and_filter_dataset.py` passing as arguments:
    * The dataset name on QCArchive
-   * The chunk size for Python's multiprocessing (32 is a good default)
-2. Submit the run on HPC3 with [submit.sh](submit.sh)
-3. Move your input file and Slurm log file into the created dataset directory
-4. Commit the results to the repo
-
-### Input format
-The input file is currently quite simple, just requiring the two fields
-mentioned above. For example:
-
-```yaml
-ds_name: "OpenFF Industry Benchmark Season 1 v1.1"
-chunksize: 32
-```
-
-`ds_name` should correspond to an existing optimization dataset on QCArchive.
-The other two parameters just need to be non-zero integers and will be passed to
-Python's [Pool][pool] and [Pool.imap][imap], respectively.
+   * (optional) The number of CPUs to use in [multiprocessing.Pool][pool],
+     defaults to 1
+   * (optional) The chunk size for [multiprocessing.Pool.imap][imap], defaults
+     to 1
+2. Move your input file and any log files (if run as a batch job, for example)
+   into the created dataset directory
+3. Commit the results to the repo
+4. Open a PR for review before merging
 
 ### Submission script
-`submit.sh` is a Slurm-script-generating script. Basic usage is just
-`./submit.sh input.yaml`, but it also supports a few flags to control the time
-requested (`-t` in hours), the memory requested (`-m` in GB), and the number of
-CPUs (`-n`). These must come before the name of the input file on the command
-line. There's also "dry run" flag (`-d`) that prints the generated sbatch input
-instead of running it immediately.
+`submit.sh` is an example Slurm submission script for running
+`download_and_filter_dataset.py` on UCI's HPC3. It may need to be modified to
+work on other clusters, but please do not include these changes as part of
+dataset submission. Basic usage is just `./submit.sh "Name of QCA dataset"`, but
+it also supports a few flags to control the time requested (`-t` in hours), the
+memory requested (`-m` in GB), the number of CPUs (`-n`), and the [imap][imap]
+chunk size (`-c`) as described above. These must come before the name of the
+input file on the command line. There's also a "dry run" flag (`-d`) that prints
+the generated `sbatch` input instead of running it immediately.
 
 #### Conda environment
-The submission script activates an environment called
+The example submission script activates an environment called
 `yammbs-dataset-submission`, so you'll need to have one of those available. You
 can create such an environment using the provided [env.yaml
 file](../devtools/env.yaml).
