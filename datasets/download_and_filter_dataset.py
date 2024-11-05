@@ -166,7 +166,11 @@ def filter_dataset(ds, nprocs, chunksize, out_dir):
 
 
 def main():
-    a = argparse.ArgumentParser()
+    a = argparse.ArgumentParser(
+        prog="python download_and_filter_dataset.py",
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
     a.add_argument("ds_name")
     a.add_argument("--nprocs", "-n", type=int, default=1)
     a.add_argument("--chunksize", "-c", type=int, default=1)
