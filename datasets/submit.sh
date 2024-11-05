@@ -1,14 +1,24 @@
 #!/bin/bash
 
 # Usage:
-# ./submit.sh COMMAND...
+# ./submit.sh [-h] [-d] [-t CPU_HOURS] [-m GB_MEMORY] [-n NCPUS] [-c CHUNKSIZE] DS_NAME
 #
-# All of the arguments to this script are passed into the body of the sbatch
-# invocation below.
+# The required argument DS_NAME should be the name of an optimization dataset on
+# QCArchive. The other optional flags control job submission and are described
+# below.
+#
+# -h Print a brief usage message and exit
+# -d Print the generated sbatch command and exit instead of invoking sbatch
+# -t The number of CPU hours to request via the SBATCH -t flag, defaults to 288
+# -m The amount of RAM to request via the SBATCH --mem flag, suffixed with "gb",
+#    defaults to 96
+# -n The number of CPUs to request via the SBATCH --cpus-per-task flag, defaults
+#    to 16
+# -c The chunk size to pass to download_and_filter_dataset.py, defaults to 32
 #
 # Slurm output is saved to logs/$date.$pid.out
 
-usage="Usage: $0 [-h] [-d] [-t CPU_HOURS] [-m GB_MEMORY] [-n NCPUS] CMDS..."
+usage="Usage: $0 [-h] [-d] [-t CPU_HOURS] [-m GB_MEMORY] [-n NCPUS] [-c CHUNKSIZE] DS_NAME"
 
 case $# in
 	0) echo 'error: no arguments provided'
