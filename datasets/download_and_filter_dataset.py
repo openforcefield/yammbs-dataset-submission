@@ -1,3 +1,26 @@
+"""Downloads and filters a named dataset from QCArchive.
+
+Usage:
+    python download_and_filter_dataset.py DS_NAME [-n NPROCS] [-c CHUNKSIZE]
+
+This script retrieves the OptimizationResultCollection named DS_NAME from
+QCArchive, applies the RecordStatus, Connectivity, ConformerRMSD, and
+ChargeCheck filters, and stores the resulting JSON files in the directory
+created by replacing spaces in DS_NAME with dashes. The initial
+OptimizationResultCollection is saved in that directory as raw.json, the
+filtered version as filtered.json, and the final yammbs.QCArchiveDataset to be
+used for benchmark runs is saved as cache.json.
+
+The optional arguments NPROCS and CHUNKSIZE control the parallelism of the
+process. NPROCS specifies the size of the multiprocessing.Pool to use for the
+ChargeCheckFilter, while CHUNKSIZE is the Pool.imap chunksize argument
+controlling the number of molecules to batch together. For maximum speed, set
+NPROCS as high as the number of available cores. Similarly, a CHUNKSIZE of 32
+has worked well in previous experiments but something larger should work too. A
+smaller CHUNKSIZE can cause additional overhead submitting small tasks to the
+process Pool.
+"""
+
 import argparse
 import logging
 from collections import defaultdict
