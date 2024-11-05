@@ -1,7 +1,7 @@
 """Downloads and filters a named dataset from QCArchive.
 
 Usage:
-    python download_and_filter_dataset.py DS_NAME [-n NPROCS] [-c CHUNKSIZE]
+    python download_and_filter_dataset.py [-n NPROCS] [-c CHUNKSIZE] DS_NAME
 
 This script retrieves the OptimizationResultCollection named DS_NAME from
 QCArchive, applies the RecordStatus, Connectivity, ConformerRMSD, and
