@@ -171,9 +171,24 @@ def main():
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    a.add_argument("ds_name")
-    a.add_argument("--nprocs", "-n", type=int, default=1)
-    a.add_argument("--chunksize", "-c", type=int, default=1)
+    a.add_argument(
+        "ds_name", help="The name of an optimization dataset on QCArchive"
+    )
+    a.add_argument(
+        "--nprocs",
+        "-n",
+        type=int,
+        default=1,
+        help="The number of processors to use in the multiprocessing.Pool."
+        " Defaults to %(default)d",
+    )
+    a.add_argument(
+        "--chunksize",
+        "-c",
+        type=int,
+        default=1,
+        help="The chunk size to use for Pool.imap. Defaults to %(default)d",
+    )
     args = a.parse_args()
 
     with TemporaryDirectory() as d:
