@@ -14,7 +14,7 @@ logger.setLevel(logging.INFO)
 parser = argparse.ArgumentParser()
 parser.add_argument("files", nargs="+")
 
-URL = "https://sandbox.zenodo.org"
+URL = "https://zenodo.org"
 TOKEN = os.environ["ZENODO_TOKEN"]
 
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
