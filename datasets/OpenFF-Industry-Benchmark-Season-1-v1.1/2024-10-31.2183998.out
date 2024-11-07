@@ -1,0 +1,1274 @@
+Thu Oct 31 15:56:54 PDT 2024
+hpc3-21-03
+34133831
+=== CONDA ENV ===
+# packages in environment at /data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       2_gnu    conda-forge
+ambertools                23.6            cuda_None_nompi_py312h41aabf6_105    conda-forge
+amberutils                21.0                     pypi_0    pypi
+annotated-types           0.7.0              pyhd8ed1ab_0    conda-forge
+anyio                     4.6.2.post1        pyhd8ed1ab_0    conda-forge
+argcomplete               3.5.1              pyhd8ed1ab_0    conda-forge
+argon2-cffi               23.1.0             pyhd8ed1ab_0    conda-forge
+argon2-cffi-bindings      21.2.0          py312h66e93f0_5    conda-forge
+arpack                    3.9.1           nompi_h77f6705_101    conda-forge
+arrow                     1.3.0              pyhd8ed1ab_0    conda-forge
+asttokens                 2.4.1              pyhd8ed1ab_0    conda-forge
+astunparse                1.6.3              pyhd8ed1ab_2    conda-forge
+async-lru                 2.0.4              pyhd8ed1ab_0    conda-forge
+attrs                     24.2.0             pyh71513ae_0    conda-forge
+babel                     2.14.0             pyhd8ed1ab_0    conda-forge
+basis_set_exchange        0.10               pyhd8ed1ab_1    conda-forge
+beautifulsoup4            4.12.3             pyha770c72_0    conda-forge
+bleach                    6.1.0              pyhd8ed1ab_0    conda-forge
+blosc                     1.21.6               hef167b5_0    conda-forge
+brotli                    1.1.0                hb9d3cd8_2    conda-forge
+brotli-bin                1.1.0                hb9d3cd8_2    conda-forge
+brotli-python             1.1.0           py312h2ec8cdc_2    conda-forge
+bson                      0.5.9                      py_0    conda-forge
+bzip2                     1.0.8                h4bc722e_7    conda-forge
+c-ares                    1.34.2               heb4867d_0    conda-forge
+c-blosc2                  2.15.1               hc57e6cf_0    conda-forge
+ca-certificates           2024.8.30            hbcca054_0    conda-forge
+cached-property           1.5.2                hd8ed1ab_1    conda-forge
+cached_property           1.5.2              pyha770c72_1    conda-forge
+cachetools                5.5.0              pyhd8ed1ab_0    conda-forge
+cairo                     1.18.0               hebfffa5_3    conda-forge
+certifi                   2024.8.30          pyhd8ed1ab_0    conda-forge
+cffi                      1.17.1          py312h06ac9bb_0    conda-forge
+chardet                   5.2.0           py312h7900ff3_2    conda-forge
+charset-normalizer        3.4.0              pyhd8ed1ab_0    conda-forge
+click                     8.1.7           unix_pyh707e725_0    conda-forge
+colorama                  0.4.6              pyhd8ed1ab_0    conda-forge
+comm                      0.2.2              pyhd8ed1ab_0    conda-forge
+contourpy                 1.3.0           py312h68727a3_2    conda-forge
+cudatoolkit               11.8.0              h4ba93d1_13    conda-forge
+cycler                    0.12.1             pyhd8ed1ab_0    conda-forge
+debugpy                   1.8.7           py312h2ec8cdc_0    conda-forge
+decorator                 5.1.1              pyhd8ed1ab_0    conda-forge
+defusedxml                0.7.1              pyhd8ed1ab_0    conda-forge
+edgembar                  0.2                      pypi_0    pypi
+entrypoints               0.4                pyhd8ed1ab_0    conda-forge
+exceptiongroup            1.2.2              pyhd8ed1ab_0    conda-forge
+executing                 2.1.0              pyhd8ed1ab_0    conda-forge
+expat                     2.6.3                h5888daf_0    conda-forge
+fftw                      3.3.10          nompi_hf1063bd_110    conda-forge
+font-ttf-dejavu-sans-mono 2.37                 hab24e00_0    conda-forge
+font-ttf-inconsolata      3.000                h77eed37_0    conda-forge
+font-ttf-source-code-pro  2.038                h77eed37_0    conda-forge
+font-ttf-ubuntu           0.83                 h77eed37_3    conda-forge
+fontconfig                2.14.2               h14ed4e7_0    conda-forge
+fonts-conda-ecosystem     1                             0    conda-forge
+fonts-conda-forge         1                             0    conda-forge
+fonttools                 4.54.1          py312h178313f_1    conda-forge
+fqdn                      1.5.1              pyhd8ed1ab_0    conda-forge
+freetype                  2.12.1               h267a509_2    conda-forge
+freetype-py               2.3.0              pyhd8ed1ab_0    conda-forge
+geometric                 1.0.2              pyhd8ed1ab_0    conda-forge
+greenlet                  3.1.1           py312h2ec8cdc_0    conda-forge
+h11                       0.14.0             pyhd8ed1ab_0    conda-forge
+h2                        4.1.0              pyhd8ed1ab_0    conda-forge
+hdf4                      4.2.15               h2a13503_7    conda-forge
+hdf5                      1.14.4          nompi_h2d575fe_101    conda-forge
+hpack                     4.0.0              pyh9f0ad1d_0    conda-forge
+httpcore                  1.0.6              pyhd8ed1ab_0    conda-forge
+httpx                     0.27.2             pyhd8ed1ab_0    conda-forge
+hyperframe                6.0.1              pyhd8ed1ab_0    conda-forge
+icu                       75.1                 he02047a_0    conda-forge
+idna                      3.10               pyhd8ed1ab_0    conda-forge
+importlib-metadata        8.5.0              pyha770c72_0    conda-forge
+importlib_metadata        8.5.0                hd8ed1ab_0    conda-forge
+importlib_resources       6.4.5              pyhd8ed1ab_0    conda-forge
+iniconfig                 2.0.0              pyhd8ed1ab_0    conda-forge
+ipykernel                 6.29.5             pyh3099207_0    conda-forge
+ipython                   8.28.0             pyh707e725_0    conda-forge
+ipywidgets                8.1.5              pyhd8ed1ab_0    conda-forge
+isoduration               20.11.0            pyhd8ed1ab_0    conda-forge
+jedi                      0.19.1             pyhd8ed1ab_0    conda-forge
+jinja2                    3.1.4              pyhd8ed1ab_0    conda-forge
+joblib                    1.4.2              pyhd8ed1ab_0    conda-forge
+json5                     0.9.25             pyhd8ed1ab_0    conda-forge
+jsonpointer               3.0.0           py312h7900ff3_1    conda-forge
+jsonschema                4.23.0             pyhd8ed1ab_0    conda-forge
+jsonschema-specifications 2024.10.1          pyhd8ed1ab_0    conda-forge
+jsonschema-with-format-nongpl 4.23.0               hd8ed1ab_0    conda-forge
+jupyter-lsp               2.2.5              pyhd8ed1ab_0    conda-forge
+jupyter_client            8.6.3              pyhd8ed1ab_0    conda-forge
+jupyter_core              5.7.2              pyh31011fe_1    conda-forge
+jupyter_events            0.10.0             pyhd8ed1ab_0    conda-forge
+jupyter_server            2.14.2             pyhd8ed1ab_0    conda-forge
+jupyter_server_terminals  0.5.3              pyhd8ed1ab_0    conda-forge
+jupyterlab                4.2.5              pyhd8ed1ab_0    conda-forge
+jupyterlab_pygments       0.3.0              pyhd8ed1ab_1    conda-forge
+jupyterlab_server         2.27.3             pyhd8ed1ab_0    conda-forge
+jupyterlab_widgets        3.0.13             pyhd8ed1ab_0    conda-forge
+keyutils                  1.6.1                h166bdaf_0    conda-forge
+kiwisolver                1.4.7           py312h68727a3_0    conda-forge
+krb5                      1.21.3               h659f571_0    conda-forge
+lcms2                     2.16                 hb7c19ff_0    conda-forge
+ld_impl_linux-64          2.43                 h712a8e2_1    conda-forge
+lerc                      4.0.0                h27087fc_0    conda-forge
+libaec                    1.1.3                h59595ed_0    conda-forge
+libblas                   3.9.0           24_linux64_openblas    conda-forge
+libboost                  1.84.0               hb8260a3_6    conda-forge
+libboost-python           1.84.0          py312hc39e661_6    conda-forge
+libbrotlicommon           1.1.0                hb9d3cd8_2    conda-forge
+libbrotlidec              1.1.0                hb9d3cd8_2    conda-forge
+libbrotlienc              1.1.0                hb9d3cd8_2    conda-forge
+libcblas                  3.9.0           24_linux64_openblas    conda-forge
+libcurl                   8.10.1               hbbe4b11_0    conda-forge
+libdeflate                1.22                 hb9d3cd8_0    conda-forge
+libedit                   3.1.20191231         he28a2e2_2    conda-forge
+libev                     4.33                 hd590300_2    conda-forge
+libexpat                  2.6.3                h5888daf_0    conda-forge
+libffi                    3.4.2                h7f98852_5    conda-forge
+libgcc                    14.2.0               h77fa898_1    conda-forge
+libgcc-ng                 14.2.0               h69a702a_1    conda-forge
+libgfortran               14.2.0               h69a702a_1    conda-forge
+libgfortran-ng            14.2.0               h69a702a_1    conda-forge
+libgfortran5              14.2.0               hd5240d6_1    conda-forge
+libglib                   2.82.2               h2ff4ddf_0    conda-forge
+libgomp                   14.2.0               h77fa898_1    conda-forge
+libiconv                  1.17                 hd590300_2    conda-forge
+libjpeg-turbo             3.0.0                hd590300_1    conda-forge
+liblapack                 3.9.0           24_linux64_openblas    conda-forge
+libnetcdf                 4.9.2           nompi_h2564987_115    conda-forge
+libnghttp2                1.64.0               h161d5f1_0    conda-forge
+libnsl                    2.0.1                hd590300_0    conda-forge
+libopenblas               0.3.27          pthreads_hac2b453_1    conda-forge
+libpng                    1.6.44               hadc24fc_0    conda-forge
+libpq                     16.4                 h2d7952a_3    conda-forge
+librdkit                  2024.03.5            h79cfef2_3    conda-forge
+libsodium                 1.0.20               h4ab18f5_0    conda-forge
+libsqlite                 3.47.0               hadc24fc_0    conda-forge
+libssh2                   1.11.0               h0841786_0    conda-forge
+libstdcxx                 14.2.0               hc0a3c3a_1    conda-forge
+libstdcxx-ng              14.2.0               h4852527_1    conda-forge
+libtiff                   4.7.0                he137b08_1    conda-forge
+libuuid                   2.38.1               h0b41bf4_0    conda-forge
+libwebp-base              1.4.0                hd590300_0    conda-forge
+libxcb                    1.17.0               h8a09558_0    conda-forge
+libxcrypt                 4.4.36               hd590300_1    conda-forge
+libxml2                   2.12.7               he7c6b58_4    conda-forge
+libzip                    1.11.1               hf83b1b0_0    conda-forge
+libzlib                   1.3.1                hb9d3cd8_2    conda-forge
+lz4-c                     1.9.4                hcb278e6_0    conda-forge
+markupsafe                3.0.2           py312h178313f_0    conda-forge
+matplotlib-base           3.9.2           py312hd3ec401_1    conda-forge
+matplotlib-inline         0.1.7              pyhd8ed1ab_0    conda-forge
+mda-xdrlib                0.2.0              pyhd8ed1ab_0    conda-forge
+mdtraj                    1.10.0          py312h0b8b674_0    conda-forge
+mistune                   3.0.2              pyhd8ed1ab_0    conda-forge
+mmpbsa-py                 16.0                     pypi_0    pypi
+msgpack-python            1.1.0           py312h68727a3_0    conda-forge
+munkres                   1.1.4              pyh9f0ad1d_0    conda-forge
+nbclient                  0.10.0             pyhd8ed1ab_0    conda-forge
+nbconvert-core            7.16.4             pyhd8ed1ab_1    conda-forge
+nbformat                  5.10.4             pyhd8ed1ab_0    conda-forge
+ncurses                   6.5                  he02047a_1    conda-forge
+nest-asyncio              1.6.0              pyhd8ed1ab_0    conda-forge
+netcdf-fortran            4.6.1           nompi_ha5d1325_107    conda-forge
+networkx                  3.4.2              pyhd8ed1ab_0    conda-forge
+nomkl                     1.0                  h5ca1d4c_0    conda-forge
+notebook                  7.2.2              pyhd8ed1ab_0    conda-forge
+notebook-shim             0.2.4              pyhd8ed1ab_0    conda-forge
+numexpr                   2.10.1          py312h6a710ac_102    conda-forge
+numpy                     1.26.4          py312heda63a1_0    conda-forge
+ocl-icd                   2.3.2                hd590300_1    conda-forge
+ocl-icd-system            1.0.0                         1    conda-forge
+openeye-toolkits          2024.1.1                py312_0    openeye
+openff-amber-ff-ports     0.0.4              pyhca7485f_0    conda-forge
+openff-forcefields        2024.09.0          pyhff2d567_0    conda-forge
+openff-interchange        0.3.29             pyhd8ed1ab_0    conda-forge
+openff-interchange-base   0.3.29             pyhd8ed1ab_0    conda-forge
+openff-models             0.1.2              pyhca7485f_0    conda-forge
+openff-qcsubmit           0.53.0             pyhd8ed1ab_1    conda-forge
+openff-toolkit            0.16.5             pyhd8ed1ab_0    conda-forge
+openff-toolkit-base       0.16.5             pyhd8ed1ab_0    conda-forge
+openff-units              0.2.2              pyhca7485f_0    conda-forge
+openff-utilities          0.1.12             pyhd8ed1ab_0    conda-forge
+openjpeg                  2.5.2                h488ebb8_0    conda-forge
+openmm                    8.1.2           py312h3328022_2    conda-forge
+openssl                   3.3.2                hb9d3cd8_0    conda-forge
+overrides                 7.7.0              pyhd8ed1ab_0    conda-forge
+packaging                 24.1               pyhd8ed1ab_0    conda-forge
+packmol-memgen            2024.2.9                 pypi_0    pypi
+pandas                    2.2.3           py312hf9745cd_1    conda-forge
+pandocfilters             1.5.0              pyhd8ed1ab_0    conda-forge
+panedr                    0.8.0              pyhd8ed1ab_0    conda-forge
+parmed                    4.2.2           py312h30efb56_1    conda-forge
+parso                     0.8.4              pyhd8ed1ab_0    conda-forge
+pcre2                     10.44                hba22ea6_2    conda-forge
+pdb4amber                 22.0                     pypi_0    pypi
+perl                      5.32.1          7_hd590300_perl5    conda-forge
+pexpect                   4.9.0              pyhd8ed1ab_0    conda-forge
+pickleshare               0.7.5                   py_1003    conda-forge
+pillow                    11.0.0          py312h7b63e92_0    conda-forge
+pint                      0.23               pyhd8ed1ab_1    conda-forge
+pip                       24.2               pyh8b19718_1    conda-forge
+pixman                    0.43.2               h59595ed_0    conda-forge
+pkgutil-resolve-name      1.3.10             pyhd8ed1ab_1    conda-forge
+platformdirs              4.3.6              pyhd8ed1ab_0    conda-forge
+pluggy                    1.5.0              pyhd8ed1ab_0    conda-forge
+prometheus_client         0.21.0             pyhd8ed1ab_0    conda-forge
+prompt-toolkit            3.0.48             pyha770c72_0    conda-forge
+psutil                    6.0.0           py312h66e93f0_2    conda-forge
+pthread-stubs             0.4               hb9d3cd8_1002    conda-forge
+ptyprocess                0.7.0              pyhd3deb0d_0    conda-forge
+pure_eval                 0.2.3              pyhd8ed1ab_0    conda-forge
+py-cpuinfo                9.0.0              pyhd8ed1ab_0    conda-forge
+pycairo                   1.27.0          py312h51b637d_0    conda-forge
+pycparser                 2.22               pyhd8ed1ab_0    conda-forge
+pydantic                  2.9.2              pyhd8ed1ab_0    conda-forge
+pydantic-core             2.23.4          py312h12e396e_0    conda-forge
+pyedr                     0.8.0              pyhd8ed1ab_0    conda-forge
+pygments                  2.18.0             pyhd8ed1ab_0    conda-forge
+pyjwt                     2.9.0              pyhd8ed1ab_1    conda-forge
+pymsmt                    22.0                     pypi_0    pypi
+pyparsing                 3.2.0              pyhd8ed1ab_1    conda-forge
+pysocks                   1.7.1              pyha2e5f31_6    conda-forge
+pytables                  3.10.1          py312hf8651a9_3    conda-forge
+pytest                    8.3.3              pyhd8ed1ab_0    conda-forge
+python                    3.12.7          hc5c86c4_0_cpython    conda-forge
+python-constraint         1.4.0                      py_0    conda-forge
+python-dateutil           2.9.0              pyhd8ed1ab_0    conda-forge
+python-fastjsonschema     2.20.0             pyhd8ed1ab_0    conda-forge
+python-json-logger        2.0.7              pyhd8ed1ab_0    conda-forge
+python-tzdata             2024.2             pyhd8ed1ab_0    conda-forge
+python_abi                3.12                    5_cp312    conda-forge
+pytraj                    2.0.6                    pypi_0    pypi
+pytz                      2024.1             pyhd8ed1ab_0    conda-forge
+pyyaml                    6.0.2           py312h66e93f0_1    conda-forge
+pyzmq                     26.2.0          py312hbf22597_3    conda-forge
+qcelemental               0.28.0             pyhd8ed1ab_1    conda-forge
+qcportal                  0.54.1             pyhd8ed1ab_0    conda-forge
+qhull                     2020.2               h434a139_5    conda-forge
+rdkit                     2024.03.5       py312h7b4b7d0_3    conda-forge
+readline                  8.2                  h8228510_1    conda-forge
+referencing               0.35.1             pyhd8ed1ab_0    conda-forge
+regex                     2024.9.11       py312h66e93f0_0    conda-forge
+reportlab                 4.2.5           py312h66e93f0_0    conda-forge
+requests                  2.32.3             pyhd8ed1ab_0    conda-forge
+rfc3339-validator         0.1.4              pyhd8ed1ab_0    conda-forge
+rfc3986-validator         0.1.1              pyh9f0ad1d_0    conda-forge
+rlpycairo                 0.2.0              pyhd8ed1ab_0    conda-forge
+rpds-py                   0.20.0          py312h12e396e_1    conda-forge
+sander                    22.0                     pypi_0    pypi
+scipy                     1.14.1          py312h62794b6_1    conda-forge
+send2trash                1.8.3              pyh0d859eb_0    conda-forge
+setuptools                75.1.0             pyhd8ed1ab_0    conda-forge
+six                       1.16.0             pyh6c4a22f_0    conda-forge
+smirnoff99frosst          1.1.0              pyh44b312d_0    conda-forge
+snappy                    1.2.1                ha2e4443_0    conda-forge
+sniffio                   1.3.1              pyhd8ed1ab_0    conda-forge
+soupsieve                 2.5                pyhd8ed1ab_1    conda-forge
+sqlalchemy                2.0.36          py312h66e93f0_0    conda-forge
+stack_data                0.6.2              pyhd8ed1ab_0    conda-forge
+tabulate                  0.9.0              pyhd8ed1ab_1    conda-forge
+terminado                 0.18.1             pyh0d859eb_0    conda-forge
+tinycss2                  1.3.0              pyhd8ed1ab_0    conda-forge
+tk                        8.6.13          noxft_h4845f30_101    conda-forge
+tomli                     2.0.2              pyhd8ed1ab_0    conda-forge
+tornado                   6.4.1           py312h66e93f0_1    conda-forge
+tqdm                      4.66.5             pyhd8ed1ab_0    conda-forge
+traitlets                 5.14.3             pyhd8ed1ab_0    conda-forge
+types-python-dateutil     2.9.0.20241003     pyhff2d567_0    conda-forge
+typing-extensions         4.12.2               hd8ed1ab_0    conda-forge
+typing_extensions         4.12.2             pyha770c72_0    conda-forge
+typing_utils              0.1.0              pyhd8ed1ab_0    conda-forge
+tzdata                    2024b                hc8b5060_0    conda-forge
+unicodedata2              15.1.0          py312h98912ed_0    conda-forge
+unidecode                 1.3.8              pyhd8ed1ab_0    conda-forge
+uri-template              1.3.0              pyhd8ed1ab_0    conda-forge
+urllib3                   2.2.3              pyhd8ed1ab_0    conda-forge
+wcwidth                   0.2.13             pyhd8ed1ab_0    conda-forge
+webcolors                 24.8.0             pyhd8ed1ab_0    conda-forge
+webencodings              0.5.1              pyhd8ed1ab_2    conda-forge
+websocket-client          1.8.0              pyhd8ed1ab_0    conda-forge
+wheel                     0.44.0             pyhd8ed1ab_0    conda-forge
+widgetsnbextension        4.0.13             pyhd8ed1ab_0    conda-forge
+xmltodict                 0.14.2             pyhd8ed1ab_0    conda-forge
+xorg-libice               1.1.1                hb9d3cd8_1    conda-forge
+xorg-libsm                1.2.4                he73a12e_1    conda-forge
+xorg-libx11               1.8.10               h4f16b4b_0    conda-forge
+xorg-libxau               1.0.11               hb9d3cd8_1    conda-forge
+xorg-libxdmcp             1.1.5                hb9d3cd8_0    conda-forge
+xorg-libxext              1.3.6                hb9d3cd8_0    conda-forge
+xorg-libxrender           0.9.11               hb9d3cd8_1    conda-forge
+xorg-libxt                1.3.0                hb9d3cd8_2    conda-forge
+xorg-xorgproto            2024.1               hb9d3cd8_1    conda-forge
+xz                        5.2.6                h166bdaf_0    conda-forge
+yaml                      0.2.5                h7f98852_2    conda-forge
+yammbs                    0+untagged.281.gee6d0dc          pypi_0    pypi
+zeromq                    4.3.5                h3b0a872_6    conda-forge
+zipp                      3.20.2             pyhd8ed1ab_0    conda-forge
+zlib                      1.3.1                hb9d3cd8_2    conda-forge
+zlib-ng                   2.2.2                h5888daf_0    conda-forge
+zstandard                 0.23.0          py312hef9b889_1    conda-forge
+zstd                      1.5.6                ha6fb4c9_0    conda-forge
+
+/data/homezvol0/bwestbr1/oe_license.txt
+=== INPUT FILE ===
+ds_name: "OpenFF Industry Benchmark Season 1 v1.1"
+chunksize: 32
+
+INFO:__main__:Downloading dataset OpenFF Industry Benchmark Season 1 v1.1 to OpenFF-Industry-Benchmark-Season-1-v1.1
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00015-0 with invalid CMILES [C:1]([C:2]1=[C:3]([H:21])[C@@:4]([NH+:15]([H:33])[H:34])([H:22])[C@:5]([N:12]([C:10]([C:11]([H:29])([H:30])[H:31])=[O:20])[H:32])([H:23])[C@@:6]([C@@:7]([C@@:8]([C:9]([NH+:19]([H:37])[H:38])([H:27])[H:28])([O:18][H:36])[H:26])([O:17][H:35])[H:25])([H:24])[O:16]1)(=[O:13])[O-:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00015-2 with invalid CMILES [C:1]([C:2]1=[C:3]([H:21])[C@@:4]([NH+:15]([H:33])[H:34])([H:22])[C@:5]([N:12]([C:10]([C:11]([H:29])([H:30])[H:31])=[O:20])[H:32])([H:23])[C@@:6]([C@@:7]([C@@:8]([C:9]([NH+:19]([H:37])[H:38])([H:27])[H:28])([O:18][H:36])[H:26])([O:17][H:35])[H:25])([H:24])[O:16]1)(=[O:13])[O-:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00015-3 with invalid CMILES [C:1]([C:2]1=[C:3]([H:21])[C@@:4]([NH+:15]([H:33])[H:34])([H:22])[C@:5]([N:12]([C:10]([C:11]([H:29])([H:30])[H:31])=[O:20])[H:32])([H:23])[C@@:6]([C@@:7]([C@@:8]([C:9]([NH+:19]([H:37])[H:38])([H:27])[H:28])([O:18][H:36])[H:26])([O:17][H:35])[H:25])([H:24])[O:16]1)(=[O:13])[O-:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00015-5 with invalid CMILES [C:1]([C:2]1=[C:3]([H:21])[C@@:4]([NH+:15]([H:33])[H:34])([H:22])[C@:5]([N:12]([C:10]([C:11]([H:29])([H:30])[H:31])=[O:20])[H:32])([H:23])[C@@:6]([C@@:7]([C@@:8]([C:9]([NH+:19]([H:37])[H:38])([H:27])[H:28])([O:18][H:36])[H:26])([O:17][H:35])[H:25])([H:24])[O:16]1)(=[O:13])[O-:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00015-7 with invalid CMILES [C:1]([C:2]1=[C:3]([H:21])[C@@:4]([NH+:15]([H:33])[H:34])([H:22])[C@:5]([N:12]([C:10]([C:11]([H:29])([H:30])[H:31])=[O:20])[H:32])([H:23])[C@@:6]([C@@:7]([C@@:8]([C:9]([NH+:19]([H:37])[H:38])([H:27])[H:28])([O:18][H:36])[H:26])([O:17][H:35])[H:25])([H:24])[O:16]1)(=[O:13])[O-:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00061-0 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00061-1 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00061-4 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00061-6 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00061-7 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00114-0 with invalid CMILES [NH+:1]([C@:2]([C:3](=[O:4])[O-:10])([C:5]([C:6]([C:7]([C:8]([NH+:9]([H:22])[H:23])([H:20])[H:21])([H:18])[H:19])([H:16])[H:17])([H:14])[H:15])[H:13])([H:11])[H:12]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00114-1 with invalid CMILES [NH+:1]([C@:2]([C:3](=[O:4])[O-:10])([C:5]([C:6]([C:7]([C:8]([NH+:9]([H:22])[H:23])([H:20])[H:21])([H:18])[H:19])([H:16])[H:17])([H:14])[H:15])[H:13])([H:11])[H:12]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00114-2 with invalid CMILES [NH+:1]([C@:2]([C:3](=[O:4])[O-:10])([C:5]([C:6]([C:7]([C:8]([NH+:9]([H:22])[H:23])([H:20])[H:21])([H:18])[H:19])([H:16])[H:17])([H:14])[H:15])[H:13])([H:11])[H:12]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00115-0 with invalid CMILES [NH+:1]([C@:2]([C:3](=[O:4])[O-:12])([C:5]([C:6]([C:7]([N:8](/[C:9]([N:10]([H:23])[H:24])=[NH+:11]/[H:25])[H:22])([H:20])[H:21])([H:18])[H:19])([H:16])[H:17])[H:15])([H:13])[H:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00115-3 with invalid CMILES [NH+:1]([C@:2]([C:3](=[O:4])[O-:12])([C:5]([C:6]([C:7]([N:8](/[C:9]([N:10]([H:23])[H:24])=[NH+:11]/[H:25])[H:22])([H:20])[H:21])([H:18])[H:19])([H:16])[H:17])[H:15])([H:13])[H:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00115-5 with invalid CMILES [NH+:1]([C@:2]([C:3](=[O:4])[O-:12])([C:5]([C:6]([C:7]([N:8](/[C:9]([N:10]([H:23])[H:24])=[NH+:11]/[H:25])[H:22])([H:20])[H:21])([H:18])[H:19])([H:16])[H:17])[H:15])([H:13])[H:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00115-7 with invalid CMILES [NH+:1]([C@:2]([C:3](=[O:4])[O-:12])([C:5]([C:6]([C:7]([N:8](/[C:9]([N:10]([H:23])[H:24])=[NH+:11]/[H:25])[H:22])([H:20])[H:21])([H:18])[H:19])([H:16])[H:17])[H:15])([H:13])[H:14]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00141-0 with invalid CMILES [N:1]1([C:19]([C@:20]([NH+:21]([H:43])[H:44])([C:22]([C:23]([H:47])([H:48])[H:49])([H:45])[H:46])[H:42])=[O:24])[C@@:2]([C:3](=[O:4])[N:5]([C:6]([c:7]2[c:8]([H:29])[c:9]([H:30])[c:10](/[C:11](=[NH+:12]/[H:31])[N:13]([H:32])[H:33])[c:14]([H:34])[c:15]2[H:35])([H:27])[H:28])[H:26])([H:25])[C:16]([H:36])([H:37])[C:17]([H:38])([H:39])[C:18]1([H:40])[H:41]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00141-3 with invalid CMILES [N:1]1([C:19]([C@:20]([NH+:21]([H:43])[H:44])([C:22]([C:23]([H:47])([H:48])[H:49])([H:45])[H:46])[H:42])=[O:24])[C@@:2]([C:3](=[O:4])[N:5]([C:6]([c:7]2[c:8]([H:29])[c:9]([H:30])[c:10](/[C:11](=[NH+:12]/[H:31])[N:13]([H:32])[H:33])[c:14]([H:34])[c:15]2[H:35])([H:27])[H:28])[H:26])([H:25])[C:16]([H:36])([H:37])[C:17]([H:38])([H:39])[C:18]1([H:40])[H:41]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00141-5 with invalid CMILES [N:1]1([C:19]([C@:20]([NH+:21]([H:43])[H:44])([C:22]([C:23]([H:47])([H:48])[H:49])([H:45])[H:46])[H:42])=[O:24])[C@@:2]([C:3](=[O:4])[N:5]([C:6]([c:7]2[c:8]([H:29])[c:9]([H:30])[c:10](/[C:11](=[NH+:12]/[H:31])[N:13]([H:32])[H:33])[c:14]([H:34])[c:15]2[H:35])([H:27])[H:28])[H:26])([H:25])[C:16]([H:36])([H:37])[C:17]([H:38])([H:39])[C:18]1([H:40])[H:41]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00142-0 with invalid CMILES [O:1]=[C:2]([N:3]([C:4]([c:5]1[c:6]([H:26])[c:7]([H:27])[c:8](/[C:9](=[NH+:10]/[H:28])[N:11]([H:29])[H:30])[c:12]([H:31])[c:13]1[H:32])([H:24])[H:25])[H:23])[C@@:14]1([H:33])[C:15]([H:34])([H:35])[C:16]([H:36])([H:37])[C:17]([H:38])([H:39])[N:18]1[C:19](=[O:20])[C:21]([NH+:22]([H:42])[H:43])([H:40])[H:41]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00142-3 with invalid CMILES [O:1]=[C:2]([N:3]([C:4]([c:5]1[c:6]([H:26])[c:7]([H:27])[c:8](/[C:9](=[NH+:10]/[H:28])[N:11]([H:29])[H:30])[c:12]([H:31])[c:13]1[H:32])([H:24])[H:25])[H:23])[C@@:14]1([H:33])[C:15]([H:34])([H:35])[C:16]([H:36])([H:37])[C:17]([H:38])([H:39])[N:18]1[C:19](=[O:20])[C:21]([NH+:22]([H:42])[H:43])([H:40])[H:41]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00142-9 with invalid CMILES [O:1]=[C:2]([N:3]([C:4]([c:5]1[c:6]([H:26])[c:7]([H:27])[c:8](/[C:9](=[NH+:10]/[H:28])[N:11]([H:29])[H:30])[c:12]([H:31])[c:13]1[H:32])([H:24])[H:25])[H:23])[C@@:14]1([H:33])[C:15]([H:34])([H:35])[C:16]([H:36])([H:37])[C:17]([H:38])([H:39])[N:18]1[C:19](=[O:20])[C:21]([NH+:22]([H:42])[H:43])([H:40])[H:41]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00163-2 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00163-3 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00163-4 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00163-5 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00163-7 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00163-8 with invalid CMILES [C:1]([c:2]1[c:3]([H:31])[c:4]([H:32])[c:7](/[C:8]([N:9]([H:35])[H:36])=[NH+:10]/[H:37])[c:6]([H:34])[c:5]1[H:33])([C@:21]1([H:47])[C:22]([H:48])([H:49])[C:23]([H:50])([H:51])[C:24]([H:52])([H:53])[C:25]([H:54])([H:55])[C@:26]([C:11]([c:12]2[c:13]([H:40])[c:14]([H:41])[c:17](/[C:18]([N:19]([H:44])[H:45])=[NH+:20]/[H:46])[c:16]([H:43])[c:15]2[H:42])([H:38])[H:39])([H:56])[C:27]1=[O:28])([H:29])[H:30]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-0 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-1 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-2 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-4 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-5 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-7 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-8 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00188-9 with invalid CMILES [NH+:1](=[C:2](/[N:3]([H:26])[H:27])[c:4]1[c:5]([H:28])[c:6]2[c:7]([H:29])[c:8]([H:30])[c:9]([C:14](=[O:15])[N:16]([c:17]3[c:18]([H:35])[c:19]([H:36])[c:20]([C:23]([NH+:24]([H:41])[H:42])([H:39])[H:40])[c:21]([H:37])[c:22]3[H:38])[H:34])[c:10]([H:31])[c:11]2[c:12]([H:32])[c:13]1[H:33])\[H:25]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-0 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-1 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-2 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-3 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-4 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-5 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-6 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-7 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-8 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+/data/homezvol0/bwestbr1/mambaforge/envs/yammbs-dataset-submission/lib/python3.12/site-packages/openff/qcsubmit/results/results.py:488: UserWarning: Skipping entry gnt-00284-9 with invalid CMILES [F:1][c:2]1[c:3]([H:32])[c:4]([H:33])[c:5]([H:34])[c:6]([F:7])[c:8]1[C:9]1=[N:12][N:13]2[C:14](=[C:15]([H:37])[N:16]=[C:17]2[N:18]([c:19]2[c:20]([H:39])[nH+:21][c:22]([H:40])[c:23]([H:41])[c:24]2[N:25]2[C:26]([H:42])([H:43])[C@:30]([NH+:31]([H:51])[H:52])([H:50])[C:29]([H:48])([H:49])[C:28]([H:46])([H:47])[C:27]2([H:44])[H:45])[H:38])[C:11]([H:36])=[C:10]1[H:35]
+  warnings.warn(
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:__main__:Filtering dataset with
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:openff.qcsubmit.results.filters:0 results were removed after applying a NoisyFilter filter.
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:openff.qcsubmit.results.filters:0 results were removed after applying a RecordStatusFilter filter.
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:openff.qcsubmit.results.filters:0 results were removed after applying a NoisyFilter filter.
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+INFO:openff.qcsubmit.results.filters:216 results were removed after applying a ConnectivityFilter filter.
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:openff.qcsubmit.results.filters:0 results were removed after applying a NoisyFilter filter.
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:openff.qcsubmit.results.filters:11730 results were removed after applying a ConformerRMSDFilter filter.
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:openff.qcsubmit.results.filters:0 results were removed after applying a NoisyFilter filter.
+INFO:__main__:starting to_records
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:__main__:finished to records
+starting filter: RecordStatus on 76666 records
+starting filter: Connectivity on 76666 records
+starting filter: ConformerRMSD on 76450 records
+starting filter: ChargeCheck on 64720 records
+Filtering charge errors:   0%|          | 0/64720 [00:00<?, ?it/s]Filtering charge errors:   0%|          | 1/64720 [06:12<6692:12:11, 372.25s/it]Filtering charge errors:   0%|          | 33/64720 [22:22<676:06:43, 37.63s/it] Filtering charge errors:   1%|          | 385/64720 [34:59<77:09:29,  4.32s/it]Filtering charge errors:   1%|          | 641/64720 [35:40<40:19:23,  2.27s/it]Filtering charge errors:   1%|          | 737/64720 [43:23<49:45:23,  2.80s/it]Filtering charge errors:   2%|▏         | 1121/64720 [47:13<28:17:59,  1.60s/it]Filtering charge errors:   2%|▏         | 1153/64720 [50:25<33:00:39,  1.87s/it]Filtering charge errors:   2%|▏         | 1185/64720 [50:53<31:33:46,  1.79s/it]Filtering charge errors:   2%|▏         | 1217/64720 [51:40<30:58:38,  1.76s/it]Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: template fit failed.  rms/cutoff = 0.53/0.15
+Warning: 1024 max ring conf limit reached for C[C@H]1C(=O)N2C[C@@H](C[C@@H]2[CH2])OC(=O)N3Cc4cccc(c4C3)CCCCC(COC(=O)N1)(C)C
+Filtering charge errors:   2%|▏         | 1249/64720 [2:48:44<521:38:37, 29.59s/it]Filtering charge errors:   6%|▌         | 3681/64720 [2:53:49<35:42:10,  2.11s/it] Filtering charge errors:   7%|▋         | 4321/64720 [2:56:09<27:06:43,  1.62s/it]Filtering charge errors:   7%|▋         | 4417/64720 [3:03:01<29:25:48,  1.76s/it]Filtering charge errors:   7%|▋         | 4513/64720 [3:06:55<30:10:56,  1.80s/it]Filtering charge errors:   7%|▋         | 4737/64720 [3:22:35<37:36:15,  2.26s/it]Filtering charge errors:   8%|▊         | 5121/64720 [3:27:23<29:27:57,  1.78s/it]Filtering charge errors:   8%|▊         | 5153/64720 [3:28:37<29:46:41,  1.80s/it]Filtering charge errors:   8%|▊         | 5185/64720 [3:43:34<51:09:39,  3.09s/it]Filtering charge errors:   9%|▉         | 5729/64720 [3:46:38<26:04:11,  1.59s/it]Filtering charge errors:   9%|▉         | 5857/64720 [3:52:47<29:17:09,  1.79s/it]Filtering charge errors:   9%|▉         | 6049/64720 [3:59:52<30:55:05,  1.90s/it]Filtering charge errors:  10%|▉         | 6177/64720 [4:02:10<28:17:58,  1.74s/it]Filtering charge errors:  10%|█         | 6497/64720 [4:02:20<16:54:05,  1.05s/it]Filtering charge errors:  10%|█         | 6497/64720 [4:02:31<16:54:05,  1.05s/it]Filtering charge errors:  10%|█         | 6529/64720 [4:09:33<27:57:56,  1.73s/it]Filtering charge errors:  10%|█         | 6625/64720 [4:09:59<23:27:16,  1.45s/it]Filtering charge errors:  10%|█         | 6657/64720 [4:12:15<27:09:12,  1.68s/it]Filtering charge errors:  10%|█         | 6689/64720 [6:20:14<434:55:36, 26.98s/it]Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 30 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 5 P on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 36 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 S on residue UNL-1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 47 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Filtering charge errors:  16%|█▌        | 10081/64720 [6:47:53<30:58:21,  2.04s/it]Filtering charge errors:  17%|█▋        | 10881/64720 [7:09:38<29:02:41,  1.94s/it]Filtering charge errors:  18%|█▊        | 11425/64720 [7:19:15<26:16:37,  1.77s/it]Filtering charge errors:  18%|█▊        | 11969/64720 [7:22:32<21:35:32,  1.47s/it]Filtering charge errors:  19%|█▊        | 12129/64720 [7:40:03<27:38:47,  1.89s/it]Filtering charge errors:  19%|█▉        | 12321/64720 [7:50:02<29:45:17,  2.04s/it]Filtering charge errors:  19%|█▉        | 12513/64720 [8:01:07<32:43:40,  2.26s/it]Filtering charge errors:  19%|█▉        | 12545/64720 [8:16:26<45:56:11,  3.17s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: OEMMFFParams::PrepMol() : unable to type atom 8 C on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: : Failed due to unspecified stereochemistry
+Warning: OEMMFFParams::PrepMol() : unable to type atom 8 C on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: : Failed due to unspecified stereochemistry
+Warning: OEMMFFParams::PrepMol() : unable to type atom 8 C on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: : Failed due to unspecified stereochemistry
+Warning: OEMMFFParams::PrepMol() : unable to type atom 8 C on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: : Failed due to unspecified stereochemistry
+Warning: OEMMFFParams::PrepMol() : unable to type atom 6 C on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Filtering charge errors:  21%|██        | 13729/64720 [8:20:15<17:40:31,  1.25s/it]Filtering charge errors:  21%|██▏       | 13761/64720 [8:21:37<18:06:40,  1.28s/it]Filtering charge errors:  22%|██▏       | 14177/64720 [8:21:41<12:25:12,  1.13it/s]Filtering charge errors:  22%|██▏       | 14177/64720 [8:21:53<12:25:12,  1.13it/s]Filtering charge errors:  22%|██▏       | 14369/64720 [8:29:45<16:15:53,  1.16s/it]Filtering charge errors:  22%|██▏       | 14561/64720 [8:31:04<14:09:20,  1.02s/it]Filtering charge errors:  23%|██▎       | 14753/64720 [8:35:20<15:04:26,  1.09s/it]Filtering charge errors:  23%|██▎       | 14881/64720 [8:35:42<12:50:19,  1.08it/s]Filtering charge errors:  23%|██▎       | 15009/64720 [8:42:40<19:10:46,  1.39s/it]Filtering charge errors:  24%|██▎       | 15329/64720 [8:42:57<11:29:00,  1.19it/s]Filtering charge errors:  24%|██▎       | 15329/64720 [8:43:13<11:29:00,  1.19it/s]Filtering charge errors:  24%|██▎       | 15361/64720 [8:48:40<19:02:45,  1.39s/it]Filtering charge errors:  24%|██▍       | 15617/64720 [8:55:00<19:27:12,  1.43s/it]Filtering charge errors:  24%|██▍       | 15713/64720 [8:56:06<17:40:45,  1.30s/it]Filtering charge errors:  24%|██▍       | 15777/64720 [9:08:56<38:13:31,  2.81s/it]Filtering charge errors:  25%|██▍       | 16097/64720 [9:21:15<34:34:29,  2.56s/it]Filtering charge errors:  26%|██▌       | 16673/64720 [9:26:01<18:38:54,  1.40s/it]Filtering charge errors:  26%|██▌       | 16705/64720 [9:27:37<19:33:09,  1.47s/it]Filtering charge errors:  26%|██▌       | 16897/64720 [9:27:46<14:24:53,  1.09s/it]Filtering charge errors:  26%|██▌       | 16897/64720 [9:28:03<14:24:53,  1.09s/it]Filtering charge errors:  26%|██▌       | 16929/64720 [9:28:38<14:50:46,  1.12s/it]Filtering charge errors:  26%|██▌       | 16961/64720 [9:30:03<16:25:59,  1.24s/it]Filtering charge errors:  26%|██▋       | 16993/64720 [9:36:15<30:24:45,  2.29s/it]Filtering charge errors:  27%|██▋       | 17153/64720 [9:39:37<24:34:17,  1.86s/it]Warning: 1024 max ring conf limit reached for C[C@H]1C(=O)NCC(=O)NCc2cccc(c2)Nc3cc(ncn3)Nc4cccc(c4)C(=O)N1
+Filtering charge errors:  27%|██▋       | 17217/64720 [9:51:15<47:38:40,  3.61s/it]Filtering charge errors:  27%|██▋       | 17569/64720 [9:53:27<21:43:39,  1.66s/it]Filtering charge errors:  27%|██▋       | 17729/64720 [9:58:50<22:58:43,  1.76s/it]Filtering charge errors:  27%|██▋       | 17761/64720 [10:05:17<32:59:49,  2.53s/it]Warning: 1024 max ring conf limit reached for C[C@H]1C(=O)NCCCNc2ncc(cn2)-c3ccnc(c3)Nc4cccc(c4)CN5CCN1CC5
+Filtering charge errors:  28%|██▊       | 17985/64720 [10:13:45<31:22:48,  2.42s/it]Filtering charge errors:  28%|██▊       | 18017/64720 [10:19:04<39:12:42,  3.02s/it]Warning: 1024 max ring conf limit reached for c1cc\2cc(c1)OCC(=O)NCCN3CCN(CC3)c4c5c(c[nH]c5ncn4)/C=N2
+Warning: 1024 max ring conf limit reached for CN1CCCNC(=O)CCCOc2cccc(c2)Nc3c4c(c[nH]c4ncn3)C1
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)Nc3cc(ccn3)-c4cnc(nc4)NCCCNC(=O)CN5C[C@H]6CC[C@@H]5CN6C2
+Warning: 1024 max ring conf limit reached for C[C@@H]1CN(CCCc2c[nH]c3c2c(ncn3)Nc4cccc(c4)OCC(=O)N1)C
+Warning: 1024 max ring conf limit reached for C[C@@H]1CN2CCN1Cc3cccc(c3)Nc4cc(ccn4)-c5cnc(nc5)NCCCNC(=O)C2
+Warning: 1024 max ring conf limit reached for C[C@H]1C(=O)N2CCN(CC2)c3c4c(c[nH]c4ncn3)/C=N\c5cccc(c5)OCCCN1C
+Warning: 1024 max ring conf limit reached for C[C@H]1c2cccc(c2)Nc3cc(ccn3)-c4cnc(nc4)NCCCNC(=O)C5(CC5)N6CCN1CC6
+Warning: 1024 max ring conf limit reached for CN1CCC(=O)NCCOc2ccccc2Nc3nccc(n3)Nc4cccc(c4)C1
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)Nc3nccc(n3)-c4ccc(nc4)NC(=O)CCNC(=O)CN5CCN(C2)CC5
+Filtering charge errors:  28%|██▊       | 18049/64720 [10:30:15<63:04:59,  4.87s/it]Warning: 1024 max ring conf limit reached for c1cc2cc(c1)Nc3nccc(n3)-c4ccc(nc4)NCCCNC(=O)CN5CCN(C2)CC5
+Warning: 1024 max ring conf limit reached for CN1CCCC(=O)NCCOc2cccc(c2)Nc3cc(ncn3)Nc4cccc(c4)C1
+Warning: OEMMFFParams::PrepMol() : unable to type atom 10 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 10 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: 1024 max ring conf limit reached for CC1(CN2CCN1CC(=O)NCCCNc3ncc(cn3)-c4ccnc(c4)Nc5cccc(c5)C2)C
+Filtering charge errors:  29%|██▉       | 18721/64720 [10:41:22<24:48:22,  1.94s/it]Warning: 1024 max ring conf limit reached for c1cc2cc(c1)Nc3cc(ncn3)Nc4cccc(c4)OCC(=O)N5CCO[C@@H](C5)C(=O)NCC2
+Warning: 1024 max ring conf limit reached for CN1CCN2Cc3cccc(c3)Nc4nccc(n4)-c5ccc(nc5)NCCCNC(=O)C[C@H]1C2
+Warning: 1024 max ring conf limit reached for CN1CCCNC(=O)CCCOc2cccc(c2)Nc3c4c(c[nH]c4ncn3)C1
+Warning: 1024 max ring conf limit reached for CN1Cc2ccc(cc2)Nc3nccc(n3)Nc4ccccc4OCCCNC(=O)C1
+Warning: 1024 max ring conf limit reached for CN1CCNC(=O)[C@@H]2CCCN2Cc3cccc(c3)Nc4cc(ncn4)Nc5cccc(c5)C1
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)N3CCN(CC3)C(=O)CNCCCNc4ccc(cn4)-c5ccnc(n5)N2
+Warning: 1024 max ring conf limit reached for c1cc\2cc(c1)OCC(=O)NCCN3CCN(CC3)c4c5c(c[nH]c5ncn4)/C=N2
+Warning: 1024 max ring conf limit reached for CN1CCC(=O)NCCCCOc2cccc(c2)Nc3cc(ncn3)Nc4cccc(c4)C1
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)Nc3cc(ccn3)-c4cnc(nc4)NCCCNC(=O)CN5C[C@H]6CC[C@@H]5CN6C2
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)Nc3nccc(n3)-c4ccc(nc4)NCCCNC(=O)CN5CCN(CC2)CC5
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)O[C@@H]3CCN(C3)CC(=O)NCCCNc4ncc(cn4)-c5ccnc(c5)N2
+Warning: 1024 max ring conf limit reached for CN1CCC(=O)NCCCOc2ccc(cc2)Nc3nccc(n3)Nc4cccc(c4)C1
+Filtering charge errors:  29%|██▉       | 18753/64720 [11:06:38<53:07:24,  4.16s/it]Warning: 1024 max ring conf limit reached for CN1Cc2ccc(cc2)Nc3nccc(n3)Nc4ccccc4OCCCNC(=O)C1
+Warning: 1024 max ring conf limit reached for CN1CCNC(=O)CCc2cccc(c2)Nc3cc(ncn3)Nc4cccc(c4)C1
+Warning: 1024 max ring conf limit reached for C[C@@H]1CN2CCN1Cc3cccc(c3)Nc4cc(ccn4)-c5cnc(nc5)NCCCNC(=O)C2
+Warning: 1024 max ring conf limit reached for CN1CCNC(=O)CCc2cccc(c2)Nc3cc(ncn3)Nc4cccc(c4)C1
+Filtering charge errors:  29%|██▉       | 19009/64720 [11:22:29<50:48:09,  4.00s/it]Filtering charge errors:  30%|███       | 19681/64720 [11:27:17<24:26:09,  1.95s/it]Warning: 1024 max ring conf limit reached for CN1CCN(C(=O)CCCOc2cccc(c2)Nc3c4c(c[nH]c4ncn3)C1)C
+Warning: 1024 max ring conf limit reached for CN1CCNC(=O)CN2CCN(CC2)Cc3cccc(c3)Nc4cc(ccn4)-c5cnc(nc5)C1
+Warning: 1024 max ring conf limit reached for CN1CCN(C(=O)CCCOc2cccc(c2)Nc3c4c(c[nH]c4ncn3)C1)C
+Filtering charge errors:  31%|███       | 19905/64720 [11:40:11<28:19:14,  2.28s/it]Filtering charge errors:  32%|███▏      | 20577/64720 [11:42:17<15:38:30,  1.28s/it]Warning: 1024 max ring conf limit reached for c1cc2cc(c1)OCCCCC(=O)N3CCN(CC3)Cc4c[nH]c5c4c(ncn5)N2
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)OCCCC(=O)N3CCN(CC3)Cc4c[nH]c5c4c(ncn5)N2
+Filtering charge errors:  32%|███▏      | 20737/64720 [11:54:45<21:23:55,  1.75s/it]Warning: 1024 max ring conf limit reached for CN1CCN(C(=O)CCCOc2cccc(c2)Nc3c4c(c[nH]c4ncn3)C1)C
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)-c3ncnc(n3)Nc4cccc(c4)CN5CCN(CC5)CC(=O)NCCC2
+Warning: 1024 max ring conf limit reached for CN1CCNC(=O)[C@H]2CCCN2Cc3cccc(c3)Nc4nccc(n4)-c5ccc(cc5)C1
+Filtering charge errors:  32%|███▏      | 20769/64720 [12:07:11<31:31:02,  2.58s/it]Warning: 1024 max ring conf limit reached for c1cc2cc(c1)-c3ncnc(n3)Nc4cccc(c4)CN5CCN(CCC(=O)NCCC2)CC5
+Filtering charge errors:  32%|███▏      | 20801/64720 [12:10:49<34:11:20,  2.80s/it]Warning: 1024 max ring conf limit reached for c1cc2cc(c1)OCCCC(=O)N3CCN(CC3)Cc4c[nH]c5c4c(ncn5)N2
+Filtering charge errors:  32%|███▏      | 20929/64720 [12:13:09<29:19:10,  2.41s/it]Filtering charge errors:  33%|███▎      | 21281/64720 [12:15:13<17:18:26,  1.43s/it]Warning: 1024 max ring conf limit reached for CN1CCCc2cc(ccn2)-c3ncnc(n3)Nc4cccc(c4)CCNC(=O)C1
+Warning: 1024 max ring conf limit reached for CN1CCCNC(=O)CN2CCN(CC2)Cc3cccc(c3)Nc4cc(ccn4)-c5ccc1nc5
+Filtering charge errors:  33%|███▎      | 21345/64720 [12:18:00<18:50:06,  1.56s/it]Warning: 1024 max ring conf limit reached for CN1CCCc2cccc(c2)-c3nc([nH]n3)Nc4cccc(c4)CN5CCN(CC5)C(=O)C1
+Warning: 1024 max ring conf limit reached for CN1CCC(=O)NCCCc2cccc(c2)-c3ncnc(n3)Nc4cccc(c4)C1
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)-c3ncnc(n3)Nc4cccc(c4)CN5CCC(CC5)C(=O)NCCC2
+Warning: 1024 max ring conf limit reached for CN1CCCC(=O)NCCCc2cccc(c2)-c3ncnc(n3)Nc4cccc(c4)C1
+Warning: 1024 max ring conf limit reached for c1cc2cc(c1)-c3ncnc(n3)Nc4cccc(c4)CN5CCN(CC5)CC(=O)NCCC2
+Filtering charge errors:  33%|███▎      | 21377/64720 [12:40:31<54:21:12,  4.51s/it]Warning: 1024 max ring conf limit reached for c1cc2cc(c1)-c3ccnc(n3)Nc4ccc(cc4)CN5CCN(CC5)CC(=O)NC2
+Warning: 1024 max ring conf limit reached for CN1CCC(=O)NCCCc2cccc(c2)-c3ncnc(n3)Nc4cccc(c4)C1
+Filtering charge errors:  34%|███▍      | 22017/64720 [12:55:25<28:36:06,  2.41s/it]Filtering charge errors:  35%|███▍      | 22529/64720 [12:55:49<16:11:33,  1.38s/it]Filtering charge errors:  35%|███▍      | 22529/64720 [12:56:04<16:11:33,  1.38s/it]Filtering charge errors:  35%|███▍      | 22593/64720 [12:59:09<17:38:20,  1.51s/it]Filtering charge errors:  35%|███▌      | 22689/64720 [13:02:35<18:35:25,  1.59s/it]Filtering charge errors:  35%|███▌      | 22721/64720 [13:07:48<24:19:03,  2.08s/it]Filtering charge errors:  36%|███▌      | 23137/64720 [13:11:09<14:19:49,  1.24s/it]Filtering charge errors:  36%|███▌      | 23169/64720 [13:15:56<19:12:30,  1.66s/it]Filtering charge errors:  36%|███▌      | 23457/64720 [13:18:42<13:54:57,  1.21s/it]Filtering charge errors:  36%|███▋      | 23489/64720 [13:22:59<18:42:26,  1.63s/it]Filtering charge errors:  37%|███▋      | 23777/64720 [13:23:45<11:11:00,  1.02it/s]Filtering charge errors:  37%|███▋      | 23841/64720 [13:27:51<15:08:55,  1.33s/it]Filtering charge errors:  37%|███▋      | 24033/64720 [13:31:32<14:21:43,  1.27s/it]Filtering charge errors:  37%|███▋      | 24097/64720 [13:32:34<13:51:41,  1.23s/it]Filtering charge errors:  38%|███▊      | 24321/64720 [13:36:57<13:32:39,  1.21s/it]Warning: 1024 max ring conf limit reached for CN1CCCN(C(=O)CN2CCN(CC2)Cc3cc(cnc3)Nc4nccc(n4)-c5ccc1nc5)C
+Filtering charge errors:  38%|███▊      | 24705/64720 [13:44:35<13:19:48,  1.20s/it]Filtering charge errors:  39%|███▉      | 25089/64720 [14:16:59<30:59:14,  2.81s/it]Filtering charge errors:  40%|███▉      | 25633/64720 [14:21:06<18:48:48,  1.73s/it]Filtering charge errors:  40%|███▉      | 25825/64720 [14:27:29<19:15:11,  1.78s/it]Filtering charge errors:  40%|████      | 25889/64720 [14:30:34<20:12:22,  1.87s/it]Filtering charge errors:  40%|████      | 26049/64720 [14:31:17<16:12:54,  1.51s/it]Filtering charge errors:  40%|████      | 26145/64720 [14:31:31<13:48:05,  1.29s/it]Filtering charge errors:  40%|████      | 26209/64720 [14:42:08<26:11:58,  2.45s/it]Filtering charge errors:  41%|████      | 26241/64720 [14:45:55<30:30:43,  2.85s/it]Filtering charge errors:  41%|████      | 26433/64720 [14:49:07<21:55:47,  2.06s/it]Filtering charge errors:  41%|████      | 26593/64720 [14:54:10<21:13:59,  2.00s/it]Filtering charge errors:  41%|████      | 26657/64720 [14:58:47<25:09:39,  2.38s/it]Filtering charge errors:  42%|████▏     | 26881/64720 [14:59:37<14:52:26,  1.42s/it]Filtering charge errors:  42%|████▏     | 26945/64720 [15:00:19<13:37:27,  1.30s/it]Filtering charge errors:  42%|████▏     | 26977/64720 [15:00:55<13:27:05,  1.28s/it]Filtering charge errors:  42%|████▏     | 27073/64720 [15:01:15<10:03:11,  1.04it/s]Filtering charge errors:  42%|████▏     | 27105/64720 [15:05:49<19:56:02,  1.91s/it]Filtering charge errors:  42%|████▏     | 27169/64720 [15:10:10<25:49:01,  2.48s/it]Filtering charge errors:  42%|████▏     | 27201/64720 [15:19:38<50:54:11,  4.88s/it]Filtering charge errors:  43%|████▎     | 27649/64720 [15:20:26<12:56:52,  1.26s/it]Filtering charge errors:  43%|████▎     | 27681/64720 [15:21:46<13:51:53,  1.35s/it]Filtering charge errors:  43%|████▎     | 27873/64720 [15:37:31<27:44:30,  2.71s/it]Filtering charge errors:  44%|████▍     | 28385/64720 [15:40:57<13:33:06,  1.34s/it]Filtering charge errors:  44%|████▍     | 28417/64720 [15:44:19<16:03:30,  1.59s/it]Filtering charge errors:  44%|████▍     | 28481/64720 [15:44:54<14:42:37,  1.46s/it]Filtering charge errors:  44%|████▍     | 28641/64720 [15:45:01<10:14:54,  1.02s/it]Filtering charge errors:  44%|████▍     | 28641/64720 [15:45:15<10:14:54,  1.02s/it]Filtering charge errors:  44%|████▍     | 28769/64720 [15:51:26<15:24:19,  1.54s/it]Filtering charge errors:  45%|████▍     | 28993/64720 [15:54:20<12:18:12,  1.24s/it]Filtering charge errors:  45%|████▌     | 29281/64720 [15:55:53<8:24:32,  1.17it/s] Filtering charge errors:  45%|████▌     | 29409/64720 [15:58:05<8:44:35,  1.12it/s]Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 1 S on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Filtering charge errors:  46%|████▌     | 29537/64720 [16:06:53<16:01:30,  1.64s/it]Filtering charge errors:  46%|████▌     | 29633/64720 [16:07:04<13:01:12,  1.34s/it]Filtering charge errors:  46%|████▌     | 29665/64720 [16:07:49<13:04:29,  1.34s/it]Filtering charge errors:  46%|████▌     | 29793/64720 [16:07:57<8:55:29,  1.09it/s] Filtering charge errors:  46%|████▌     | 29793/64720 [16:08:16<8:55:29,  1.09it/s]Filtering charge errors:  46%|████▋     | 30049/64720 [16:20:11<17:58:09,  1.87s/it]Filtering charge errors:  48%|████▊     | 30785/64720 [16:28:30<10:07:47,  1.07s/it]Filtering charge errors:  48%|████▊     | 31137/64720 [16:28:52<7:04:15,  1.32it/s] Filtering charge errors:  48%|████▊     | 31137/64720 [16:29:06<7:04:15,  1.32it/s]Filtering charge errors:  48%|████▊     | 31361/64720 [16:32:53<7:40:33,  1.21it/s]Filtering charge errors:  49%|████▉     | 31617/64720 [16:34:36<6:34:40,  1.40it/s]Filtering charge errors:  49%|████▉     | 31681/64720 [16:35:35<6:43:26,  1.36it/s]Filtering charge errors:  49%|████▉     | 31905/64720 [16:35:58<4:56:18,  1.85it/s]Filtering charge errors:  49%|████▉     | 31937/64720 [17:01:28<29:56:22,  3.29s/it]Filtering charge errors:  49%|████▉     | 31969/64720 [17:03:46<30:38:10,  3.37s/it]Filtering charge errors:  50%|█████     | 32449/64720 [17:06:41<13:27:02,  1.50s/it]Filtering charge errors:  50%|█████     | 32481/64720 [17:08:17<14:11:29,  1.58s/it]Filtering charge errors:  50%|█████     | 32513/64720 [17:18:09<25:21:30,  2.83s/it]Filtering charge errors:  50%|█████     | 32545/64720 [17:23:55<32:09:45,  3.60s/it]Filtering charge errors:  50%|█████     | 32577/64720 [17:24:41<29:48:41,  3.34s/it]Filtering charge errors:  50%|█████     | 32609/64720 [17:24:53<25:53:45,  2.90s/it]Filtering charge errors:  51%|█████     | 32737/64720 [17:25:45<15:41:00,  1.77s/it]Filtering charge errors:  51%|█████     | 32993/64720 [17:32:53<15:06:05,  1.71s/it]Filtering charge errors:  51%|█████     | 33057/64720 [17:33:18<13:06:08,  1.49s/it]Filtering charge errors:  51%|█████     | 33089/64720 [17:44:03<30:41:15,  3.49s/it]Filtering charge errors:  51%|█████▏    | 33313/64720 [17:48:38<20:14:21,  2.32s/it]Filtering charge errors:  52%|█████▏    | 33441/64720 [17:54:10<20:51:53,  2.40s/it]Filtering charge errors:  52%|█████▏    | 33569/64720 [18:05:19<28:04:04,  3.24s/it]Filtering charge errors:  52%|█████▏    | 33761/64720 [18:06:23<18:08:02,  2.11s/it]Filtering charge errors:  53%|█████▎    | 34049/64720 [18:08:37<11:36:01,  1.36s/it]Filtering charge errors:  53%|█████▎    | 34081/64720 [18:18:03<20:56:28,  2.46s/it]Filtering charge errors:  53%|█████▎    | 34113/64720 [18:21:01<23:14:41,  2.73s/it]Filtering charge errors:  53%|█████▎    | 34561/64720 [18:22:38<9:28:09,  1.13s/it] Filtering charge errors:  53%|█████▎    | 34593/64720 [18:37:56<23:31:44,  2.81s/it]Filtering charge errors:  54%|█████▎    | 34785/64720 [18:40:15<17:24:37,  2.09s/it]Filtering charge errors:  54%|█████▍    | 35105/64720 [18:42:21<10:55:54,  1.33s/it]Filtering charge errors:  54%|█████▍    | 35201/64720 [18:52:39<17:40:12,  2.15s/it]Filtering charge errors:  54%|█████▍    | 35233/64720 [18:53:49<17:39:59,  2.16s/it]Filtering charge errors:  54%|█████▍    | 35265/64720 [19:00:07<24:58:04,  3.05s/it]Filtering charge errors:  55%|█████▌    | 35777/64720 [19:01:02<8:27:37,  1.05s/it] Filtering charge errors:  56%|█████▌    | 35937/64720 [19:13:34<15:12:18,  1.90s/it]Filtering charge errors:  56%|█████▋    | 36449/64720 [19:16:19<8:32:17,  1.09s/it] Filtering charge errors:  56%|█████▋    | 36513/64720 [19:19:11<9:34:40,  1.22s/it]Filtering charge errors:  56%|█████▋    | 36545/64720 [19:25:49<14:32:30,  1.86s/it]Filtering charge errors:  57%|█████▋    | 37057/64720 [19:32:06<9:24:59,  1.23s/it] Filtering charge errors:  58%|█████▊    | 37249/64720 [19:35:50<9:14:18,  1.21s/it]Filtering charge errors:  58%|█████▊    | 37601/64720 [19:35:51<5:40:48,  1.33it/s]Filtering charge errors:  58%|█████▊    | 37601/64720 [19:36:07<5:40:48,  1.33it/s]Filtering charge errors:  58%|█████▊    | 37665/64720 [19:36:47<5:45:11,  1.31it/s]Filtering charge errors:  58%|█████▊    | 37857/64720 [19:41:01<6:52:01,  1.09it/s]Filtering charge errors:  59%|█████▊    | 37889/64720 [19:42:37<7:49:08,  1.05s/it]Filtering charge errors:  59%|█████▉    | 38273/64720 [19:44:01<4:33:46,  1.61it/s]Filtering charge errors:  59%|█████▉    | 38305/64720 [19:51:16<10:03:15,  1.37s/it]Filtering charge errors:  59%|█████▉    | 38337/64720 [19:58:58<17:20:07,  2.37s/it]Filtering charge errors:  60%|█████▉    | 38561/64720 [19:59:53<10:31:52,  1.45s/it]Filtering charge errors:  60%|█████▉    | 38625/64720 [20:01:31<10:35:50,  1.46s/it]Filtering charge errors:  60%|█████▉    | 38689/64720 [20:05:58<14:00:55,  1.94s/it]Filtering charge errors:  60%|█████▉    | 38817/64720 [20:07:02<10:29:33,  1.46s/it]Filtering charge errors:  60%|██████    | 38849/64720 [20:14:51<20:37:01,  2.87s/it]Filtering charge errors:  60%|██████    | 39041/64720 [20:18:17<14:20:30,  2.01s/it]Filtering charge errors:  61%|██████    | 39169/64720 [20:21:11<12:49:15,  1.81s/it]Filtering charge errors:  61%|██████    | 39265/64720 [20:22:25<10:56:11,  1.55s/it]Filtering charge errors:  61%|██████    | 39329/64720 [20:28:52<17:01:27,  2.41s/it]Filtering charge errors:  61%|██████    | 39393/64720 [20:30:13<15:14:37,  2.17s/it]Filtering charge errors:  61%|██████    | 39457/64720 [20:30:58<12:47:14,  1.82s/it]Filtering charge errors:  61%|██████    | 39617/64720 [20:35:35<12:24:40,  1.78s/it]Filtering charge errors:  61%|██████▏   | 39649/64720 [20:39:56<17:31:47,  2.52s/it]Filtering charge errors:  62%|██████▏   | 39841/64720 [20:41:41<10:37:08,  1.54s/it]Filtering charge errors:  62%|██████▏   | 39873/64720 [20:44:30<13:20:40,  1.93s/it]Filtering charge errors:  62%|██████▏   | 39905/64720 [20:45:02<12:27:49,  1.81s/it]Filtering charge errors:  62%|██████▏   | 39937/64720 [20:48:29<17:31:21,  2.55s/it]Filtering charge errors:  62%|██████▏   | 39969/64720 [20:48:52<15:11:31,  2.21s/it]Filtering charge errors:  62%|██████▏   | 40065/64720 [20:50:05<10:44:38,  1.57s/it]Filtering charge errors:  62%|██████▏   | 40097/64720 [20:50:20<9:27:09,  1.38s/it] Filtering charge errors:  62%|██████▏   | 40129/64720 [20:59:36<31:06:46,  4.55s/it]Filtering charge errors:  62%|██████▏   | 40257/64720 [20:59:36<14:30:45,  2.14s/it]Filtering charge errors:  62%|██████▏   | 40257/64720 [20:59:47<14:30:45,  2.14s/it]Filtering charge errors:  62%|██████▏   | 40321/64720 [21:02:19<15:14:34,  2.25s/it]Filtering charge errors:  62%|██████▏   | 40353/64720 [21:03:10<14:29:37,  2.14s/it]Filtering charge errors:  62%|██████▏   | 40417/64720 [21:07:36<18:48:21,  2.79s/it]Filtering charge errors:  62%|██████▏   | 40449/64720 [21:08:13<16:43:26,  2.48s/it]Filtering charge errors:  63%|██████▎   | 40481/64720 [21:09:46<17:17:22,  2.57s/it]Filtering charge errors:  63%|██████▎   | 40513/64720 [21:19:37<41:54:37,  6.23s/it]Filtering charge errors:  63%|██████▎   | 40801/64720 [21:26:31<17:35:31,  2.65s/it]Filtering charge errors:  63%|██████▎   | 40865/64720 [21:27:18<15:06:35,  2.28s/it]Filtering charge errors:  63%|██████▎   | 40929/64720 [21:28:24<13:18:15,  2.01s/it]Filtering charge errors:  63%|██████▎   | 40961/64720 [21:30:58<15:44:23,  2.38s/it]Filtering charge errors:  63%|██████▎   | 40993/64720 [21:31:39<14:34:35,  2.21s/it]Filtering charge errors:  63%|██████▎   | 41025/64720 [21:33:11<15:21:35,  2.33s/it]Filtering charge errors:  63%|██████▎   | 41057/64720 [21:36:51<21:35:48,  3.29s/it]Filtering charge errors:  64%|██████▎   | 41121/64720 [21:38:22<16:58:05,  2.59s/it]Filtering charge errors:  64%|██████▎   | 41185/64720 [21:43:28<21:55:08,  3.35s/it]Filtering charge errors:  64%|██████▍   | 41281/64720 [21:49:37<23:11:25,  3.56s/it]Filtering charge errors:  64%|██████▍   | 41377/64720 [21:52:02<18:02:11,  2.78s/it]Filtering charge errors:  64%|██████▍   | 41473/64720 [21:58:41<21:05:34,  3.27s/it]Filtering charge errors:  64%|██████▍   | 41505/64720 [22:03:46<26:51:15,  4.16s/it]Filtering charge errors:  64%|██████▍   | 41729/64720 [22:03:49<10:58:41,  1.72s/it]Filtering charge errors:  64%|██████▍   | 41729/64720 [22:04:08<10:58:41,  1.72s/it]Filtering charge errors:  65%|██████▍   | 41793/64720 [22:06:28<11:53:24,  1.87s/it]Filtering charge errors:  65%|██████▍   | 41857/64720 [22:08:58<12:30:31,  1.97s/it]Filtering charge errors:  65%|██████▍   | 41889/64720 [22:11:58<15:37:07,  2.46s/it]Filtering charge errors:  65%|██████▍   | 41953/64720 [22:14:30<15:24:31,  2.44s/it]Filtering charge errors:  65%|██████▍   | 42017/64720 [22:21:37<22:56:16,  3.64s/it]Filtering charge errors:  65%|██████▌   | 42081/64720 [22:22:59<18:35:43,  2.96s/it]Filtering charge errors:  65%|██████▌   | 42113/64720 [22:23:29<16:24:37,  2.61s/it]Filtering charge errors:  65%|██████▌   | 42145/64720 [22:29:04<26:04:07,  4.16s/it]Filtering charge errors:  65%|██████▌   | 42241/64720 [22:34:55<24:32:05,  3.93s/it]Filtering charge errors:  66%|██████▌   | 42465/64720 [22:35:29<10:11:13,  1.65s/it]Filtering charge errors:  66%|██████▌   | 42497/64720 [22:39:05<13:38:12,  2.21s/it]Filtering charge errors:  66%|██████▌   | 42529/64720 [22:43:07<18:04:20,  2.93s/it]Filtering charge errors:  66%|██████▌   | 42561/64720 [22:51:37<31:02:26,  5.04s/it]Filtering charge errors:  66%|██████▌   | 42753/64720 [22:52:17<13:36:12,  2.23s/it]Filtering charge errors:  66%|██████▌   | 42817/64720 [22:55:00<13:58:58,  2.30s/it]Filtering charge errors:  66%|██████▌   | 42849/64720 [22:59:05<18:19:55,  3.02s/it]Filtering charge errors:  66%|██████▋   | 42881/64720 [23:00:23<17:45:34,  2.93s/it]Filtering charge errors:  67%|██████▋   | 43073/64720 [23:05:41<13:10:15,  2.19s/it]Filtering charge errors:  67%|██████▋   | 43105/64720 [23:09:15<16:25:06,  2.73s/it]Filtering charge errors:  67%|██████▋   | 43137/64720 [23:17:29<27:38:04,  4.61s/it]Filtering charge errors:  67%|██████▋   | 43201/64720 [23:19:39<22:59:09,  3.85s/it]Filtering charge errors:  67%|██████▋   | 43457/64720 [23:22:22<10:47:18,  1.83s/it]Filtering charge errors:  67%|██████▋   | 43521/64720 [23:27:43<14:12:21,  2.41s/it]Filtering charge errors:  67%|██████▋   | 43617/64720 [23:31:19<13:52:24,  2.37s/it]Filtering charge errors:  67%|██████▋   | 43649/64720 [23:35:39<17:50:08,  3.05s/it]Filtering charge errors:  67%|██████▋   | 43681/64720 [23:47:46<34:26:36,  5.89s/it]Filtering charge errors:  68%|██████▊   | 43937/64720 [23:49:13<14:03:12,  2.43s/it]Filtering charge errors:  68%|██████▊   | 43969/64720 [23:57:57<22:04:35,  3.83s/it]Filtering charge errors:  68%|██████▊   | 44161/64720 [24:01:51<14:58:45,  2.62s/it]Filtering charge errors:  68%|██████▊   | 44193/64720 [24:03:24<15:07:12,  2.65s/it]Filtering charge errors:  68%|██████▊   | 44257/64720 [24:08:03<17:13:14,  3.03s/it]Warning: 1024 max ring conf limit reached for c1cc2ccc1CCCNC(=O)CCCCOc3ccc(cc3)-n4cnc5c4nc(nc5)N2
+Filtering charge errors:  69%|██████▊   | 44353/64720 [24:09:37<13:24:32,  2.37s/it]Filtering charge errors:  69%|██████▊   | 44449/64720 [24:20:08<20:47:18,  3.69s/it]Filtering charge errors:  69%|██████▉   | 44577/64720 [24:20:19<13:05:35,  2.34s/it]Filtering charge errors:  69%|██████▉   | 44705/64720 [24:20:20<8:29:50,  1.53s/it] Filtering charge errors:  69%|██████▉   | 44705/64720 [24:20:39<8:29:50,  1.53s/it]Filtering charge errors:  69%|██████▉   | 44737/64720 [24:20:51<8:08:38,  1.47s/it]Filtering charge errors:  69%|██████▉   | 44769/64720 [24:26:21<14:48:26,  2.67s/it]Filtering charge errors:  69%|██████▉   | 44833/64720 [24:29:04<14:34:40,  2.64s/it]Filtering charge errors:  69%|██████▉   | 44865/64720 [24:29:18<12:32:08,  2.27s/it]Filtering charge errors:  69%|██████▉   | 44929/64720 [24:35:28<18:42:36,  3.40s/it]Filtering charge errors:  70%|██████▉   | 45057/64720 [24:36:05<10:25:57,  1.91s/it]Filtering charge errors:  70%|██████▉   | 45121/64720 [24:37:25<9:28:57,  1.74s/it] Filtering charge errors:  70%|██████▉   | 45153/64720 [24:37:54<8:44:46,  1.61s/it]Filtering charge errors:  70%|██████▉   | 45185/64720 [24:42:59<16:30:10,  3.04s/it]Filtering charge errors:  70%|██████▉   | 45217/64720 [24:43:48<14:48:25,  2.73s/it]Filtering charge errors:  70%|██████▉   | 45281/64720 [24:47:56<17:02:06,  3.15s/it]Filtering charge errors:  70%|███████   | 45377/64720 [24:50:58<13:58:07,  2.60s/it]Filtering charge errors:  70%|███████   | 45473/64720 [24:52:11<10:04:50,  1.89s/it]Filtering charge errors:  70%|███████   | 45569/64720 [24:57:46<13:03:54,  2.46s/it]Filtering charge errors:  70%|███████   | 45601/64720 [24:57:57<11:26:15,  2.15s/it]Filtering charge errors:  71%|███████   | 45697/64720 [25:02:57<13:19:38,  2.52s/it]Filtering charge errors:  71%|███████   | 45761/64720 [25:06:58<15:02:54,  2.86s/it]Filtering charge errors:  71%|███████   | 45857/64720 [25:07:01<9:34:05,  1.83s/it] Filtering charge errors:  71%|███████   | 45857/64720 [25:07:19<9:34:05,  1.83s/it]Filtering charge errors:  71%|███████   | 45921/64720 [25:11:18<12:29:03,  2.39s/it]Filtering charge errors:  71%|███████   | 46017/64720 [25:13:19<10:20:34,  1.99s/it]Filtering charge errors:  71%|███████   | 46049/64720 [25:16:55<13:53:33,  2.68s/it]Filtering charge errors:  71%|███████▏  | 46177/64720 [25:19:30<10:21:49,  2.01s/it]Filtering charge errors:  71%|███████▏  | 46209/64720 [25:19:57<9:30:33,  1.85s/it] Filtering charge errors:  71%|███████▏  | 46241/64720 [25:20:43<9:08:53,  1.78s/it]Filtering charge errors:  71%|███████▏  | 46273/64720 [25:26:18<17:39:21,  3.45s/it]Filtering charge errors:  72%|███████▏  | 46433/64720 [25:26:23<7:28:48,  1.47s/it] Filtering charge errors:  72%|███████▏  | 46433/64720 [25:26:39<7:28:48,  1.47s/it]Filtering charge errors:  72%|███████▏  | 46465/64720 [25:35:34<18:47:19,  3.71s/it]Filtering charge errors:  72%|███████▏  | 46593/64720 [25:37:22<12:12:16,  2.42s/it]Filtering charge errors:  72%|███████▏  | 46753/64720 [25:40:13<9:06:06,  1.82s/it] Filtering charge errors:  72%|███████▏  | 46817/64720 [25:41:25<8:21:51,  1.68s/it]Filtering charge errors:  72%|███████▏  | 46913/64720 [25:51:07<14:51:56,  3.01s/it]Filtering charge errors:  73%|███████▎  | 47009/64720 [25:51:37<10:48:00,  2.20s/it]Filtering charge errors:  73%|███████▎  | 47169/64720 [25:55:50<9:26:33,  1.94s/it] Filtering charge errors:  73%|███████▎  | 47201/64720 [25:57:27<10:00:09,  2.06s/it]Filtering charge errors:  73%|███████▎  | 47233/64720 [25:57:50<9:06:56,  1.88s/it] Filtering charge errors:  73%|███████▎  | 47265/64720 [26:01:56<13:35:23,  2.80s/it]Filtering charge errors:  73%|███████▎  | 47297/64720 [26:04:31<15:23:25,  3.18s/it]Filtering charge errors:  73%|███████▎  | 47489/64720 [26:06:26<7:38:08,  1.60s/it] Filtering charge errors:  73%|███████▎  | 47553/64720 [26:07:39<7:07:05,  1.49s/it]Filtering charge errors:  74%|███████▎  | 47617/64720 [26:10:00<7:55:08,  1.67s/it]Filtering charge errors:  74%|███████▍  | 47745/64720 [26:15:51<9:56:46,  2.11s/it]Filtering charge errors:  74%|███████▍  | 47777/64720 [26:17:42<10:44:30,  2.28s/it]Filtering charge errors:  74%|███████▍  | 47841/64720 [26:18:01<8:12:51,  1.75s/it] Filtering charge errors:  74%|███████▍  | 47937/64720 [26:19:20<6:35:29,  1.41s/it]Filtering charge errors:  74%|███████▍  | 47969/64720 [26:26:45<15:10:43,  3.26s/it]Filtering charge errors:  74%|███████▍  | 48161/64720 [26:27:10<6:56:31,  1.51s/it] Filtering charge errors:  75%|███████▍  | 48225/64720 [26:28:13<6:24:33,  1.40s/it]Filtering charge errors:  75%|███████▍  | 48257/64720 [26:35:46<14:00:47,  3.06s/it]Filtering charge errors:  75%|███████▍  | 48289/64720 [26:42:19<20:36:37,  4.52s/it]Filtering charge errors:  75%|███████▌  | 48545/64720 [26:49:44<12:16:22,  2.73s/it]Filtering charge errors:  75%|███████▌  | 48737/64720 [26:52:01<8:28:21,  1.91s/it] Filtering charge errors:  75%|███████▌  | 48769/64720 [27:04:04<16:33:48,  3.74s/it]Filtering charge errors:  76%|███████▌  | 48993/64720 [27:09:36<11:42:06,  2.68s/it]Filtering charge errors:  76%|███████▌  | 49121/64720 [27:14:43<11:16:13,  2.60s/it]Filtering charge errors:  76%|███████▌  | 49249/64720 [27:14:44<8:01:18,  1.87s/it] Filtering charge errors:  76%|███████▌  | 49249/64720 [27:15:00<8:01:18,  1.87s/it]Filtering charge errors:  76%|███████▌  | 49281/64720 [27:19:16<10:37:16,  2.48s/it]Filtering charge errors:  76%|███████▋  | 49409/64720 [27:20:57<8:03:45,  1.90s/it] Filtering charge errors:  76%|███████▋  | 49441/64720 [27:29:30<14:36:54,  3.44s/it]Filtering charge errors:  76%|███████▋  | 49473/64720 [27:34:18<17:46:21,  4.20s/it]Filtering charge errors:  77%|███████▋  | 49537/64720 [27:36:32<15:13:03,  3.61s/it]Filtering charge errors:  77%|███████▋  | 49633/64720 [27:37:32<10:26:48,  2.49s/it]Filtering charge errors:  77%|███████▋  | 49665/64720 [27:41:21<13:22:27,  3.20s/it]Filtering charge errors:  77%|███████▋  | 49857/64720 [27:44:39<8:09:17,  1.98s/it] Filtering charge errors:  77%|███████▋  | 49921/64720 [27:51:20<11:50:59,  2.88s/it]Filtering charge errors:  77%|███████▋  | 49953/64720 [27:55:29<14:28:12,  3.53s/it]Filtering charge errors:  77%|███████▋  | 50113/64720 [27:58:24<9:32:00,  2.35s/it] Filtering charge errors:  78%|███████▊  | 50209/64720 [27:59:00<7:08:30,  1.77s/it]Filtering charge errors:  78%|███████▊  | 50305/64720 [27:59:02<5:01:19,  1.25s/it]Filtering charge errors:  78%|███████▊  | 50305/64720 [27:59:20<5:01:19,  1.25s/it]Filtering charge errors:  78%|███████▊  | 50337/64720 [28:06:19<11:07:06,  2.78s/it]Filtering charge errors:  78%|███████▊  | 50401/64720 [28:06:31<8:22:35,  2.11s/it] Filtering charge errors:  78%|███████▊  | 50465/64720 [28:11:58<11:34:01,  2.92s/it]Filtering charge errors:  78%|███████▊  | 50497/64720 [28:14:13<12:21:52,  3.13s/it]Filtering charge errors:  78%|███████▊  | 50561/64720 [28:18:46<13:43:14,  3.49s/it]Filtering charge errors:  78%|███████▊  | 50785/64720 [28:23:42<8:21:46,  2.16s/it] Filtering charge errors:  79%|███████▊  | 50817/64720 [28:26:35<9:44:21,  2.52s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  79%|███████▊  | 50881/64720 [28:33:12<13:06:10,  3.41s/it]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  79%|███████▉  | 51009/64720 [28:38:25<11:29:27,  3.02s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  79%|███████▉  | 51105/64720 [28:40:12<9:13:05,  2.44s/it] Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  79%|███████▉  | 51169/64720 [28:41:08<7:51:52,  2.09s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  79%|███████▉  | 51233/64720 [28:42:52<7:24:13,  1.98s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  79%|███████▉  | 51265/64720 [28:50:14<13:55:02,  3.72s/it]Filtering charge errors:  80%|███████▉  | 51617/64720 [28:50:20<4:07:10,  1.13s/it] Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  80%|███████▉  | 51617/64720 [28:50:30<4:07:10,  1.13s/it]Filtering charge errors:  80%|███████▉  | 51745/64720 [28:51:11<3:22:47,  1.07it/s]Filtering charge errors:  80%|████████  | 51969/64720 [28:51:54<2:16:00,  1.56it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  80%|████████  | 52001/64720 [28:56:21<4:18:33,  1.22s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  81%|████████  | 52161/64720 [29:01:35<5:09:55,  1.48s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  81%|████████  | 52577/64720 [29:02:38<2:27:27,  1.37it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  81%|████████▏ | 52705/64720 [29:04:48<2:37:26,  1.27it/s]Filtering charge errors:  82%|████████▏ | 52801/64720 [29:04:56<2:11:34,  1.51it/s]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  82%|████████▏ | 52801/64720 [29:05:10<2:11:34,  1.51it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  82%|████████▏ | 52897/64720 [29:10:38<4:05:08,  1.24s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  82%|████████▏ | 53089/64720 [29:13:36<3:39:00,  1.13s/it]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  82%|████████▏ | 53281/64720 [29:14:07<2:32:04,  1.25it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  83%|████████▎ | 53441/64720 [29:16:50<2:42:05,  1.16it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  83%|████████▎ | 53505/64720 [29:18:39<3:03:23,  1.02it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  83%|████████▎ | 53665/64720 [29:20:56<2:53:03,  1.06it/s]Filtering charge errors:  83%|████████▎ | 53697/64720 [29:21:38<2:58:14,  1.03it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  83%|████████▎ | 53761/64720 [29:25:36<4:38:17,  1.52s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  84%|████████▍ | 54305/64720 [29:27:11<1:38:26,  1.76it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  84%|████████▍ | 54369/64720 [29:28:34<1:51:19,  1.55it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  84%|████████▍ | 54401/64720 [29:28:58<1:52:10,  1.53it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  84%|████████▍ | 54529/64720 [29:29:54<1:40:19,  1.69it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  84%|████████▍ | 54561/64720 [29:32:12<2:38:21,  1.07it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  84%|████████▍ | 54657/64720 [29:36:51<4:11:21,  1.50s/it]Filtering charge errors:  85%|████████▍ | 54945/64720 [29:37:25<2:00:35,  1.35it/s]Filtering charge errors:  85%|████████▌ | 55169/64720 [29:38:33<1:31:16,  1.74it/s]Filtering charge errors:  85%|████████▌ | 55201/64720 [29:39:54<1:53:30,  1.40it/s]Filtering charge errors:  85%|████████▌ | 55233/64720 [29:40:16<1:52:26,  1.41it/s]Filtering charge errors:  85%|████████▌ | 55329/64720 [29:41:14<1:46:26,  1.47it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  86%|████████▌ | 55553/64720 [29:45:03<2:09:23,  1.18it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  86%|████████▌ | 55681/64720 [29:49:53<3:08:33,  1.25s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  86%|████████▌ | 55777/64720 [29:50:17<2:31:35,  1.02s/it]Filtering charge errors:  87%|████████▋ | 56033/64720 [29:50:18<1:18:11,  1.85it/s]Filtering charge errors:  87%|████████▋ | 56033/64720 [29:50:31<1:18:11,  1.85it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  87%|████████▋ | 56225/64720 [29:55:32<2:08:24,  1.10it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  87%|████████▋ | 56353/64720 [29:56:35<1:52:38,  1.24it/s]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  87%|████████▋ | 56417/64720 [29:57:32<1:53:28,  1.22it/s]Filtering charge errors:  87%|████████▋ | 56449/64720 [29:58:08<1:57:05,  1.18it/s]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  87%|████████▋ | 56513/64720 [29:58:52<1:51:01,  1.23it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  88%|████████▊ | 56801/64720 [30:06:01<2:39:07,  1.21s/it]Filtering charge errors:  88%|████████▊ | 57089/64720 [30:08:00<1:47:38,  1.18it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  88%|████████▊ | 57217/64720 [30:10:06<1:49:45,  1.14it/s]Filtering charge errors:  89%|████████▊ | 57313/64720 [30:10:18<1:30:26,  1.37it/s]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  89%|████████▉ | 57441/64720 [30:10:21<1:05:38,  1.85it/s]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  89%|████████▉ | 57441/64720 [30:10:41<1:05:38,  1.85it/s]Filtering charge errors:  89%|████████▉ | 57473/64720 [30:11:45<1:27:24,  1.38it/s]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  89%|████████▉ | 57505/64720 [30:13:21<1:57:26,  1.02it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  89%|████████▉ | 57569/64720 [30:14:46<2:06:37,  1.06s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  89%|████████▉ | 57889/64720 [30:17:33<1:22:04,  1.39it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  89%|████████▉ | 57921/64720 [30:19:15<1:44:51,  1.08it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  90%|████████▉ | 57985/64720 [30:21:29<2:08:42,  1.15s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  90%|█████████ | 58273/64720 [30:22:26<1:07:05,  1.60it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  90%|█████████ | 58369/64720 [30:22:34<54:13,  1.95it/s]  Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  90%|█████████ | 58369/64720 [30:22:51<54:13,  1.95it/s]Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  90%|█████████ | 58497/64720 [30:23:19<48:22,  2.14it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  90%|█████████ | 58529/64720 [30:24:03<56:34,  1.82it/s]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  90%|█████████ | 58561/64720 [30:26:45<1:50:11,  1.07s/it]Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed to build structure from CT
+Warning: : Failed to build structure from CT
+Warning: : Failed to build structure from CT
+Warning: : Failed to build structure from CT
+Warning: : Failed to build structure from CT
+Warning: : Failed to build structure from CT
+Warning: : Failed to build structure from CT
+Warning: : Failed to build structure from CT
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Warning: : Failed due to unspecified stereochemistry
+Filtering charge errors:  91%|█████████ | 58689/64720 [30:28:06<1:30:25,  1.11it/s]Filtering charge errors:  91%|█████████ | 58945/64720 [30:28:10<41:09,  2.34it/s]  Filtering charge errors:  91%|█████████ | 58945/64720 [30:28:21<41:09,  2.34it/s]Filtering charge errors:  91%|█████████ | 59009/64720 [30:28:44<42:19,  2.25it/s]Filtering charge errors:  91%|█████████ | 59041/64720 [30:29:57<59:58,  1.58it/s]Filtering charge errors:  91%|█████████▏| 59137/64720 [30:30:33<51:29,  1.81it/s]Filtering charge errors:  92%|█████████▏| 59553/64720 [30:30:47<18:26,  4.67it/s]Filtering charge errors:  92%|█████████▏| 59553/64720 [30:31:01<18:26,  4.67it/s]Filtering charge errors:  92%|█████████▏| 59713/64720 [30:31:32<19:18,  4.32it/s]Filtering charge errors:  92%|█████████▏| 59809/64720 [30:33:45<36:25,  2.25it/s]Filtering charge errors:  93%|█████████▎| 60033/64720 [30:34:36<28:13,  2.77it/s]Filtering charge errors:  93%|█████████▎| 60065/64720 [30:34:44<27:23,  2.83it/s]Filtering charge errors:  93%|█████████▎| 60065/64720 [30:35:01<27:23,  2.83it/s]Filtering charge errors:  93%|█████████▎| 60129/64720 [30:36:29<43:57,  1.74it/s]Filtering charge errors:  93%|█████████▎| 60225/64720 [30:36:33<32:17,  2.32it/s]Filtering charge errors:  93%|█████████▎| 60289/64720 [30:36:37<26:22,  2.80it/s]Filtering charge errors:  93%|█████████▎| 60289/64720 [30:36:51<26:22,  2.80it/s]Filtering charge errors:  93%|█████████▎| 60385/64720 [30:39:10<52:50,  1.37it/s]Filtering charge errors:  94%|█████████▎| 60673/64720 [30:40:38<33:03,  2.04it/s]Filtering charge errors:  94%|█████████▍| 60897/64720 [30:41:40<26:00,  2.45it/s]Filtering charge errors:  94%|█████████▍| 61057/64720 [30:41:59<19:53,  3.07it/s]Filtering charge errors:  94%|█████████▍| 61089/64720 [30:42:38<23:45,  2.55it/s]Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Filtering charge errors:  94%|█████████▍| 61121/64720 [30:44:10<37:59,  1.58it/s]Filtering charge errors:  95%|█████████▍| 61249/64720 [30:44:15<24:22,  2.37it/s]Filtering charge errors:  95%|█████████▍| 61249/64720 [30:44:31<24:22,  2.37it/s]Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Filtering charge errors:  95%|█████████▍| 61281/64720 [30:48:04<1:07:36,  1.18s/it]Filtering charge errors:  95%|█████████▌| 61633/64720 [30:49:18<28:49,  1.78it/s]  Filtering charge errors:  95%|█████████▌| 61761/64720 [30:49:33<22:10,  2.22it/s]Filtering charge errors:  96%|█████████▌| 61921/64720 [30:50:20<18:47,  2.48it/s]Filtering charge errors:  96%|█████████▌| 61985/64720 [30:52:28<29:12,  1.56it/s]Filtering charge errors:  96%|█████████▌| 62145/64720 [30:53:47<25:16,  1.70it/s]Filtering charge errors:  96%|█████████▋| 62305/64720 [30:53:53<16:23,  2.46it/s]Filtering charge errors:  96%|█████████▋| 62305/64720 [30:54:11<16:23,  2.46it/s]Filtering charge errors:  96%|█████████▋| 62433/64720 [30:55:10<17:32,  2.17it/s]Filtering charge errors:  97%|█████████▋| 62593/64720 [30:58:30<25:31,  1.39it/s]Filtering charge errors:  97%|█████████▋| 62849/64720 [31:00:08<17:56,  1.74it/s]Filtering charge errors:  98%|█████████▊| 63105/64720 [31:00:49<11:14,  2.39it/s]Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 34 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Filtering charge errors:  98%|█████████▊| 63137/64720 [31:02:51<16:41,  1.58it/s]Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Warning: OEMMFFParams::PrepMol() : unable to type atom 35 H on residue UNL-1
+Warning: : Force field setup failed due to missing parameters
+Filtering charge errors:  98%|█████████▊| 63457/64720 [31:03:11<07:36,  2.77it/s]Filtering charge errors:  98%|█████████▊| 63457/64720 [31:03:21<07:36,  2.77it/s]Filtering charge errors:  98%|█████████▊| 63489/64720 [31:04:09<09:18,  2.20it/s]Filtering charge errors:  98%|█████████▊| 63521/64720 [31:06:20<15:09,  1.32it/s]Filtering charge errors:  98%|█████████▊| 63745/64720 [31:07:26<08:54,  1.83it/s]Filtering charge errors:  99%|█████████▉| 63937/64720 [31:08:32<06:10,  2.11it/s]Filtering charge errors:  99%|█████████▉| 64001/64720 [31:08:33<04:53,  2.45it/s]Filtering charge errors:  99%|█████████▉| 64001/64720 [31:08:51<04:53,  2.45it/s]Filtering charge errors:  99%|█████████▉| 64065/64720 [31:09:25<05:12,  2.09it/s]Filtering charge errors:  99%|█████████▉| 64161/64720 [31:11:37<06:41,  1.39it/s]Filtering charge errors:  99%|█████████▉| 64193/64720 [31:12:01<06:21,  1.38it/s]Filtering charge errors:  99%|█████████▉| 64321/64720 [31:12:22<03:19,  2.00it/s]Filtering charge errors:  99%|█████████▉| 64385/64720 [31:13:29<03:28,  1.60it/s]Filtering charge errors: 100%|█████████▉| 64449/64720 [31:14:36<03:15,  1.38it/s]Filtering charge errors: 100%|█████████▉| 64609/64720 [31:15:12<00:54,  2.03it/s]Filtering charge errors: 100%|█████████▉| 64673/64720 [31:16:18<00:28,  1.65it/s]Filtering charge errors: 100%|██████████| 64720/64720 [31:16:18<00:00,  1.74s/it]
+INFO:openff.qcsubmit.results.filters:62 results were removed after applying a ChargeCheckFilter filter.
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+INFO:openff.qcsubmit.results.filters:0 results were removed after applying a NoisyFilter filter.
+INFO:__main__:Converting dataset to yammbs input format
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: Problem parsing SMILES:
+Warning: Inconsistent cis/trans bond stereo.
+Warning: [c:1]1([H:24])[c:2]([H:25])[c:5]([H:28])[c:12]2[c:11]([c:4]1[H:27])[c:7]([H:30])[c:8]([H:31])[c:15]1[c:13]2[C:10]([H:33])=[C:14](/[C:18](=[N:20]/[C:16]2=[C:6]([H:29])[C:3]([H:26])=[C:9]([H:32])[S:23]2)[O:21][H:35])/[C:17](=[N:19]/[H:34])[O:22]1
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+Warning: bond stereochemistry may be assigned incorrectly for molecule 
+starting filter: End on 64658 records
+Sat Nov  2 03:33:22 PDT 2024
