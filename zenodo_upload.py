@@ -69,7 +69,7 @@ def add_metadata(deposition_id, url, headers, title):
             "title": title,
             "upload_type": "dataset",
             "description": description,
-            "creators": [{"name": "Westbrook, Brent", "affiliation": "OMSF"}],
+            "creators": [{"name": "OpenFF, YDS", "affiliation": "OMSF"}],
         }
     }
     r = requests.put(
