@@ -30,7 +30,12 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
    [conda-env.yaml]` on the PR. The brackets indicate an optional argument. If
    the path to the conda environment is omitted, the default environment will be
    used ([devtools/env.yaml](devtools/env.yaml)).
-6. Wait for the benchmarks to finish and merge your PR!
+6. Wait for the benchmarks to finish.
+7. Review the results, and update your submission with a README containing a
+   link to the Zenodo archive created by CI.
+   * An OpenFF admin (probably your PR reviewer) will need to manually publish
+     the Zenodo entry before you can do this.
+8. Merge your PR!
 
 #### Output
 
