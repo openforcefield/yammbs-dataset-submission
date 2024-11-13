@@ -9,6 +9,7 @@ import pandas
 import seaborn as sea
 from matplotlib import pyplot
 from openff.toolkit.utils import OpenEyeToolkitWrapper
+from pandas import DataFrame as DF
 
 assert OpenEyeToolkitWrapper().is_available()
 
@@ -24,7 +25,7 @@ warnings.filterwarnings(
 pandas.set_option("display.max_columns", None)
 
 
-def load_bench(d: Path, filter_records, negate) -> pandas.DataFrame:
+def load_bench(d: Path) -> pandas.DataFrame:
     """Load the DDE, RMSD, TFD, and ICRMSD results from the CSV files in ``d``
     and return the result as a merged dataframe"""
     dde = pandas.read_csv(d / "dde.csv")
@@ -35,33 +36,20 @@ def load_bench(d: Path, filter_records, negate) -> pandas.DataFrame:
     tfd.columns = ["rec_id", "tfd"]
     icrmsd = pandas.read_csv(d / "icrmsd.csv")
     icrmsd.columns = ["rec_id", "bonds", "angles", "dihedrals", "impropers"]
-    ret = (
-        dde.merge(rmsd)
-        .pipe(pandas.DataFrame.merge, tfd)
-        .pipe(pandas.DataFrame.merge, icrmsd)
-    )
-    if filter_records is not None:
-        if negate:
-            ret = ret[~ret["rec_id"].astype(str).isin(filter_records)]
-        else:
-            ret = ret[ret["rec_id"].astype(str).isin(filter_records)]
+    ret = dde.merge(rmsd).pipe(DF.merge, tfd).pipe(DF.merge, icrmsd)
     print(f"loaded {ret.shape} rows for {d}")
     return ret
 
 
-def load_benches(
-    ffs, in_dirs, filter_records, negate
-) -> list[pandas.DataFrame]:
+def load_benches(ffs, in_dirs) -> list[pandas.DataFrame]:
     """Load a sequence of dataframes, one per ``ff``. If there are multiple
     ``in_dirs``, each ``ff`` is loaded from each ``in_dir`` and stacked into a
     single dataframe."""
     ret = list()
     for ff in ffs:
-        df = load_bench(Path(in_dirs[0]) / ff, filter_records, negate)
+        df = load_bench(Path(in_dirs[0]) / ff)
         for d in in_dirs[1:]:
-            df = pandas.concat(
-                [df, load_bench(Path(d) / ff, filter_records, negate)]
-            )
+            df = pandas.concat([df, load_bench(Path(d) / ff)])
         ret.append(df)
     return ret
 
@@ -160,7 +148,7 @@ def plot_icrmsds(dfs, names, out_dir):
         pyplot.close()
 
 
-def plot(out_dir, ffs, in_dirs, names=None, filter_records=None, negate=False):
+def plot(out_dir, ffs, in_dirs, names=None):
     """Plot each of the `dde`, `rmsd`, and `tfd` CSV files found in `in_dirs`
     and write the resulting PNG images to out_dir. If provided, take the plot
     legend entries from `names` instead of `in_dirs`. If `filter_records` is
@@ -172,7 +160,7 @@ def plot(out_dir, ffs, in_dirs, names=None, filter_records=None, negate=False):
     if names is None:
         names = in_dirs
 
-    dfs = load_benches(ffs, in_dirs, filter_records, negate)
+    dfs = load_benches(ffs, in_dirs)
 
     for name, df in zip(names, dfs):
         df.to_csv(f"{out_dir}/{name}.csv")
@@ -194,20 +182,12 @@ def plotter(ffs, output_dir, input_dirs, names=None, **kwargs):
 @click.command()
 @click.argument("forcefields", nargs=-1)
 @click.option("--input-dir", "-d", default=["output/industry"], multiple=True)
-@click.option("--filter-records", "-r", default=None)
-@click.option("--negate", "-n", is_flag=True, default=False)
 @click.option("--output_dir", "-o", default="/tmp")
-def main(forcefields, input_dir, filter_records, negate, output_dir):
-    if filter_records is not None:
-        # assume it's the name of a file
-        with open(filter_records) as inp:
-            filter_records = [line.strip() for line in inp]
+def main(forcefields, input_dir, output_dir):
     plotter(
         forcefields,
         output_dir,
         input_dirs=input_dir,
-        filter_records=filter_records,
-        negate=negate,
     )
 
 
