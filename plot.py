@@ -143,12 +143,8 @@ def plot_icrmsds(dfs, names, out_dir):
 
 
 def plot(ffs, out_dir: str):
-    """Plot each of the `dde`, `rmsd`, and `tfd` CSV files found in `in_dirs`
-    and write the resulting PNG images to out_dir. If provided, take the plot
-    legend entries from `names` instead of `in_dirs`. If `filter_records` is
-    provided, restrict the plot only to those records. `negate` swaps the
-    comparison to include only the records *not* in `filter_records`.
-
+    """Plot each of the `dde`, `rmsd`, and `tfd` CSV files found in `ff/output`
+    for `ff` in `ffs` and write the resulting PNG images to out_dir.
     """
     out_dir = Path(out_dir)
     out_dir.mkdir(exist_ok=True)
