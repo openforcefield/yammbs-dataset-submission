@@ -8,10 +8,7 @@ import numpy
 import pandas
 import seaborn as sea
 from matplotlib import pyplot
-from openff.toolkit.utils import OpenEyeToolkitWrapper
 from pandas import DataFrame as DF
-
-assert OpenEyeToolkitWrapper().is_available()
 
 # try to suppress stereo warnings - from lily's valence-fitting
 # curate-dataset.py
