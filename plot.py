@@ -28,27 +28,24 @@ pandas.set_option("display.max_columns", None)
 def load_bench(d: Path) -> pandas.DataFrame:
     """Load the DDE, RMSD, TFD, and ICRMSD results from the CSV files in ``d``
     and return the result as a merged dataframe"""
-    dde = pandas.read_csv(d / "dde.csv")
+    dde = pandas.read_csv(d / "output" / "dde.csv")
     dde.columns = ["rec_id", "dde"]
-    rmsd = pandas.read_csv(d / "rmsd.csv")
+    rmsd = pandas.read_csv(d / "output" / "rmsd.csv")
     rmsd.columns = ["rec_id", "rmsd"]
-    tfd = pandas.read_csv(d / "tfd.csv")
+    tfd = pandas.read_csv(d / "output" / "tfd.csv")
     tfd.columns = ["rec_id", "tfd"]
-    icrmsd = pandas.read_csv(d / "icrmsd.csv")
+    icrmsd = pandas.read_csv(d / "output" / "icrmsd.csv")
     icrmsd.columns = ["rec_id", "bonds", "angles", "dihedrals", "impropers"]
     ret = dde.merge(rmsd).pipe(DF.merge, tfd).pipe(DF.merge, icrmsd)
     print(f"loaded {ret.shape} rows for {d}")
     return ret
 
 
-def load_benches(ffs, in_dirs) -> list[pandas.DataFrame]:
-    """Load a sequence of dataframes, one per ``ff``. If there are multiple
-    ``in_dirs``, each ``ff`` is loaded from each ``in_dir`` and stacked into a
-    single dataframe."""
+def load_benches(ffs) -> list[pandas.DataFrame]:
     ret = list()
     for ff in ffs:
-        df = load_bench(Path(in_dirs[0]) / ff)
-        for d in in_dirs[1:]:
+        df = load_bench(Path(ff))
+        for d in ffs[1:]:
             df = pandas.concat([df, load_bench(Path(d) / ff)])
         ret.append(df)
     return ret
@@ -148,7 +145,7 @@ def plot_icrmsds(dfs, names, out_dir):
         pyplot.close()
 
 
-def plot(out_dir, ffs, in_dirs, names=None):
+def plot(ffs, out_dir: str):
     """Plot each of the `dde`, `rmsd`, and `tfd` CSV files found in `in_dirs`
     and write the resulting PNG images to out_dir. If provided, take the plot
     legend entries from `names` instead of `in_dirs`. If `filter_records` is
@@ -156,11 +153,12 @@ def plot(out_dir, ffs, in_dirs, names=None):
     comparison to include only the records *not* in `filter_records`.
 
     """
-    # default to directory names
-    if names is None:
-        names = in_dirs
+    out_dir = Path(out_dir)
+    out_dir.mkdir(exist_ok=True)
 
-    dfs = load_benches(ffs, in_dirs)
+    dfs = load_benches(ffs)
+
+    names = [Path(ff).name for ff in ffs]
 
     for name, df in zip(names, dfs):
         df.to_csv(f"{out_dir}/{name}.csv")
@@ -171,24 +169,11 @@ def plot(out_dir, ffs, in_dirs, names=None):
     plot_icrmsds(dfs, names, out_dir)
 
 
-def plotter(ffs, output_dir, input_dirs, names=None, **kwargs):
-    if names is None:
-        names = ["Sage 2.1.0", "Sage 2.2.0", "Sage TM"]
-    out_path = Path(output_dir)
-    out_path.mkdir(exist_ok=True)
-    plot(output_dir, ffs, input_dirs, names, **kwargs)
-
-
 @click.command()
 @click.argument("forcefields", nargs=-1)
-@click.option("--input-dir", "-d", default=["output/industry"], multiple=True)
 @click.option("--output_dir", "-o", default="/tmp")
-def main(forcefields, input_dir, output_dir):
-    plotter(
-        forcefields,
-        output_dir,
-        input_dirs=input_dir,
-    )
+def main(forcefields, output_dir):
+    plot(forcefields, output_dir)
 
 
 if __name__ == "__main__":
