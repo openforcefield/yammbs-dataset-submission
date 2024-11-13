@@ -48,11 +48,13 @@ See [datasets/README.md](datasets/README.md)
 
 ## Benchmark Results
 
-| Submission   | Description                     | DOI                                                                |
-|--------------|---------------------------------|--------------------------------------------------------------------|
-| [Sage-2.1.0] | Constrained openff-2.1.0.offxml | [10.5281/zenodo.14053221](https://doi.org/10.5281/zenodo.14053221) |
+| Submission                 | Description                       | DOI                                                                |
+|----------------------------|-----------------------------------|--------------------------------------------------------------------|
+| [Sage-2.1.0]               | Constrained openff-2.1.0.offxml   | [10.5281/zenodo.14053221](https://doi.org/10.5281/zenodo.14053221) |
+| [Sage-2.1.0-unconstrained] | Unconstrained openff-2.1.0.offxml | [10.5281/zenodo.14058464](https://doi.org/10.5281/zenodo.14058464) |
 
 [Sage-2.1.0]: submissions/2024-11-07-Sage-2.1.0
+[Sage-2.1.0-unconstrained]: submissions/2024-11-08-Sage-2.1.0-unconstrained
 
 
 <!-- References -->
