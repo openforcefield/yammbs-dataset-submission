@@ -124,16 +124,6 @@ def plot_icrmsds(dfs, names, out_dir):
     for m in ["bonds", "angles", "dihedrals", "impropers"]:
         full = merge_metrics(dfs, names, m)
         df = full.iloc[:, 1:]
-        # only take the data points within f standard deviations of the mean
-        if f := os.environ.get("OFF_BENCH_F", None):
-            std, mean = df.std(), df.mean()
-            f = float(f)
-            cond = ((df > mean - f * std) & (df < mean + f * std)).all(1)
-            df = df[cond]
-            filt = full[~cond]["rec_id"].to_list()
-            print(f"filtered {len(filt)} {m}:")
-            print(filt)
-
         figure, axis = pyplot.subplots(figsize=(6, 4))
         ax = sea.boxplot(df)
         pyplot.title(titles[m])
