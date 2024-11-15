@@ -152,6 +152,21 @@ jobs:
 
           echo input_dir="${input_dir}" >> $GITHUB_ENV
 
+      - name: tar results
+        shell: bash -l {0}
+        run: |
+          input_files=$(python get_files.py ${{ inputs.path }})
+          tar cf results.tar \
+            tmp.sqlite.bz2 $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv \
+            $input_dir/output/{dde,rmsd,rmsd_cdf,tfd,tfd_cdf,bonds,angles,dihedrals,impropers}.png \
+            env.yaml main.py $input_files
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: results.tar
+
       - name: Upload to zenodo
         env:
             ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
