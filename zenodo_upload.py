@@ -6,6 +6,7 @@ import logging
 import os
 
 import requests
+from requests.exceptions import JSONDecodeError
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -21,11 +22,18 @@ TOKEN = os.environ["ZENODO_TOKEN"]
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 
 
-def check_status(response, expect):
-    "Helper for checking that ``response.status_code`` matches ``expect``."
-    assert (
-        response.status_code == expect
-    ), f"Request failed ({response.status_code}), body: {response.json()}"
+def check_status(response, expect, fatal: bool):
+    """Helper for checking that ``response.status_code`` matches ``expect``. If
+    ``fatal`` is ``True``, raise an exception if ``expect`` is not matched."""
+    if response.status_code != expect:
+        try:
+            body = response.json()
+        except JSONDecodeError as e:
+            body = e
+        msg = f"Request failed ({response.status_code}), body: {body}"
+        logger.error(msg)
+        if fatal:
+            raise Exception(msg)
 
 
 def check_api_access(url, headers):
