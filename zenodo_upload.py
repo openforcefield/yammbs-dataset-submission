@@ -16,7 +16,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--title", "-t")
 parser.add_argument("files", nargs="+")
 
-URL = "https://zenodo.org"
+URL = os.environ["ZENODO_URL"]
 TOKEN = os.environ["ZENODO_TOKEN"]
 
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
