@@ -1,0 +1,251 @@
+# this is adapted from openff-docs/cookbook_preproc.yaml
+
+name: Run benchmarks and commit the results
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Run the benchmarks for PR#: '
+        required: true
+        type: string
+      path:
+        description: Path to submission directory
+        required: true
+        type: string
+      env:
+        description: Path to conda YAML file
+        required: true
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.pr_number || github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  start-aws-runner:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    outputs:
+      mapping: ${{ steps.aws-start.outputs.mapping }}
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::649715411074:role/gh-actions-runner-role
+          aws-region: us-east-1
+      - name: Create cloud runner
+        id: aws-start
+        uses: omsf-eco-infra/gha-runner@v0.2.0
+        with:
+          provider: "aws"
+          action: "start"
+          aws_image_id: ami-0d5079d9be06933e5
+          aws_instance_type: c6a.8xlarge
+          aws_region_name: us-east-1
+          aws_home_dir: /home/ubuntu
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+
+  benchmark:
+    permissions: write-all
+    runs-on: self-hosted
+    needs:
+      - start-aws-runner
+    steps:
+      - name: Report dispatch to PR
+        if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          pr_number: ${{ inputs.pr_number }}
+          message: >
+            A workflow has been dispatched to run the benchmarks for this PR.
+
+
+            - Run ID: [${{ github.run_id }}]
+
+            - Triggering actor: ${{ github.triggering_actor }}
+
+            - Target branch: ${{ github.ref_name }}
+
+
+            [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Create check
+        if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        id: create-check
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const created_run = await github.request(
+              'POST /repos/{owner}/{repo}/check-runs',
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: '${{ github.job }}',
+                head_sha: '${{ github.sha }}',
+                details_url: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
+                status: 'in_progress',
+                started_at: new Date().toISOString(),
+                output: {
+                  title: 'Run benchmarks',
+                  summary: 'Results and progress: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
+                  text: ''
+                },
+                headers: {
+                  'X-GitHub-Api-Version': '2022-11-28'
+                }
+              }
+            )
+
+            return created_run.data.id
+
+      - name: Install git-lfs
+        run: |
+          sudo apt install -y git-lfs
+
+      - uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Install Conda environment
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          environment-file: ${{ inputs.env }}
+
+      - name: Run benchmarks
+        env:
+            LICENSE: ${{ secrets.OE_LICENSE }}
+        shell: bash -l {0}
+        run: |
+          set -e
+          echo "$LICENSE" > /tmp/oe_license.txt
+          export OE_LICENSE=/tmp/oe_license.txt
+          python torsions.py ${{ inputs.path }} $(nproc)
+          rm $OE_LICENSE
+
+      - name: Plot results
+        shell: bash -l {0}
+        run: |
+          set -e
+          input_file=${{ inputs.path }}
+          input_dir=$(dirname $input_file)
+          # python plot.py $input_dir -o $input_dir/output
+
+      - name: Commit results
+        shell: bash -l {0}
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+          git config --global init.defaultBranch main
+
+          # Commit the benchmark results and push
+
+          input_file=${{ inputs.path }}                        # path to the input YAML file
+          input_dir=$(dirname $input_file)                     # parent directory of input YAML file
+          git add $input_dir/output/{log_sse}.csv
+          git add $input_dir/output/{log_sse}.csv
+          git commit -m "Add benchmark results"
+          git push
+
+          echo input_dir="${input_dir}" >> $GITHUB_ENV
+
+      - name: Upload to zenodo
+        env:
+            ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        shell: bash -l {0}
+        run: |
+          # TODO: make and bundle plot(s)
+          bzip2 tmp.sqlite
+          micromamba env export > env.yaml
+          input_files=$(python get_files.py ${{ inputs.path }})
+          python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
+            tmp.sqlite.bz2 $input_dir/output/{log_sse}.csv \
+            env.yaml torsions.py $input_files
+
+      - name: Report status to PR
+        id: reportStatusToPr
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          pr_number: ${{ inputs.pr_number }}
+          message: >
+            A workflow dispatched to run benchmarks for this PR has just finished.
+
+
+            - Run ID: [${{ github.run_id }}]
+
+            - Triggering actor: ${{ github.triggering_actor }}
+
+            - Target branch: ${{ github.ref_name }}
+
+            - Job status: **${{ job.status }}**
+
+            [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+
+      - name: Report status to PR on templating failure
+        if: always() && steps.reportStatusToPr.outcome == 'failure'
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          pr_number: ${{ inputs.pr_number }}
+          message: >
+            A workflow dispatched to run benchmarks for this PR has just failed.
+
+
+            - Run ID: [${{ github.run_id }}]
+
+            - Triggering actor: ${{ github.triggering_actor }}
+
+            - Target branch: ${{ github.ref_name }}
+
+            - Job status: **${{ job.status }}**
+
+            [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Update check
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.request(
+              'PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}',
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                check_run_id: ${{ steps.create-check.outputs.result }},
+                status: 'completed',
+                conclusion: '${{ job.status }}',
+                completed_at: new Date().toISOString(),
+                headers: {
+                  'X-GitHub-Api-Version': '2022-11-28'
+                }
+              }
+            )
+
+  stop-aws-runner:
+    runs-on: ubuntu-latest
+    permissions:
+        id-token: write
+        contents: read
+    needs:
+      - start-aws-runner
+      - benchmark
+    if: ${{ always() }}
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::649715411074:role/gh-actions-runner-role
+          aws-region: us-east-1
+      - name: Stop instances
+        uses: omsf-eco-infra/gha-runner@v0.2.0
+        with:
+          provider: "aws"
+          action: "stop"
+          instance_mapping: ${{ needs.start-aws-runner.outputs.mapping }}
+          aws_region_name: us-east-1
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
