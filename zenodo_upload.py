@@ -22,9 +22,8 @@ TOKEN = os.environ["ZENODO_TOKEN"]
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 
 
-def check_status(response, expect, fatal: bool):
-    """Helper for checking that ``response.status_code`` matches ``expect``. If
-    ``fatal`` is ``True``, raise an exception if ``expect`` is not matched."""
+def check_status(response, expect) -> bool:
+    "Helper for checking that ``response.status_code`` matches ``expect``."
     if response.status_code != expect:
         try:
             body = response.json()
@@ -32,14 +31,15 @@ def check_status(response, expect, fatal: bool):
             body = e
         msg = f"Request failed ({response.status_code}), body: {body}"
         logger.error(msg)
-        if fatal:
-            raise Exception(msg)
+        return False
+
+    return True
 
 
 def check_api_access(url, headers):
     logger.info("checking API access")
     r = requests.get(f"{url}/api/deposit/depositions", headers=headers)
-    check_status(r, 200)
+    return check_status(r, 200)
 
 
 def create_empty_upload(url, headers):
@@ -49,11 +49,14 @@ def create_empty_upload(url, headers):
         json={},
         headers=headers | {"Content-Type": "application/json"},
     )
-    check_status(r, 201)
+    if not check_status(r, 201):
+        return False
     return r.json()
 
 
-def upload_file(bucket_url, filename, headers):
+def upload_file(bucket_url, filename, headers) -> bool:
+    "Upload a file and return whether this succeeded or not"
+
     logger.info(f"uploading file: `{filename}`")
 
     if not os.path.exists(filename):
@@ -63,7 +66,7 @@ def upload_file(bucket_url, filename, headers):
     with open(filename, "rb") as f:
         path = os.path.basename(filename)
         r = requests.put(f"{bucket_url}/{path}", data=f, headers=headers)
-        check_status(r, 201)
+        return check_status(r, 201)
 
 
 def add_metadata(deposition_id, url, headers, title):
@@ -85,22 +88,38 @@ def add_metadata(deposition_id, url, headers, title):
         headers=headers | {"Content-Type": "application/json"},
         data=json.dumps(data),
     )
-    check_status(r, 200)
+    return check_status(r, 200)
+
+
+def with_retries(fn, retries):
+    "Run ``fn`` up to ``retries`` times or until it returns something truthy"
+    finished = False
+    while not finished and retries > 0:
+        finished = fn()
+        retries -= 1
+    return finished
 
 
 def main():
     args = parser.parse_args()
 
-    check_api_access(URL, HEADERS)
-    res = create_empty_upload(URL, HEADERS)
+    if not with_retries(lambda: check_api_access(URL, HEADERS), 5):
+        logger.error("No API access, exiting")
+        exit(1)
+
+    if not (res := with_retries(lambda: create_empty_upload(URL, HEADERS), 5)):
+        logger.error("Failed to create empty upload, exiting")
+        exit(1)
 
     bucket_url = res["links"]["bucket"]
     deposition_id = res["id"]
 
     for f in args.files:
-        upload_file(bucket_url, f, HEADERS)
+        with_retries(lambda: upload_file(bucket_url, f, HEADERS), 5)
 
-    add_metadata(deposition_id, URL, HEADERS, title=args.title)
+    with_retries(
+        lambda: add_metadata(deposition_id, URL, HEADERS, title=args.title), 5
+    )
 
 
 if __name__ == "__main__":
