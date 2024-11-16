@@ -155,6 +155,8 @@ jobs:
       - name: tar results
         shell: bash -l {0}
         run: |
+          bzip2 tmp.sqlite
+          micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
           tar cf results.tar \
             tmp.sqlite.bz2 $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv \
@@ -173,8 +175,6 @@ jobs:
             ZENODO_URL:  "https://zenodo.org"
         shell: bash -l {0}
         run: |
-          bzip2 tmp.sqlite
-          micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
           python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
             tmp.sqlite.bz2 $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv \
