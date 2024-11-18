@@ -6,7 +6,7 @@ rather than being part of a config file (`industry.yaml` in this case). For that
 reason, a copy of the version of `download_and_filter_dataset.py` (previously
 called `new_dataset.py`) is also included here.
 
-Additionally, the cache file `first1000.json` contains the first 100 entries in
+Additionally, the cache file `first100.json` contains the first 100 entries in
 from `cache.json` for testing purposes. This file was produced by manipulating
 `cache.json` with `jq`:
 
