@@ -52,7 +52,7 @@ See [datasets/README.md](datasets/README.md)
 |-------------------------------|-----------------------------------|--------------------------------------------------------------------|
 | [Sage-2.1.0]                  | Constrained openff-2.1.0.offxml   | [10.5281/zenodo.14053221](https://doi.org/10.5281/zenodo.14053221) |
 | [Sage-2.1.0-unconstrained]    | Unconstrained openff-2.1.0.offxml | [10.5281/zenodo.14058464](https://doi.org/10.5281/zenodo.14058464) |
-| [Parsley-1.3.0-unconstrained] | Unconstrained openff-1.3.1.offxml | [10.5281/zenodo.14172472](https://doi.org/10.5281/zenodo.14172472) |
+| [Parsley-1.3.1-unconstrained] | Unconstrained openff-1.3.1.offxml | [10.5281/zenodo.14172472](https://doi.org/10.5281/zenodo.14172472) |
 
 [Sage-2.1.0]: submissions/2024-11-07-Sage-2.1.0
 [Sage-2.1.0-unconstrained]: submissions/2024-11-08-Sage-2.1.0-unconstrained
