@@ -264,7 +264,7 @@ layout: basic
 	  "{{ page.path }}",
 {% endfor %}
   ];
-  let dirs = PAGES.map((x) => x.replace(/\/output\/industry\/([^/]+)\/.*$/, '$1'));
+  let dirs = PAGES.map((x) => x.replace(/\/submissions\/([^/]+)\/.*$/, '$1'));
   let unique_dirs = [...new Set(dirs)];
   const selected = new Map();
   for (dir of unique_dirs) {
