@@ -1,0 +1,3 @@
+forcefield: openff_unconstrained-2.2.1.offxml
+datasets:
+    - datasets/torsion-dev/filtered-supp-td.json
