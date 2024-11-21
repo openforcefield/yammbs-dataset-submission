@@ -104,6 +104,7 @@ jobs:
 
       - name: Install git-lfs
         run: |
+          sudo apt update
           sudo apt install -y git-lfs
 
       - uses: actions/checkout@v3
