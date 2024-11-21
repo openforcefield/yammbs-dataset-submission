@@ -22,4 +22,4 @@ dependencies:
   - tqdm
 
   - pip:
-    - git+https://github.com/openforcefield/yammbs.git@a7298a8038073b104e25d01fd6b0803b3474a3bd
+    - git+https://github.com/openforcefield/yammbs.git@add-torsion-models
