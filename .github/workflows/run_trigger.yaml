@@ -89,7 +89,7 @@ jobs:
                     path: path
                 },
                 headers: {
-                  'X-GitHub-Api-Version': '2022-11-28' // OLD?
+                  'X-GitHub-Api-Version': '2022-11-28'
                 }
               },
             )
