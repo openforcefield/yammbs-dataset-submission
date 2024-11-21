@@ -37,7 +37,7 @@ layout: basic
 
   async function fetchData(dir) {
 	  // includes trailing slash so don't add another
-	  let base = `${window.location.pathname}output/industry/${dir}`
+	  let base = `${window.location.pathname}submissions/${dir}/output`
 	  let dde = await fetchCsv(`${base}/dde.csv`);
 	  let rmsd = await fetchCsv(`${base}/rmsd.csv`);
 	  let tfd = await fetchCsv(`${base}/tfd.csv`);
