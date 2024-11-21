@@ -64,7 +64,7 @@ jobs:
             const ref = pr.data.head.ref
 
             // treat everything after the command name as an argument
-            const args = comment.body.split(" ").slice(1);
+            // const args = comment.body.split(" ").slice(1);
 
             // const path = args[0]; // path to submission dir
             // if (!path) {
