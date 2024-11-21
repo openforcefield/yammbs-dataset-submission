@@ -71,9 +71,11 @@ jobs:
             //     console.log("No submission path provided");
             //     return;
             // }
-            const path = "torsion-dev/tmp.yaml" // "submissions" YAML
 
-            const env = "devtools/torsions.yaml"; // conda env
+            // const path = "torsion-dev/tmp.yaml" // "submissions" YAML
+            const path = "submissions/2024-11-21-Sage-2.2.1/input.yaml"
+
+            const env = "devtools/env.yaml"; // conda env
 
             // We didn't return early, so dispatch the workflow
             const dispatch = await github.request(
