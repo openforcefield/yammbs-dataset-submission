@@ -25,10 +25,10 @@ jobs:
             const comment = context.payload.comment
 
             // Return early if comment is not the trigger phrase
-            if (!comment.body.startsWith('/run-torsions')) {
-              console.log("Comment is not trigger phrase")
-              return
-            }
+            // if (!comment.body.startsWith('/run-torsions')) {
+            //   console.log("Comment is not trigger phrase")
+            //   return
+            // }
 
             // This will 404 if the user is not a collaborator (and cause an
             // exception below), so this check prevents random users from
