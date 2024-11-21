@@ -156,6 +156,7 @@ jobs:
       - name: Upload to zenodo
         env:
             ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+            ZENODO_URL:  "https://zenodo.org"
         shell: bash -l {0}
         run: |
           # TODO: make and bundle plot(s)
