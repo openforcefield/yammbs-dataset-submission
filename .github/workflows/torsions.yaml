@@ -159,11 +159,11 @@ jobs:
         shell: bash -l {0}
         run: |
           # TODO: make and bundle plot(s)
-          bzip2 tmp.sqlite
+          bzip2 torsions-dev.sqlite
           micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
           python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
-            tmp.sqlite.bz2 $input_dir/output/log_sse.csv \
+            torsions-dev.sqlite.bz2 $input_dir/output/log_sse.csv \
             env.yaml torsions.py $input_files
 
       - name: Report status to PR
