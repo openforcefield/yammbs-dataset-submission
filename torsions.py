@@ -35,6 +35,7 @@ def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
             crc = QCArchiveTorsionDataset.model_validate_json(inp.read())
         store = TorsionStore.from_torsion_dataset(crc, sqlite_file)
 
+    print(f"num molecule IDs: {len(store.get_molecule_ids())}", flush=True)
     print(f"started optimizing store with {procs=}", flush=True)
     start = time.time()
     store.optimize_mm(force_field=forcefield, n_processes=procs)
