@@ -147,6 +147,8 @@ jobs:
           input_file=${{ inputs.path }}                        # path to the input YAML file
           input_dir=$(dirname $input_file)                     # parent directory of input YAML file
           git add $input_dir/output/log_sse.csv
+          git add $input_dir/output/minimized.json
+          git add $input_dir/output/metrics.json
           git commit -m "Add benchmark results"
           git push
 

@@ -35,13 +35,19 @@ def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
             crc = QCArchiveTorsionDataset.model_validate_json(inp.read())
         store = TorsionStore.from_torsion_dataset(crc, sqlite_file)
 
-    print("started optimizing store", flush=True)
+    print(f"started optimizing store with {procs=}", flush=True)
     start = time.time()
     store.optimize_mm(force_field=forcefield, n_processes=procs)
     print(f"finished optimizing after {time.time() - start} sec")
 
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
+
+    with open(f"{out_dir}/minimized.json", "w") as f:
+        f.write(store.get_outputs().model_dump_json())
+
+    with open(f"{out_dir}/metrics.json", "w") as f:
+        f.write(store.get_metrics().model_dump_json())
 
     make_csvs(store, forcefield, out_dir)
 
