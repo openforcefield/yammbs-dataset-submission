@@ -146,7 +146,8 @@ jobs:
 
           input_file=${{ inputs.path }}                        # path to the input YAML file
           input_dir=$(dirname $input_file)                     # parent directory of input YAML file
-          git add $input_dir/output/log_sse.csv
+          git add $input_dir/output/rmsd.csv
+          git add $input_dir/output/een.csv
           git add $input_dir/output/minimized.json
           git add $input_dir/output/metrics.json
           git commit -m "Add benchmark results"
@@ -165,7 +166,8 @@ jobs:
           micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
           python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
-            torsions-dev.sqlite.bz2 $input_dir/output/log_sse.csv \
+            torsions-dev.sqlite.bz2 $input_dir/output/rmsd.csv \
+            torsions-dev.sqlite.bz2 $input_dir/output/rmse.csv \
             env.yaml torsions.py $input_files
 
       - name: Report status to PR
