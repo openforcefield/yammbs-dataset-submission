@@ -104,6 +104,7 @@ jobs:
 
       - name: Install git-lfs
         run: |
+          sudo apt update
           sudo apt install -y git-lfs
 
       - uses: actions/checkout@v3
@@ -145,8 +146,10 @@ jobs:
 
           input_file=${{ inputs.path }}                        # path to the input YAML file
           input_dir=$(dirname $input_file)                     # parent directory of input YAML file
-          git add $input_dir/output/{log_sse}.csv
-          git add $input_dir/output/{log_sse}.csv
+          git add $input_dir/output/rmsd.csv
+          git add $input_dir/output/een.csv
+          git add $input_dir/output/minimized.json
+          git add $input_dir/output/metrics.json
           git commit -m "Add benchmark results"
           git push
 
@@ -155,14 +158,16 @@ jobs:
       - name: Upload to zenodo
         env:
             ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+            ZENODO_URL:  "https://zenodo.org"
         shell: bash -l {0}
         run: |
           # TODO: make and bundle plot(s)
-          bzip2 tmp.sqlite
+          bzip2 torsions-dev.sqlite
           micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
           python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
-            tmp.sqlite.bz2 $input_dir/output/{log_sse}.csv \
+            torsions-dev.sqlite.bz2 $input_dir/output/rmsd.csv \
+            torsions-dev.sqlite.bz2 $input_dir/output/een.csv \
             env.yaml torsions.py $input_files
 
       - name: Report status to PR

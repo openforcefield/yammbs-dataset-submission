@@ -1,2 +1,5 @@
 oe_license.txt
 /__pycache__/
+
+# macOS
+.DS_Store
