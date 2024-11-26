@@ -21,7 +21,7 @@ assert OpenEyeToolkitWrapper().is_available()
 def make_csvs(store, forcefield, out_dir):
     print("getting log SSEs")
     store.get_rmsd(forcefield, skip_check=True).to_csv(f"{out_dir}/rmsd.csv")
-    store.get_rmse(forcefield, skip_check=True).to_csv(f"{out_dir}/rmse.csv")
+    store.get_een(forcefield, skip_check=True).to_csv(f"{out_dir}/een.csv")
 
 
 def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):

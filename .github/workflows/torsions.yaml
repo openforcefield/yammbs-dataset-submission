@@ -167,7 +167,7 @@ jobs:
           input_files=$(python get_files.py ${{ inputs.path }})
           python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
             torsions-dev.sqlite.bz2 $input_dir/output/rmsd.csv \
-            torsions-dev.sqlite.bz2 $input_dir/output/rmse.csv \
+            torsions-dev.sqlite.bz2 $input_dir/output/een.csv \
             env.yaml torsions.py $input_files
 
       - name: Report status to PR
