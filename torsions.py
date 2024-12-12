@@ -19,9 +19,17 @@ assert OpenEyeToolkitWrapper().is_available()
 
 
 def make_csvs(store, forcefield, out_dir):
-    print("getting log SSEs")
-    store.get_rmsd(forcefield, skip_check=True).to_csv(f"{out_dir}/rmsd.csv")
-    store.get_een(forcefield, skip_check=True).to_csv(f"{out_dir}/een.csv")
+    print("getting metrics and writing to CSVs")
+
+    print("getting rmsds")
+    rmsds = store.get_rmsd(forcefield, skip_check=True)
+    print("got rmsds, writing to CSV")
+    rmsds.to_csv(f"{out_dir}/rmsd.csv")
+
+    print("getting een")
+    eens = store.get_een(forcefield, skip_check=True)
+    print("got een, writing to CSV")
+    eens.to_csv(f"{out_dir}/een.csv")
 
 
 def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
@@ -31,7 +39,7 @@ def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
         print(f"loading existing database from {sqlite_file}", flush=True)
         store = TorsionStore(sqlite_file)
     else:
-        print(f"loading cached dataset from {dataset}", flush=True)
+        print(f"loading YAMMBS input model dataset from {dataset}", flush=True)
         with open(dataset) as inp:
             crc = QCArchiveTorsionDataset.model_validate_json(inp.read())
         store = TorsionStore.from_torsion_dataset(crc, sqlite_file)
