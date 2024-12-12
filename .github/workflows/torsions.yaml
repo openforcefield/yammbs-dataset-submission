@@ -1,6 +1,6 @@
 # this is adapted from openff-docs/cookbook_preproc.yaml
 
-name: Run benchmarks and commit the results
+name: Run torsion benchmarks and commit the results
 
 on:
   workflow_dispatch:
@@ -90,7 +90,7 @@ jobs:
                 status: 'in_progress',
                 started_at: new Date().toISOString(),
                 output: {
-                  title: 'Run benchmarks',
+                  title: 'Run torsion benchmarks',
                   summary: 'Results and progress: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
                   text: ''
                 },
@@ -116,7 +116,7 @@ jobs:
         with:
           environment-file: ${{ inputs.env }}
 
-      - name: Run benchmarks
+      - name: Run torsion benchmarks
         env:
             LICENSE: ${{ secrets.OE_LICENSE }}
         shell: bash -l {0}
@@ -177,7 +177,7 @@ jobs:
         with:
           pr_number: ${{ inputs.pr_number }}
           message: >
-            A workflow dispatched to run benchmarks for this PR has just finished.
+            A workflow dispatched to run torsion benchmarks for this PR has just finished.
 
 
             - Run ID: [${{ github.run_id }}]
@@ -197,7 +197,7 @@ jobs:
         with:
           pr_number: ${{ inputs.pr_number }}
           message: >
-            A workflow dispatched to run benchmarks for this PR has just failed.
+            A workflow dispatched to run torsion benchmarks for this PR has just failed.
 
 
             - Run ID: [${{ github.run_id }}]
