@@ -1,6 +1,6 @@
 # this is adapted from openff-docs/cookbook_preproc.yaml
 
-name: Run torsion benchmarks and commit the results
+name: Run torsion benchmarks
 
 on:
   workflow_dispatch:

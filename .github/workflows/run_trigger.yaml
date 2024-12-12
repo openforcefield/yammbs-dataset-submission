@@ -1,6 +1,8 @@
 # this is adapted from openff-docs/cookbook_pr_trigger.yaml
 
-name: Trigger benchmark run on comment with "/run-benchmark"
+name: Trigger benchmark run
+
+# comment on a PR with "/run-optimization-benchmark" or "/run-torsion-benchmark"
 
 on:
   issue_comment:
@@ -28,7 +30,7 @@ jobs:
             // set the type of workflow to dispatch
             let benchmark_workflow;
             if (comment.body.startsWith('/run-optimization-benchmarks')) {
-               benchmark_workflow = "run.yaml"
+               benchmark_workflow = "opt.yaml"
             } else if (comment.body.startsWith('/run-torsion-benchmarks')) {
                benchmark_workflow = "torsions.yaml"
             } else {

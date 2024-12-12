@@ -1,6 +1,6 @@
 # this is adapted from openff-docs/cookbook_preproc.yaml
 
-name: Run optimization benchmarks and commit the results
+name: Run optimization benchmarks
 
 on:
   workflow_dispatch:
