@@ -124,7 +124,7 @@ jobs:
           set -e
           echo "$LICENSE" > /tmp/oe_license.txt
           export OE_LICENSE=/tmp/oe_license.txt
-          python torsions.py ${{ inputs.path }} $(nproc)
+          python --log=DEBUG torsions.py ${{ inputs.path }} $(nproc)
           rm $OE_LICENSE
 
       - name: Plot results
