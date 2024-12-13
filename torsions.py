@@ -1,6 +1,7 @@
 # Usage:
 # python torsions.py path/to/config.yaml ncpus
 
+import logging
 import os
 import sys
 import time
@@ -14,6 +15,9 @@ from yammbs.torsion import TorsionStore
 from yammbs.torsion.inputs import QCArchiveTorsionDataset
 
 from config import Config
+
+logging.basicConfig(level=logging.DEBUG)
+
 
 assert OpenEyeToolkitWrapper().is_available()
 
