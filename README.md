@@ -26,10 +26,11 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
 
 3. Push your branch and open a PR.
 4. Request a review, and get the PR approved.
-5. Make a comment of the form `/run-benchmark path/to/submission
+5. Make a comment of the form `/run-optimization-benchmarks path/to/submission
+   [conda-env.yaml]` or `/run-torsion-benchmarks path/to-submission
    [conda-env.yaml]` on the PR. The brackets indicate an optional argument. If
-   the path to the conda environment is omitted, the default environment will be
-   used ([devtools/env.yaml](devtools/env.yaml)).
+   the path to the conda environment is omitted, the default environment will
+   be used ([devtools/env.yaml](devtools/env.yaml)).
 6. Wait for the benchmarks to finish.
 7. Review the results, and update your submission with a README containing a
    link to the Zenodo archive created by CI.
