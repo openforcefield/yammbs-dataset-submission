@@ -1,0 +1,4 @@
+forcefield: submissions/2024-12-19-Sage-2.2.1-lipids-core/ff-aux.offxml
+datasets:
+    - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
+~                                                                           
