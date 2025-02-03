@@ -76,7 +76,7 @@ jobs:
       - name: Create check
         if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
         id: create-check
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const created_run = await github.request(
@@ -212,7 +212,7 @@ jobs:
 
       - name: Update check
         if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             await github.request(
