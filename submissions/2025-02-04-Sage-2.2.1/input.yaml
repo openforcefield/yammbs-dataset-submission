@@ -1,0 +1,3 @@
+forcefield: openff_unconstrained-2.2.1.offxml
+datasets:
+    - datasets/OpenFF-Lipid-Optimization-Training-Supplement-v1.0/cache.json
