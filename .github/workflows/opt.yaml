@@ -107,9 +107,13 @@ jobs:
           sudo apt update
           sudo apt install -y git-lfs
 
-      - uses: actions/checkout@v3
+      - name: Clone repository
+        uses: actions/checkout@v3
         with:
           lfs: true
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
 
       - name: Install Conda environment
         uses: mamba-org/setup-micromamba@v1
