@@ -30,9 +30,10 @@ def load_bench(d: Path) -> pandas.DataFrame:
     rmsd.columns = ["rec_id", "rmsd"]
     tfd = pandas.read_csv(d / "output" / "tfd.csv")
     tfd.columns = ["rec_id", "tfd"]
-    icrmsd = pandas.read_csv(d / "output" / "icrmsd.csv")
-    icrmsd.columns = ["rec_id", "bonds", "angles", "dihedrals", "impropers"]
-    ret = dde.merge(rmsd).pipe(DF.merge, tfd).pipe(DF.merge, icrmsd)
+    # icrmsd = pandas.read_csv(d / "output" / "icrmsd.csv")
+    # icrmsd.columns = ["rec_id", "bonds", "angles", "dihedrals", "impropers"]
+    # ret = dde.merge(rmsd).pipe(DF.merge, tfd).pipe(DF.merge, icrmsd)
+    ret = dde.merge(rmsd).pipe(DF.merge, tfd)
     print(f"loaded {ret.shape} rows for {d}")
     return ret
 
@@ -148,7 +149,7 @@ def plot(ffs, out_dir: str):
     plot_ddes(dfs, names, out_dir)
     plot_rmsds(dfs, names, out_dir)
     plot_tfds(dfs, names, out_dir)
-    plot_icrmsds(dfs, names, out_dir)
+    # plot_icrmsds(dfs, names, out_dir)
 
 
 @click.command()
