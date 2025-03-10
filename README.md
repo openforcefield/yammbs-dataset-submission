@@ -4,7 +4,7 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
 ## Usage
 
 ### Running benchmarks in CI
-0. Create a new branch starting from the `master` branch.
+0. Create a new branch starting from the `main` branch.
 1. Create a new entry in the `submissions` directory, with the general format
    `YYYY-MM-DD-Name`. For example:
 
