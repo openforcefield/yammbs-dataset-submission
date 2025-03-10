@@ -43,6 +43,10 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
 This will produce CSV files corresponding to the DDE, RMSD, TFD, and
 internal-coordinate RMSD (ICRMSD) metrics computed by [yammbs][yammbs].
 
+### Forks
+
+Running from forks is not supported. To gain access to push directly, contact @mattwthompson.
+
 ### Generating datasets
 
 See [datasets/README.md](datasets/README.md)
