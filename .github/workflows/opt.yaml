@@ -185,7 +185,7 @@ jobs:
         if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
         uses: thollander/actions-comment-pull-request@v3
         with:
-          pr_number: ${{ inputs.pr_number }}
+          pr-number: ${{ inputs.pr_number }}
           message: >
             A workflow dispatched to run optimization benchmarks for this PR has just finished.
 
