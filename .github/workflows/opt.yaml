@@ -54,7 +54,7 @@ jobs:
     steps:
       - name: Report dispatch to PR
         if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
-        uses: thollander/actions-comment-pull-request@v2
+        uses: thollander/actions-comment-pull-request@v3
         with:
           pr_number: ${{ inputs.pr_number }}
           message: >
@@ -183,7 +183,7 @@ jobs:
       - name: Report status to PR
         id: reportStatusToPr
         if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
-        uses: thollander/actions-comment-pull-request@v2
+        uses: thollander/actions-comment-pull-request@v3
         with:
           pr_number: ${{ inputs.pr_number }}
           message: >
@@ -203,7 +203,7 @@ jobs:
 
       - name: Report status to PR on templating failure
         if: always() && steps.reportStatusToPr.outcome == 'failure'
-        uses: thollander/actions-comment-pull-request@v2
+        uses: thollander/actions-comment-pull-request@v3
         with:
           pr_number: ${{ inputs.pr_number }}
           message: >
