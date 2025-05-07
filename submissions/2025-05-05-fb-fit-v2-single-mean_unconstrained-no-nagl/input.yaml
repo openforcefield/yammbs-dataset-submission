@@ -1,0 +1,3 @@
+forcefield: submissions/2025-05-05-fb-fit-v2-single-mean_unconstrained-no-nagl/ff.offxml
+datasets:
+    - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
