@@ -1,0 +1,1 @@
+This force field is a test fit of a NAGL FF force field (sage 2.3.0)with multiple conformer optimizations, selected diversely for each modified valence term.

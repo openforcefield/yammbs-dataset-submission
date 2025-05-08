@@ -1,0 +1,41 @@
+name: nagl-valence
+channels:
+  - conda-forge
+  - openeye
+dependencies:
+  - python
+  - pip
+
+  - openeye-toolkits
+
+  - packaging
+  - numpy
+  - smirnoff99frosst
+  - openff-forcefields
+  - openff-amber-ff-ports >=0.0.4
+  - openff-units
+  - openff-utilities
+  - networkx >=2.5
+  - xmltodict
+  - bson
+  - importlib-metadata >=4.10
+  - python-constraint
+  - cachetools
+  - cached-property
+  - typing_extensions
+  - qcportal >=0.50.0
+
+  - openff-interchange ==0.3.29
+  - rdkit !=2024.03.6
+  - mdtraj
+  - openmm >=7.6
+
+  - openff-forcefields
+  - openff-nagl-base
+  - openff-nagl-models
+  - openff-qcsubmit
+  - click
+  - tqdm
+
+  - pip:
+    - git+git://github.com/openforcefield/openff-toolkit.git@add-nagl-global-v0165
