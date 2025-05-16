@@ -1,0 +1,3 @@
+forcefield: gaff-2.11
+datasets:
+    - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json

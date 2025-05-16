@@ -55,6 +55,7 @@ See [datasets/README.md](datasets/README.md)
 
 | Submission                                      | Description                                                                        | DOI                                                                                                         |
 |-------------------------------------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [GAFF-2.11](submissions/2025-05-07-GAFF) | GAFF-2.11+AM1BCC (via openmmforcefields)                                                  | https://doi.org/10.5281/zenodo.15361197
 | [Parsley-1.0.0-unconstrained](submissions/2025-05-07-Parsley-1.0.0)                   | openff_unconstrained-1.0.0.offxml                                                  | https://doi.org/10.5281/zenodo.15361226                                         |
 | [smirnoff99Frosst-1.1.0](submissions/2025-05-07-s99f-1.1.0) (note this has hbond constraints))                   | smirnoff99Frosst-1.1.0.offxml                                                  | https://doi.org/10.5281/zenodo.15361270       |
 | [Parsley-1.3.1](submissions/2025-05-07-Parsley-1.3.1) (same settings as below)        | openff_unconstrained-1.3.1.offxml                                                  | https://doi.org/10.5281/zenodo.15362656                                                                 |
