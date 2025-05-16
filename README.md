@@ -55,6 +55,7 @@ See [datasets/README.md](datasets/README.md)
 
 | Submission                                      | Description                                                                        | DOI                                                                                                         |
 |-------------------------------------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [Parsley-1.0.0-unconstrained](submissions/2025-05-07-Parsley-1.0.0)                   | openff_unconstrained-1.0.0.offxml                                                  | https://doi.org/10.5281/zenodo.15361226                                         |
 | [Parsley-1.3.1-unconstrained]                   | openff_unconstrained-1.3.1.offxml                                                  | [10.5281/zenodo.14172472](https://doi.org/10.5281/zenodo.14172472)                                          |
 | [Sage-2.0.0](submissions/2024-11-19-Sage-2.0.0) | openff_unconstrained-2.0.0.offxml                                                  | [10.5281/zenodo.14188644](https://doi.org/10.5281/zenodo.14188644)                                          |
 | [Sage-2.1.0]                                    | openff-2.1.0.offxml                                                                | [10.5281/zenodo.14053221](https://doi.org/10.5281/zenodo.14053221)                                          |
