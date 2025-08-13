@@ -1,3 +1,3 @@
-forcefield: smee-spice2-systematic-torsion-generation.offxml
+forcefield: submissions/2025-08-13-smee-spice2-systematic-torsion-generation/smee-spice2-systematic-torsion-generation.offxml
 datasets:
     - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
