@@ -4,6 +4,11 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
 ## Usage
 
 ### Running benchmarks in CI
+
+Note: as running benchmarks in CI uses paid AWS images, please ensure you have
+discussed your projects and plans with a member of the OpenFF leadership team
+before you open a pull request.
+
 0. Create a new branch starting from the `main` branch.
 1. Create a new entry in the `submissions` directory, with the general format
    `YYYY-MM-DD-Name`. For example:
@@ -37,8 +42,8 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
 
 3. Push your branch and open a PR.
 4. Request a review, and get the PR approved.
-5. Make a comment of the form `/run-optimization-benchmarks path/to/submission
-   [conda-env.yaml]` or `/run-torsion-benchmarks path/to-submission
+5. Make a comment of the form `/run-optimization-benchmarks path/to/submission/input.yaml
+   [conda-env.yaml]` or `/run-torsion-benchmarks path/to-submission/input.yaml
    [conda-env.yaml]` on the PR. The brackets indicate an optional argument. If
    the path to the conda environment is omitted, the default environment will
    be used ([devtools/env.yaml](devtools/env.yaml)).
