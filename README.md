@@ -21,7 +21,7 @@ before you open a pull request.
    ``` yaml
    forcefield: openff-2.1.0.offxml
    datasets:
-	   - - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
+	   - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
    ```
 
    All paths should be relative to the root of the repository, and cached
