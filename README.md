@@ -9,14 +9,14 @@ Note: as running benchmarks in CI uses paid AWS images, please ensure you have
 discussed your projects and plans with a member of the OpenFF leadership team
 before you open a pull request.
 
-1. Create a new branch starting from the `main` branch.
-2. Create a new entry in the `submissions` directory, with the general format
+0. Create a new branch starting from the `main` branch.
+1. Create a new entry in the `submissions` directory, with the general format
    `YYYY-MM-DD-Name`. For example:
 
    ``` shell
    mkdir submissions/$(date +%Y-%m-%d)-Sage-2.1.0
    ```
-3. Add a YAML input file in this directory specifying the force field and datasets
+2. Add a YAML input file in this directory specifying the force field and datasets
    to use for the run. For example:
    ``` yaml
    forcefield: openff-2.1.0.offxml
@@ -29,19 +29,19 @@ before you open a pull request.
    fields recognized by the toolkit (as in the example). Currently only single
    datasets are supported.
 
-4. Push your branch and open a PR.
-5. Request a review, and get the PR approved.
-6. Make a comment of the form `/run-optimization-benchmarks path/to/submission/input.yaml
+3. Push your branch and open a PR.
+4. Request a review, and get the PR approved.
+5. Make a comment of the form `/run-optimization-benchmarks path/to/submission/input.yaml
    [conda-env.yaml]` or `/run-torsion-benchmarks path/to-submission/input.yaml
    [conda-env.yaml]` on the PR. The brackets indicate an optional argument. If
    the path to the conda environment is omitted, the default environment will
    be used ([devtools/env.yaml](devtools/env.yaml)).
-7. Wait for the benchmarks to finish.
-8. Review the results, and update your submission with a README containing a
+6. Wait for the benchmarks to finish.
+7. Review the results, and update your submission with a README containing a
    link to the Zenodo archive created by CI.
    * An OpenFF admin (probably your PR reviewer) will need to manually publish
      the Zenodo entry before you can do this.
-9. Merge your PR!
+8. Merge your PR!
 
 #### Output
 
