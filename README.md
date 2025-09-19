@@ -4,6 +4,11 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
 ## Usage
 
 ### Running benchmarks in CI
+
+Note: as running benchmarks in CI uses paid AWS images, please ensure you have
+discussed your projects and plans with a member of the OpenFF leadership team
+before you open a pull request.
+
 0. Create a new branch starting from the `main` branch.
 1. Create a new entry in the `submissions` directory, with the general format
    `YYYY-MM-DD-Name`. For example:
@@ -11,23 +16,34 @@ Input files and scripts for benchmarking OpenFF force fields with yammbs
    ``` shell
    mkdir submissions/$(date +%Y-%m-%d)-Sage-2.1.0
    ```
-2. Add a YAML input file in this directory specifying the force field and datasets
-   to use for the run. For example:
+2. Add a YAML input file named `input.yaml` in this directory specifying the force field and datasets
+   to use for the run.
+   
+   All paths in the file must be relative to the root of the repository.
+
+   Currently only single datasets are supported.
+   Currently only cached datasets are supported.
+
+   If using a new force field file (as in the below example) commit that file to the branch.
+   ``` yaml
+   forcefield: submissions/2025-10-31-Spooky-FF-v3/spooky-ff-v3.offxml
+   datasets:
+      - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
+   ```
+
+   Force fields can also correspond to built-in force fields recognized by the toolkit, for example:
+   
+   For example:
    ``` yaml
    forcefield: openff-2.1.0.offxml
    datasets:
-	   - datasets/cache/industry.json
+      - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
    ```
-
-   All paths should be relative to the root of the repository, and cached
-   datasets must be used. Force fields can also correspond to built-in force
-   fields recognized by the toolkit (as in the example). Currently only single
-   datasets are supported.
 
 3. Push your branch and open a PR.
 4. Request a review, and get the PR approved.
-5. Make a comment of the form `/run-optimization-benchmarks path/to/submission
-   [conda-env.yaml]` or `/run-torsion-benchmarks path/to-submission
+5. Make a comment of the form `/run-optimization-benchmarks path/to/submission/input.yaml
+   [conda-env.yaml]` or `/run-torsion-benchmarks path/to-submission/input.yaml
    [conda-env.yaml]` on the PR. The brackets indicate an optional argument. If
    the path to the conda environment is omitted, the default environment will
    be used ([devtools/env.yaml](devtools/env.yaml)).
