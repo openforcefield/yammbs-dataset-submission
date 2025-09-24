@@ -19,19 +19,27 @@ assert OpenEyeToolkitWrapper().is_available()
 
 
 def make_csvs(store, forcefield, out_dir):
+    ff_name = forcefield.split(".offxml")[0]
     print("getting DDEs")
-    store.get_dde(forcefield, skip_check=True).to_csv(f"{out_dir}/dde.csv")
+    store.get_dde(forcefield, skip_check=True).to_csv(f"{out_dir}/{ff_name}_dde.csv")
     print("getting RMSDs")
-    store.get_rmsd(forcefield, skip_check=True).to_csv(f"{out_dir}/rmsd.csv")
+    store.get_rmsd(forcefield, skip_check=True).to_csv(f"{out_dir}/{ff_name}_rmsd.csv")
     print("getting TFDs")
-    store.get_tfd(forcefield, skip_check=True).to_csv(f"{out_dir}/tfd.csv")
+    store.get_tfd(forcefield, skip_check=True).to_csv(f"{out_dir}/{ff_name}_tfd.csv")
     print("getting internal coordinate RMSDs")
     store.get_internal_coordinate_rmsd(forcefield, skip_check=True).to_csv(
-        f"{out_dir}/icrmsd.csv"
+        f"{out_dir}/{ff_name}_icrmsd.csv"
     )
 
 
-def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
+def _main(
+    forcefields: list[str],
+    dataset: str,
+    sqlite_file: str,
+    out_dir: str,
+    procs: int,
+    invalidate_cache: bool,
+):
     if invalidate_cache and os.path.exists(sqlite_file):
         os.remove(sqlite_file)
     if os.path.exists(sqlite_file):
@@ -43,15 +51,17 @@ def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
             crc = QCArchiveDataset.model_validate_json(inp.read())
         store = MoleculeStore.from_qcarchive_dataset(crc, sqlite_file)
 
-    print("started optimizing store", flush=True)
-    start = time.time()
-    store.optimize_mm(force_field=forcefield, n_processes=procs)
-    print(f"finished optimizing after {time.time() - start} sec")
+    for forcefield in forcefields:
+        print(f"started optimizing store with {forcefield}", flush=True)
+        start = time.time()
+        print(f"optimizing with {forcefield}", flush=True)
+        store.optimize_mm(force_field=forcefield, n_processes=procs)
+        print(f"finished optimizing after {time.time() - start} sec")
 
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
+        if not os.path.exists(out_dir):
+            os.makedirs(out_dir)
 
-    make_csvs(store, forcefield, out_dir)
+        make_csvs(store, forcefield, out_dir)
 
 
 if __name__ == "__main__":
