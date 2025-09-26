@@ -82,7 +82,8 @@ See [datasets/README.md](datasets/README.md)
 | [Sage-2.2.1](submissions/2024-11-21-Sage-2.2.1) | openff_unconstrained-2.2.1.offxml                                                  | [10.5281/zenodo.14200591](https://doi.org/10.5281/zenodo.14200591)                                          |
 | [Null-0.0.3](submissions/2024-12-03-Null-0.0.3) | Protein parameter fit, null model v0.0.3, unconstrained                            | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14270907.svg)](https://doi.org/10.5281/zenodo.14270907) |
 | [Null-0.0.3-Looser-Priors][nlp]                 | Protein parameter fit, null model v0.0.3, unconstrained with looser torsion priors | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14270934.svg)](https://doi.org/10.5281/zenodo.14270934) |
-| [Split vdW N v1](submissions/2025-09-16-split-N-vdW-v1) | Split vdW N parameters, v1 | [10.5281/zenodo.17163050](https://zenodo.org/records/17163051) |
+| [Split vdW N v1](submissions/2025-09-16-split-N-vdW-v1) | Split vdW N parameters, v1 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17196559.svg)](https://doi.org/10.5281/zenodo.17196559) |
+
 <!-- ENDOFTABLE -->
 
 [Sage-2.1.0]: submissions/2024-11-07-Sage-2.1.0
