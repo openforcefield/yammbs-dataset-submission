@@ -158,7 +158,7 @@ def filter_dataset(ds, nprocs, chunksize, out_dir):
 def main():
     a = argparse.ArgumentParser()
     a.add_argument("input_file")
-    a.add_argument("--nprocs", "-n", type=int)
+    a.add_argument("--nprocs", "-n", type=int, default=1)
     args = a.parse_args()
 
     conf = Config.from_file(args.input_file)
