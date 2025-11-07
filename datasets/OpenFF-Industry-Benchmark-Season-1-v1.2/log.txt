@@ -1,0 +1,5 @@
+starting filter: RecordStatus on 74585 records
+starting filter: Connectivity on 74585 records
+starting filter: ConformerRMSD on 74585 records
+starting filter: ChargeCheck on 63120 records
+starting filter: End on 63063 records
