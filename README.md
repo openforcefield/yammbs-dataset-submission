@@ -84,6 +84,7 @@ See [datasets/README.md](datasets/README.md)
 | [Null-0.0.3-Looser-Priors][nlp]                 | Protein parameter fit, null model v0.0.3, unconstrained with looser torsion priors | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14270934.svg)](https://doi.org/10.5281/zenodo.14270934) |
 | [2025-08-13-smee-spice2-systematic-torsion-generation](submissions/2025-08-13-smee-spice2-systematic-torsion-generation)                 | [Fit to SPICE2 using SMEE, with proper torsion types systematically generated from the dataset](https://github.com/fjclark/descent-workflow/tree/main) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16864755.svg)](https://doi.org/10.5281/zenodo.16864755) |
 | [Split vdW N v1](submissions/2025-09-16-split-N-vdW-v1) | Split vdW N parameters, v1 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17196559.svg)](https://doi.org/10.5281/zenodo.17196559) |
+| [Protein-Null-4-mer-AAQAA3-2-OPC3](submissions/2025-09-19-protein-null-4-mer-aaqaa3-2-opc3) | Protein NMR fit started from Null-4-mer-QM | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17163330.svg)](https://doi.org/10.5281/zenodo.17163330)
 | [Sage-2.1.0 (rerun)](submissions/2025-10-20-Sage-2.1.0) | Re-running Sage 2.1.0 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17404618.svg)](https://doi.org/10.5281/zenodo.17404618)
 
 <!-- ENDOFTABLE -->
