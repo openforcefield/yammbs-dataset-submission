@@ -1,3 +1,5 @@
+# YAMMBS-dataset-submission datasets
+
 ## Adding a new dataset
 The general steps for adding a new dataset are:
 1. Run `download_and_filter_dataset.py` passing as arguments:
@@ -11,7 +13,7 @@ The general steps for adding a new dataset are:
 3. Commit the results to the repo
 4. Open a PR for review before merging
 
-### Submission script
+## Submission script
 `submit.sh` is an example Slurm submission script for running
 `download_and_filter_dataset.py` on UCI's HPC3. It may need to be modified to
 work on other clusters, but please do not include these changes as part of
@@ -22,11 +24,23 @@ chunk size (`-c`) as described above. These must come before the name of the
 input file on the command line. There's also a "dry run" flag (`-d`) that prints
 the generated `sbatch` input instead of running it immediately.
 
-#### Conda environment
+## Conda environment
 The example submission script activates an environment called
 `yammbs-dataset-submission`, so you'll need to have one of those available. You
 can create such an environment using the provided [env.yaml
 file](../devtools/env.yaml).
+
+## Basic `git-lfs` usage
+
+Existing datasets are large and tracked with `git-lfs`. The below steps are only
+necessary to interact directly with datasets, not create new submissions.
+
+1. Install `git-lfs` however you choose. Homebrew works (`brew install git-lfs`) on macOS.
+1. Run `git lfs install`.
+1. Fetch all objects tracked in LFS with `git lfs fetch --all`.
+  * Optionally fetch objects from only one branch with i.e. `git lfs fetch upstream BRANCH_NAME`.
+
+Now the large files are on your machine. Look at i.e. `ls -lhrS datasets/OpenFF-Industry-Benchmark-Season-1-v1.1`.
 
 [pool]: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool
 [imap]: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.imap
