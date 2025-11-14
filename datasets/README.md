@@ -35,12 +35,12 @@ file](../devtools/env.yaml).
 Existing datasets are large and tracked with `git-lfs`. The below steps are only
 necessary to interact directly with datasets, not create new submissions.
 
-1. Install `git-lfs` however you choose. Homebrew works (`brew install git-lfs`) on macOS.
+1. Install `git-lfs` however you choose. You can use Homebrew (`brew install git-lfs`) on macOS.
 1. Run `git lfs install`.
 1. Fetch all objects tracked in LFS with `git lfs fetch --all`.
-  * Optionally fetch objects from only one branch with i.e. `git lfs fetch upstream BRANCH_NAME`.
+  * Optionally fetch objects from only one branch with e.g. `git lfs fetch upstream BRANCH_NAME`.
 
-Now the large files are on your machine. Look at i.e. `ls -lhrS datasets/OpenFF-Industry-Benchmark-Season-1-v1.1`.
+Now the large files are on your machine. Look at e.g. `ls -lhrS datasets/OpenFF-Industry-Benchmark-Season-1-v1.1`.
 
 [pool]: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool
 [imap]: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.imap
