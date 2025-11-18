@@ -1,0 +1,39 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+jobs:
+  test:
+    name: Unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+
+    - name: Setup Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.12'
+
+    - name: Install extra dependencies
+      run: pip install requests pytest
+
+    - name: Run tests
+      env:
+        ZENODO_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
+        ZENODO_URL: "https://sandbox.zenodo.org"
+      run: python -m pytest tests/
+
