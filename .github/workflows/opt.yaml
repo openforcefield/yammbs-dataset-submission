@@ -204,7 +204,7 @@ jobs:
 
             [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-            - Zenodo URL: http://zenodo.org/records/${{ steps.uploadToZenodo.outputs.value}}
+            - Zenodo URL: http://zenodo.org/upload/${{ steps.uploadToZenodo.outputs.value}}
 
       - name: Report status to PR on templating failure
         if: always() && steps.reportStatusToPr.outcome == 'failure'
