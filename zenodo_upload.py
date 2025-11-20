@@ -104,12 +104,18 @@ def main():
     args = parser.parse_args()
 
     if not with_retries(lambda: check_api_access(URL, HEADERS), 5):
-        logger.error("No API access, exiting")
+        logger.error(f"No API access (at {URL=}), exiting")
         exit(1)
 
     if not (res := with_retries(lambda: create_empty_upload(URL, HEADERS), 5)):
         logger.error("Failed to create empty upload, exiting")
         exit(1)
+
+    record_id = res["record_id"]
+    doi = res["metadata"]["prereserve_doi"]["doi"]
+
+    # TODO: Store this info and report it back to PR through opt.yaml
+    logger.info(f"Created a (currently empty) record with record ID: {record_id} and DOI: {doi}")
 
     bucket_url = res["links"]["bucket"]
     deposition_id = res["id"]
@@ -121,6 +127,7 @@ def main():
         lambda: add_metadata(deposition_id, URL, HEADERS, title=args.title), 5
     )
 
+    print(deposition_id)
 
 if __name__ == "__main__":
     main()

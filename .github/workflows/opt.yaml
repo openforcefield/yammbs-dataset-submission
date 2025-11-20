@@ -169,16 +169,20 @@ jobs:
           retention-days: 14
 
       - name: Upload to zenodo
+        id: uploadToZenodo
         env:
             ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
             ZENODO_URL:  "https://zenodo.org"
         shell: bash -l {0}
         run: |
           input_files=$(python get_files.py ${{ inputs.path }})
-          python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
+
+          deposition_id=$(python zenodo_upload.py --title "YDS PR #${{ inputs.pr_number }}" \
             tmp.sqlite.bz2 $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv \
             $input_dir/output/{dde,rmsd,rmsd_cdf,tfd,tfd_cdf,bonds,angles,dihedrals,impropers}.png \
-            env.yaml main.py $input_files
+            env.yaml main.py $input_files)
+
+          echo "value=$deposition_id" >> "$GITHUB_OUTPUT"
 
       - name: Report status to PR
         id: reportStatusToPr
@@ -200,6 +204,7 @@ jobs:
 
             [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
+            - Zenodo URL: http://zenodo.org/uploads/${{ steps.uploadToZenodo.outputs.value}}
 
       - name: Report status to PR on templating failure
         if: always() && steps.reportStatusToPr.outcome == 'failure'
