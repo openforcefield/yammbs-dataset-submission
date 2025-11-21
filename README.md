@@ -40,6 +40,9 @@ before you open a pull request.
       - datasets/OpenFF-Industry-Benchmark-Season-1-v1.1/cache.json
    ```
 
+   The version of `openff-forcefields` used by YDS is highly constrained and may not include all released
+   force fields. If this is the case, the force field must be passed as a local file.
+
 3. Push your branch and open a PR.
 4. Request a review, and get the PR approved.
 5. Make a comment of the form `/run-optimization-benchmarks path/to/submission/input.yaml
