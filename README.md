@@ -85,6 +85,7 @@ See [datasets/README.md](datasets/README.md)
 | [2025-08-13-smee-spice2-systematic-torsion-generation](submissions/2025-08-13-smee-spice2-systematic-torsion-generation)                 | [Fit to SPICE2 using SMEE, with proper torsion types systematically generated from the dataset](https://github.com/fjclark/descent-workflow/tree/main) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16864755.svg)](https://doi.org/10.5281/zenodo.16864755) |
 | [Split vdW N v1](submissions/2025-09-16-split-N-vdW-v1) | Split vdW N parameters, v1 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17196559.svg)](https://doi.org/10.5281/zenodo.17196559) |
 | [Sage-2.1.0 (rerun)](submissions/2025-10-20-Sage-2.1.0) | Re-running Sage 2.1.0 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17404618.svg)](https://doi.org/10.5281/zenodo.17404618)
+| [Sage 2.3.0 RC2](submissions/2025-11-07-Sage-2.3.0-RC2) | Sage 2.3.0 RC2 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17555233.svg)](https://doi.org/10.5281/zenodo.17555233)
 
 <!-- ENDOFTABLE -->
 
