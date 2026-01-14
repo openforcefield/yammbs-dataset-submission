@@ -38,7 +38,7 @@ jobs:
           aws-region: us-east-1
       - name: Create cloud runner
         id: aws-start
-        uses: omsf/start-aws-gha-runner@v1.1.0
+        uses: omsf/start-aws-gha-runner@v1.1.1
         with:
           aws_image_id: ami-0d5079d9be06933e5
           aws_instance_type: c6a.8xlarge
@@ -104,7 +104,7 @@ jobs:
           sudo apt update
           sudo apt install -y git-lfs
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           lfs: true
 
@@ -153,6 +153,7 @@ jobs:
           echo input_dir="${input_dir}" >> $GITHUB_ENV
 
       - name: Upload to zenodo
+        id: uploadToZenodo
         env:
             ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
             ZENODO_URL:  "https://zenodo.org"
@@ -162,10 +163,13 @@ jobs:
           bzip2 torsions-dev.sqlite
           micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
-          python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
+
+          deposition_id=$(python zenodo_upload.py --title "YDS Upload ${{ inputs.pr_number }}" \
             torsions-dev.sqlite.bz2 $input_dir/output/rmsd.csv \
             torsions-dev.sqlite.bz2 $input_dir/output/een.csv \
-            env.yaml torsions.py $input_files
+            env.yaml torsions.py $input_files)
+
+          echo "value=$deposition_id" >> "$GITHUB_OUTPUT"
 
       - name: Report status to PR
         id: reportStatusToPr
@@ -186,6 +190,8 @@ jobs:
             - Job status: **${{ job.status }}**
 
             [${{ github.run_id }}]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            - Zenodo URL: http://zenodo.org/uploads/${{ steps.uploadToZenodo.outputs.value}}
 
 
       - name: Report status to PR on templating failure
