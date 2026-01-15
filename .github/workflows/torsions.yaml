@@ -17,6 +17,10 @@ on:
         description: Path to conda YAML file
         required: true
         type: string
+      name:
+        description: Title of Zenodo upload
+        required: true
+        type: string
 
 concurrency:
   group: ${{ github.workflow }}-${{ inputs.pr_number || github.ref || github.run_id }}
@@ -164,7 +168,7 @@ jobs:
           micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
 
-          deposition_id=$(python zenodo_upload.py --title "${{ inputs.title }}" \
+          deposition_id=$(python zenodo_upload.py --title "${{ inputs.name }}" \
             torsions-dev.sqlite.bz2 $input_dir/output/rmsd.csv \
             torsions-dev.sqlite.bz2 $input_dir/output/een.csv \
             env.yaml torsions.py $input_files)
