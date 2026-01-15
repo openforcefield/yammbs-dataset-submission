@@ -17,6 +17,10 @@ on:
         description: Path to conda YAML file
         required: true
         type: string
+      title:
+        description: Title of Zenodo upload
+        required: true
+        type: string
 
 concurrency:
   group: ${{ github.workflow }}-${{ inputs.pr_number || github.ref || github.run_id }}
