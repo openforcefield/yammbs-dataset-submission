@@ -102,6 +102,8 @@ def with_retries(fn, retries):
 
 def main():
     args = parser.parse_args()
+    logger.info(f"{args=}")
+    logger.info(f"{args.title=}")
 
     if not with_retries(lambda: check_api_access(URL, HEADERS), 5):
         logger.error(f"No API access (at {URL=}), exiting")
