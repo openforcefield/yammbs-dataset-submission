@@ -10,7 +10,7 @@ if True:  # to prevent future reordering around this import
 
 from openff.toolkit.utils import OpenEyeToolkitWrapper
 from yammbs.torsion import TorsionStore
-from yammbs.torsion.inputs import QCArchiveTorsionDataset
+from yammbs.torsion.inputs import QCArchiveTorsionDataset, TorsionDataset
 from yammbs.scripts.run_torsion_comparisons import analyse_torsions
 
 from config import Config
