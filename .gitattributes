@@ -1,1 +1,5 @@
 datasets/*/*.json filter=lfs diff=lfs merge=lfs -text
+datasets/torsion-dev/one-torsiondrive.json filter=lfs diff=lfs merge=lfs -text
+datasets/torsion-dev/torsiondrive-data.json filter=lfs diff=lfs merge=lfs -text
+datasets/torsion-dev/two-torsiondrives.json filter=lfs diff=lfs merge=lfs -text
+datasets/torsion-dev/larger.json filter=lfs diff=lfs merge=lfs -text
