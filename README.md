@@ -92,6 +92,7 @@ See [datasets/README.md](datasets/README.md)
 | [Sage 2.3.0 RC2](submissions/2025-11-07-Sage-2.3.0-RC2) | Sage 2.3.0 RC2 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17555233.svg)](https://doi.org/10.5281/zenodo.17555233)
 | [Rosemary-3.0.0-alpha0](submissions/2025-11-11-Rosemary-alpha0) | openff_no_water_unconstrained-3.0.0-alpha0.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17584227.svg)](https://doi.org/10.5281/zenodo.17584227)
 | [openff-2.2.0-rc1-alkanes](submissions/2026-01-22-Sage-2.2.0-alkanes) | openff-2.2.0-rc1-alkanes.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18357086.svg)](https://doi.org/10.5281/zenodo.18357086)
+| [openff-2.2.0-rc1-alkanes-revert](submissions/2026-01-26-Sage-2.2.0-alkanes-revert) | openff-2.2.0-rc1-alkanes-revert.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18382916.svg)](https://doi.org/10.5281/zenodo.18382916)
 
 <!-- ENDOFTABLE -->
 
