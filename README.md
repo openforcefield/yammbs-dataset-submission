@@ -88,10 +88,10 @@ See [datasets/README.md](datasets/README.md)
 | [Protein-Null-4-mer-AAQAA3-2-OPC3](submissions/2025-09-19-protein-null-4-mer-aaqaa3-2-opc3) | Protein NMR fit started from Null-4-mer-QM | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17163330.svg)](https://doi.org/10.5281/zenodo.17163330)
 | [Protein-Specific-4-mer-AAQAA3-2-OPC3](submissions/2025-09-19-protein-specific-4-mer-aaqaa3-2-opc3) | Protein NMR fit started from Specific-4-mer-QM | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17163328.svg)](https://doi.org/10.5281/zenodo.17163328)
 | [Sage-2.1.0 (rerun)](submissions/2025-10-20-Sage-2.1.0) | Re-running Sage 2.1.0 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17404618.svg)](https://doi.org/10.5281/zenodo.17404618)
-<<<<<<< HEAD
 | [Sage 2.3.0 RC1](submissions/2025-11-07-Sage-2.3.0-RC1) | Sage 2.3.0 RC1 |[ ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17555239.svg)](https://doi.org/10.5281/zenodo.17555239)
 | [Sage 2.3.0 RC2](submissions/2025-11-07-Sage-2.3.0-RC2) | Sage 2.3.0 RC2 | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17555233.svg)](https://doi.org/10.5281/zenodo.17555233)
 | [Rosemary-3.0.0-alpha0](submissions/2025-11-11-Rosemary-alpha0) | openff_no_water_unconstrained-3.0.0-alpha0.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17584227.svg)](https://doi.org/10.5281/zenodo.17584227)
+| [openff-2.2.0-rc1-alkanes-revert](submissions/2026-01-26-Sage-2.2.0-alkanes-revert) | openff-2.2.0-rc1-alkanes-revert.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18382916.svg)](https://doi.org/10.5281/zenodo.18382916)
 
 <!-- ENDOFTABLE -->
 
