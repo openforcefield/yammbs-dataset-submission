@@ -113,7 +113,7 @@ jobs:
           lfs: true
 
       - name: Install Conda environment
-        uses: mamba-org/setup-micromamba@v2
+        uses: mamba-org/setup-micromamba@v3
         with:
           environment-file: ${{ inputs.env }}
 
