@@ -1,5 +1,4 @@
 import argparse
-from loguru import logger
 from collections import defaultdict
 from dataclasses import dataclass
 from multiprocessing import Pool
@@ -7,6 +6,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 import yaml
+from loguru import logger
 from openff.qcsubmit.results import OptimizationResultCollection
 from openff.qcsubmit.results.filters import (
     ConformerRMSDFilter,
@@ -58,9 +58,7 @@ def imap_fn(record_and_molecule):
     """
     record, molecule = record_and_molecule
     try:
-        OpenEyeToolkitWrapper().assign_partial_charges(
-            molecule, partial_charge_method="am1bccelf10"
-        )
+        OpenEyeToolkitWrapper().assign_partial_charges(molecule, partial_charge_method="am1bccelf10")
     except (ChargeCalculationError, ConformerGenerationError):
         ok = False
     else:
@@ -87,9 +85,7 @@ class ChargeCheckFilter(SinglepointRecordFilter):
         logger.info("starting to_records")
 
         for record, molecule in result_collection.to_records():
-            all_records_and_molecules[record._client.address].append(
-                (record.id, molecule)
-            )
+            all_records_and_molecules[record._client.address].append((record.id, molecule))
 
         logger.info("finished to records")
 
@@ -112,9 +108,7 @@ class ChargeCheckFilter(SinglepointRecordFilter):
                     if ok:
                         filtered_ids.append(record_id)
 
-            filtered_results[address] = [
-                entry for entry in entries if entry.record_id in filtered_ids
-            ]
+            filtered_results[address] = [entry for entry in entries if entry.record_id in filtered_ids]
 
         result_collection.entries = filtered_results
 
@@ -163,14 +157,13 @@ def main():
 
     conf = Config.from_file(args.input_file)
     with TemporaryDirectory() as d:
-        client = _CachedPortalClient(
-            "https://api.qcarchive.molssi.org:443/", d
-        )
+        client = _CachedPortalClient("https://api.qcarchive.molssi.org:443/", d)
         out_dir = Path.cwd()
         if conf.ds_name.replace(" ", "-") not in str(out_dir):
             raise FileNotFoundError(
-            f"The current working directory {out_dir} does not contain "
-            f"the required path segment {conf.ds_name.replace(' ', '-')}.")
+                f"The current working directory {out_dir} does not contain "
+                f"the required path segment {conf.ds_name.replace(' ', '-')}."
+            )
 
         logger.info(f"Downloading dataset {conf.ds_name} to {out_dir}")
         ds = download_dataset(client, conf.ds_name, out_dir)

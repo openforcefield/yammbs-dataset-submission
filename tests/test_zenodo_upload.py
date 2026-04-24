@@ -1,7 +1,7 @@
+import os
 import random
 import string
 import subprocess
-import os
 
 import requests
 
