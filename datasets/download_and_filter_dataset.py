@@ -171,13 +171,16 @@ def main():
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    a.add_argument("ds_name", help="The name of an optimization dataset on QCArchive")
+    a.add_argument(
+        "ds_name", help="The name of an optimization dataset on QCArchive"
+    )
     a.add_argument(
         "--nprocs",
         "-n",
         type=int,
         default=1,
-        help="The number of processors to use in the multiprocessing.Pool. Defaults to %(default)d",
+        help="The number of processors to use in the multiprocessing.Pool."
+        " Defaults to %(default)d",
     )
     a.add_argument(
         "--chunksize",
@@ -189,7 +192,9 @@ def main():
     args = a.parse_args()
 
     with TemporaryDirectory() as d:
-        client = _CachedPortalClient("https://api.qcarchive.molssi.org:443/", d)
+        client = _CachedPortalClient(
+            "https://api.qcarchive.molssi.org:443/", d
+        )
         out_dir = Path(args.ds_name.replace(" ", "-"))
         out_dir.mkdir()
 

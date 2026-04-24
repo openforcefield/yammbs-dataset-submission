@@ -35,9 +35,7 @@ def test_basic_upload(capsys):
 
     assert post_response.status_code < 400, post_response.json()
 
-    get_response = requests.get(
-        f"https://sandbox.zenodo.org/api/records/{deposition_id}"
-    )
+    get_response = requests.get(f"https://sandbox.zenodo.org/api/records/{deposition_id}")
 
     assert get_response.json()["metadata"]["title"] == title
 
