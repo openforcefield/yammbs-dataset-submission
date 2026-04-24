@@ -26,7 +26,9 @@ def make_csvs(store, forcefield, out_dir):
     print("getting TFDs")
     store.get_tfd(forcefield, skip_check=True).to_csv(f"{out_dir}/tfd.csv")
     print("getting internal coordinate RMSDs")
-    store.get_internal_coordinate_rmsd(forcefield, skip_check=True).to_csv(f"{out_dir}/icrmsd.csv")
+    store.get_internal_coordinate_rmsd(forcefield, skip_check=True).to_csv(
+        f"{out_dir}/icrmsd.csv"
+    )
 
 
 def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
