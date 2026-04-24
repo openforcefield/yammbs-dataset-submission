@@ -115,7 +115,9 @@ def main():
     doi = res["metadata"]["prereserve_doi"]["doi"]
 
     # TODO: Store this info and report it back to PR through opt.yaml
-    logger.info(f"Created a (currently empty) record with record ID: {record_id} and DOI: {doi}")
+    logger.info(
+        f"Created a (currently empty) record with record ID: {record_id} and DOI: {doi}"
+    )
 
     bucket_url = res["links"]["bucket"]
     deposition_id = res["id"]

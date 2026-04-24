@@ -68,7 +68,9 @@ def imap_fn(record_and_molecule):
     """
     record, molecule = record_and_molecule
     try:
-        OpenEyeToolkitWrapper().assign_partial_charges(molecule, partial_charge_method="am1bccelf10")
+        OpenEyeToolkitWrapper().assign_partial_charges(
+            molecule, partial_charge_method="am1bccelf10"
+        )
     except (ChargeCalculationError, ConformerGenerationError):
         ok = False
     else:
@@ -95,7 +97,9 @@ class ChargeCheckFilter(SinglepointRecordFilter):
         logger.info("starting to_records")
 
         for record, molecule in result_collection.to_records():
-            all_records_and_molecules[record._client.address].append((record.id, molecule))
+            all_records_and_molecules[record._client.address].append(
+                (record.id, molecule)
+            )
 
         logger.info("finished to records")
 
@@ -118,7 +122,9 @@ class ChargeCheckFilter(SinglepointRecordFilter):
                     if ok:
                         filtered_ids.append(record_id)
 
-            filtered_results[address] = [entry for entry in entries if entry.record_id in filtered_ids]
+            filtered_results[address] = [
+                entry for entry in entries if entry.record_id in filtered_ids
+            ]
 
         result_collection.entries = filtered_results
 
