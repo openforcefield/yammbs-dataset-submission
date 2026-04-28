@@ -39,8 +39,8 @@ def load_benches(ffs) -> list[pandas.DataFrame]:
     ret = list()
     for ff in ffs:
         df = load_bench(Path(ff))
-        for d in ffs[1:]:
-            df = pandas.concat([df, load_bench(Path(d) / ff)])
+        for other_ff in ffs[1:]:
+            df = pandas.concat([df, load_bench(Path(other_ff))])
         ret.append(df)
     return ret
 
