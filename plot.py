@@ -14,9 +14,7 @@ from pandas import DataFrame as DF
 logging.getLogger("openff").setLevel(logging.ERROR)
 
 # suppress divide by zero in numpy.log
-warnings.filterwarnings(
-    "ignore", message="divide by zero", category=RuntimeWarning
-)
+warnings.filterwarnings("ignore", message="divide by zero", category=RuntimeWarning)
 
 pandas.set_option("display.max_columns", None)
 
@@ -60,7 +58,7 @@ def merge_metrics(dfs, names, metric: str):
 
 
 def plot_ddes(dfs: list[pandas.DataFrame], names, out_dir):
-    figure, axis = pyplot.subplots(figsize=(6, 4))
+    _, _ = pyplot.subplots(figsize=(6, 4))
     ddes = merge_metrics(dfs, names, "dde")
     ax = sea.histplot(
         data=ddes.iloc[:, 1:],
@@ -76,7 +74,7 @@ def plot_ddes(dfs: list[pandas.DataFrame], names, out_dir):
 
 
 def plot_rmsds(dfs: list[pandas.DataFrame], names, out_dir):
-    figure, axis = pyplot.subplots(figsize=(6, 4))
+    _, _ = pyplot.subplots(figsize=(6, 4))
     rmsds = merge_metrics(dfs, names, "rmsd")
     ax = sea.kdeplot(data=numpy.log10(rmsds.iloc[:, 1:]))
     ax.set_xlim((-2.0, 0.7))
@@ -84,7 +82,7 @@ def plot_rmsds(dfs: list[pandas.DataFrame], names, out_dir):
     pyplot.savefig(f"{out_dir}/rmsd.png", dpi=300)
     pyplot.close()
 
-    figure, axis = pyplot.subplots(figsize=(6, 4))
+    _, _ = pyplot.subplots(figsize=(6, 4))
     ax = sea.ecdfplot(rmsds.iloc[:, 1:])
     ax.set_xlabel("RMSD (Å)")
     pyplot.savefig(f"{out_dir}/rmsd_cdf.png", dpi=300)
@@ -92,7 +90,7 @@ def plot_rmsds(dfs: list[pandas.DataFrame], names, out_dir):
 
 
 def plot_tfds(dfs: list[pandas.DataFrame], names, out_dir):
-    figure, axis = pyplot.subplots(figsize=(6, 4))
+    _, _ = pyplot.subplots(figsize=(6, 4))
     tfds = merge_metrics(dfs, names, "tfd")
     ax = sea.kdeplot(data=numpy.log10(tfds.iloc[:, 1:]))
     ax.set_xlim((-4.0, 0.5))
@@ -100,7 +98,7 @@ def plot_tfds(dfs: list[pandas.DataFrame], names, out_dir):
     pyplot.savefig(f"{out_dir}/tfd.png", dpi=300)
     pyplot.close()
 
-    figure, axis = pyplot.subplots(figsize=(6, 4))
+    _, _ = pyplot.subplots(figsize=(6, 4))
     ax = sea.ecdfplot(tfds.iloc[:, 1:])
     ax.set_xlabel("TFD")
     pyplot.savefig(f"{out_dir}/tfd_cdf.png", dpi=300)
@@ -123,7 +121,7 @@ def plot_icrmsds(dfs, names, out_dir):
     for m in ["bonds", "angles", "dihedrals", "impropers"]:
         full = merge_metrics(dfs, names, m)
         df = full.iloc[:, 1:]
-        figure, axis = pyplot.subplots(figsize=(6, 4))
+        _, _ = pyplot.subplots(figsize=(6, 4))
         ax = sea.boxplot(df)
         pyplot.title(titles[m])
         ax.set_ylabel(ylabels[m])

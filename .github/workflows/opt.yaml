@@ -36,7 +36,7 @@ jobs:
       mapping: ${{ steps.aws-start.outputs.mapping }}
     steps:
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::649715411074:role/gh-actions-runner-role
           aws-region: us-east-1
@@ -77,7 +77,7 @@ jobs:
       - name: Create check
         if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
         id: create-check
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const created_run = await github.request(
@@ -113,7 +113,7 @@ jobs:
           lfs: true
 
       - name: Install Conda environment
-        uses: mamba-org/setup-micromamba@v2
+        uses: mamba-org/setup-micromamba@v3
         with:
           environment-file: ${{ inputs.env }}
 
@@ -166,7 +166,7 @@ jobs:
             env.yaml main.py $input_files
 
       - name: Archive results
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: results
           path: results.tar
@@ -231,7 +231,7 @@ jobs:
 
       - name: Update check
         if: always() && github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             await github.request(
@@ -260,7 +260,7 @@ jobs:
     if: ${{ always() }}
     steps:
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::649715411074:role/gh-actions-runner-role
           aws-region: us-east-1
