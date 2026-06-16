@@ -117,7 +117,7 @@ jobs:
         with:
           environment-file: ${{ inputs.env }}
 
-      - name: Run torsion benchmarks
+      - name: Run torsion benchmarks and plot results
         env:
             LICENSE: ${{ secrets.OE_LICENSE }}
         shell: bash -l {0}
@@ -127,14 +127,6 @@ jobs:
           export OE_LICENSE=/tmp/oe_license.txt
           python torsions.py ${{ inputs.path }} $(nproc)
           rm $OE_LICENSE
-
-      - name: Plot results
-        shell: bash -l {0}
-        run: |
-          set -e
-          input_file=${{ inputs.path }}
-          input_dir=$(dirname $input_file)
-          # python plot.py $input_dir -o $input_dir/output
 
       - name: Commit results
         shell: bash -l {0}
@@ -147,10 +139,7 @@ jobs:
 
           input_file=${{ inputs.path }}                        # path to the input YAML file
           input_dir=$(dirname $input_file)                     # parent directory of input YAML file
-          git add $input_dir/output/rmsd.csv
-          git add $input_dir/output/een.csv
-          git add $input_dir/output/minimized.json
-          git add $input_dir/output/metrics.json
+          git add $input_dir/output ':!*.sqlite'               # add everything but the database file
           git commit -m "Add benchmark results"
           git push
 
@@ -163,14 +152,15 @@ jobs:
             ZENODO_URL:  "https://zenodo.org"
         shell: bash -l {0}
         run: |
-          # TODO: make and bundle plot(s)
-          bzip2 torsions-dev.sqlite
+          bzip2 torsions.sqlite
           micromamba env export > env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
 
           deposition_id=$(python zenodo_upload.py --title "${{ inputs.name }}" \
-            torsions-dev.sqlite.bz2 $input_dir/output/rmsd.csv \
-            torsions-dev.sqlite.bz2 $input_dir/output/een.csv \
+            torsions.sqlite.bz2 \
+            $input_dir/output/*.csv \
+            $input_dir/output/*.png \
+            $input_dir/output/*.json \
             env.yaml torsions.py $input_files)
 
           echo "value=$deposition_id" >> "$GITHUB_OUTPUT"

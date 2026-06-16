@@ -1,0 +1,3 @@
+forcefield: openff-2.2.1
+datasets:
+    - datasets/torsion-dev/two-torsiondrives.json
