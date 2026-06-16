@@ -5,7 +5,7 @@ import yaml
 
 @dataclass
 class Config:
-    forcefield: str
+    forcefields: list[str]
     datasets: list[str]
 
     @classmethod

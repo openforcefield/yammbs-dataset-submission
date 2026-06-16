@@ -147,8 +147,8 @@ jobs:
 
           input_file=${{ inputs.path }}                        # path to the input YAML file
           input_dir=$(dirname $input_file)                     # parent directory of input YAML file
-          git add $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv
-          git add $input_dir/output/{dde,rmsd,rmsd_cdf,tfd,tfd_cdf,bonds,angles,dihedrals,impropers}.png
+          git add $input_dir/output/.*_{dde,icrmsd,rmsd,tfd}.csv
+          git add $input_dir/output/.*_{dde,rmsd,rmsd_cdf,tfd,tfd_cdf,bonds,angles,dihedrals,impropers}.png
           git commit -m "Add benchmark results"
           git push
 
