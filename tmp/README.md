@@ -10,6 +10,7 @@ These files are generated from running `plot.py` as follows:
 $ python plot.py \
     submissions/2026-04-28-Rosemary-alpha0-QM \
     submissions/2026-04-28-Rosemary-alpha0-QM-freeze/ \
-    submissions/2025-11-07-Sage-2.3.0-RC2/  \
+    submissions/2025-11-11-Rosemary-alpha0/ \
+    submissions/2025-11-07-Sage-2.3.0-RC2/ \
     -o tmp/
 ```

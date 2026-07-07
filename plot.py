@@ -140,6 +140,9 @@ def plot(ffs, out_dir: str):
 
     names = [Path(ff).name for ff in ffs]
 
+    # strip date out of name to keep it more brief
+    names = ["-".join(name.split("-")[3:]) for name in names]
+
     for name, df in zip(names, dfs):
         df.to_csv(f"{out_dir}/{name}.csv")
 

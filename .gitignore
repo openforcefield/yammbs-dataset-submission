@@ -3,3 +3,6 @@ oe_license.txt
 
 # macOS
 .DS_Store
+# pixi environments
+.pixi/*
+!.pixi/config.toml
