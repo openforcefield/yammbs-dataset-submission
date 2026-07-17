@@ -94,6 +94,7 @@ See [datasets/README.md](datasets/README.md)
 | [openff-2.2.0-rc1-alkanes](submissions/2026-01-22-Sage-2.2.0-alkanes) | openff-2.2.0-rc1-alkanes.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18357086.svg)](https://doi.org/10.5281/zenodo.18357086)
 | [openff-2.2.0-rc1-alkanes-revert](submissions/2026-01-26-Sage-2.2.0-alkanes-revert) | openff-2.2.0-rc1-alkanes-revert.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18382916.svg)](https://doi.org/10.5281/zenodo.18382916)
 | [Sage 2.3.0 frozen alkane parameters](submissions/2026-06-04-Sage-2.3.0-alkane) | openff_unconstrained-2.3.0-frozen-alkane-params.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20563242.svg)](https://doi.org/10.5281/zenodo.20563242)
+| [Rosemary-3.0.0-alpha1c](submissions/2026-06-19-Rosemary-alpha1c) | openff_no_water_unconstrained-3.0.0-alpha0.offxml | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20768009.svg)](https://doi.org/10.5281/zenodo.20768009)
 
 <!-- ENDOFTABLE -->
 
