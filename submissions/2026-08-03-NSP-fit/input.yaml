@@ -1,0 +1,3 @@
+forcefield: submissions/2026-08-03-NSP-fit/addl_params_r11.offxml
+datasets:
+    - datasets/OpenFF-Industry-Benchmark-Season-1-v1.2/cache.json
