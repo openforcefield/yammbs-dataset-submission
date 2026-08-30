@@ -36,7 +36,7 @@ def load_bench(d: Path) -> pandas.DataFrame:
 
 
 def load_benches(ffs) -> list[pandas.DataFrame]:
-    ret = list()
+    ret = []
     for ff in ffs:
         df = load_bench(Path(ff))
         for d in ffs[1:]:

@@ -6,9 +6,6 @@ import sys
 import time
 from pathlib import Path
 
-if True:  # to prevent future reordering around this import
-    import qcportal  # noqa
-
 from openff.toolkit.utils import OpenEyeToolkitWrapper
 from yammbs import MoleculeStore
 from yammbs.inputs import QCArchiveDataset
@@ -57,17 +54,17 @@ def _main(forcefield, dataset, sqlite_file, out_dir, procs, invalidate_cache):
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Not enough arguments")
-        exit(1)
+        sys.exit(1)
 
     conf = Config.from_file(sys.argv[1])
 
     ndatasets = len(conf.datasets)
     if ndatasets == 0:
         print("Must provide at least one dataset")
-        exit(1)
+        sys.exit(1)
     if ndatasets > 1:
         print("Only single dataset currently supported")
-        exit(1)
+        sys.exit(1)
 
     p = Path(sys.argv[1])
     out_dir = p.parent / "output"

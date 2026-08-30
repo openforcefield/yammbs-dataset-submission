@@ -1,10 +1,9 @@
 # adapted from https://developers.zenodo.org/?python#quickstart-upload
-
-
 import argparse
 import json
 import logging
 import os
+import sys
 
 import requests
 from requests.exceptions import JSONDecodeError
@@ -105,11 +104,11 @@ def main():
 
     if not with_retries(lambda: check_api_access(URL, HEADERS), 5):
         logger.error(f"No API access (at {URL=}), exiting")
-        exit(1)
+        sys.exit(1)
 
     if not (res := with_retries(lambda: create_empty_upload(URL, HEADERS), 5)):
         logger.error("Failed to create empty upload, exiting")
-        exit(1)
+        sys.exit(1)
 
     record_id = res["record_id"]
     doi = res["metadata"]["prereserve_doi"]["doi"]
@@ -123,7 +122,7 @@ def main():
     deposition_id = res["id"]
 
     for f in args.files:
-        with_retries(lambda: upload_file(bucket_url, f, HEADERS), 5)
+        with_retries(lambda f=f: upload_file(bucket_url, f, HEADERS), 5)
 
     with_retries(lambda: add_metadata(deposition_id, URL, HEADERS, title=args.title), 5)
 
