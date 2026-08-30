@@ -19,6 +19,7 @@ def test_basic_upload(capsys):
         ["python", "zenodo_upload.py", "--title", title, random_file_name],
         capture_output=True,
         text=True,
+        check=True,
     )
 
     assert result.returncode == 0, f"Script failed with stderr: {result.stderr}"
