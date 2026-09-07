@@ -1,0 +1,3 @@
+forcefield: submissions/2026-08-07-Sage-2.3.0-extended-training-set/2.3.0_ext_train_data_r12.offxml
+datasets:
+    - datasets/OpenFF-NSP-Optimization-Set-1-Combined-v4.0/cache.json
