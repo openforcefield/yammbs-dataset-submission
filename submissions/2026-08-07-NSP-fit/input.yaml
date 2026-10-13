@@ -1,0 +1,3 @@
+forcefield: submissions/2026-08-07-NSP-fit/addl_params_r11.offxml
+datasets:
+    - datasets/OpenFF-NSP-Optimization-Set-1-Combined-v4.0/cache.json
