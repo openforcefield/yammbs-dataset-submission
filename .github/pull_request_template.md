@@ -1,4 +1,6 @@
 ## Submission Checklist
+
+- [ ] [AI disclosure](https://github.com/openforcefield/yammbs-dataset-submission/blob/main/AI_POLICY.md)
 - [ ] Created a new directory in the `submissions` directory containing the YDS input file and optionally a force field `.offxml` file
 - [ ] Triggered the benchmark workflow with a PR comment of the form `/run-optimization-benchmarks path/to/submission/input.yaml path/to/environment.yaml Title of any length` or the same with `/run-torsion-benchmarks ...`
   - After the command, the first and second space-separated values are the data input file and conda environment file, respectively. The rest of the comment becomes the title of the Zenodo record.
