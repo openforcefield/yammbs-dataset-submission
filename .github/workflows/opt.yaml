@@ -13,10 +13,6 @@ on:
         description: Path to submission directory
         required: true
         type: string
-      env:
-        description: Path to conda YAML file
-        required: true
-        type: string
       name:
         description: Title of Zenodo upload
         required: true
@@ -112,10 +108,10 @@ jobs:
         with:
           lfs: true
 
-      - name: Install Conda environment
-        uses: mamba-org/setup-micromamba@v3
+      - name: Set up Pixi
+        uses: prefix-dev/setup-pixi@v0.11.3
         with:
-          environment-file: ${{ inputs.env }}
+          cache: true
 
       - name: Run optimization benchmarks
         env:
@@ -158,7 +154,7 @@ jobs:
         shell: bash -l {0}
         run: |
           bzip2 tmp.sqlite
-          micromamba env export > env.yaml
+          pixi workspace export conda-environment env.yaml
           input_files=$(python get_files.py ${{ inputs.path }})
           tar cf results.tar \
             tmp.sqlite.bz2 $input_dir/output/{dde,icrmsd,rmsd,tfd}.csv \
