@@ -1,0 +1,30 @@
+[workspace]
+authors = ["Matthew W. Thompson <mattwthompson@protonmail.com>"]
+channels = ["conda-forge", "https://conda.anaconda.org/openeye"]
+name = "yammbs-dataset-submission"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+pip = "*"
+qcportal = "~=0.57"
+openff-qcsubmit = "*"
+openff-toolkit = "*"
+openff-interchange = ">=0.5"
+openeye-toolkits = { channel = "openeye" }
+click = "*"
+matplotlib = "*"
+numpy = "*"
+mdanalysis = "*"
+pandas = "*"
+seaborn = "*"
+tqdm = "*"
+bokeh = "*"
+panel = "*"
+pytorch = { version = "*", build = "*cpu*" }
+
+[pypi-dependencies]
+yammbs = { git = "https://github.com/openforcefield/yammbs.git", rev = "0.3.0" }
